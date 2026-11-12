@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "id_1794508782263_rji3ve65e",
+    "createdAt": "2026-11-12T18:39:42.263Z",
+    "updatedAt": "2026-11-12T18:39:42.263Z",
+    "groupId": "id_1794508782121_u36brs5sc",
+    "uploadedBy": "id_1794508782247_7rf3ilswk",
+    "title": "Indian Constitution Quick Revision Notes",
+    "description": "Handmade summary of Fundamental Rights articles 12-35 with landmark cases.",
+    "fileStorageKey": "sample_notes_polity.pdf",
+    "fileName": "polity_quick_revision.pdf",
+    "fileType": "application/pdf",
+    "fileSize": 358400,
+    "visibility": "group"
+  }
+]

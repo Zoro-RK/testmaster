@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "id_1794508782246_58lxuinbi",
+    "createdAt": "2026-11-12T18:39:42.246Z",
+    "updatedAt": "2026-11-12T18:39:42.246Z",
+    "displayName": "Senthil Kumar (Admin)",
+    "email": "admin@studycircle.tnpsc",
+    "passwordHash": "$2b$10$EFQnEvUVWNLKNNVg30lA0eqKnXS12oCLljOBEs7r6AiQ/ASUJ5yJa",
+    "accountStatus": "active"
+  },
+  {
+    "_id": "id_1794508782247_7rf3ilswk",
+    "createdAt": "2026-11-12T18:39:42.247Z",
+    "updatedAt": "2026-11-12T18:39:42.247Z",
+    "displayName": "Kavitha Rajan",
+    "email": "kavitha@studycircle.tnpsc",
+    "passwordHash": "$2b$10$oXCqjY4qLvmCYTHeuXmWl.d8UkCwF1tKTPlevd7EsAlTLri57u7gq",
+    "accountStatus": "active"
+  },
+  {
+    "_id": "id_1794508782247_2apmufwc6",
+    "createdAt": "2026-11-12T18:39:42.247Z",
+    "updatedAt": "2026-11-12T18:39:42.247Z",
+    "displayName": "Manojkumar S.",
+    "email": "manoj@studycircle.tnpsc",
+    "passwordHash": "$2b$10$oXCqjY4qLvmCYTHeuXmWl.d8UkCwF1tKTPlevd7EsAlTLri57u7gq",
+    "accountStatus": "active"
+  },
+  {
+    "_id": "id_1794508782247_vzl87013n",
+    "createdAt": "2026-11-12T18:39:42.247Z",
+    "updatedAt": "2026-11-12T18:39:42.247Z",
+    "displayName": "Deepa Sundaram",
+    "email": "deepa@studycircle.tnpsc",
+    "passwordHash": "$2b$10$oXCqjY4qLvmCYTHeuXmWl.d8UkCwF1tKTPlevd7EsAlTLri57u7gq",
+    "accountStatus": "active"
+  }
+]

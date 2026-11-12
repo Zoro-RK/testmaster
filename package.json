@@ -1,0 +1,17 @@
+{
+  "name": "tnpsc-study-circle",
+  "version": "1.0.0",
+  "description": "Private collaborative TNPSC Group IV preparation web application",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "node server/server.js",
+    "client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "seed": "node server/seed/seed.js",
+    "test": "node server/tests/test.js"
+  },
+  "keywords": ["tnpsc", "study-circle", "group-iv", "react", "express", "mongodb"],
+  "author": "TNPSC Study Circle",
+  "license": "ISC"
+}
+

@@ -1,0 +1,46 @@
+[
+  {
+    "_id": "id_1794508782089_58caiyssb",
+    "createdAt": "2026-11-12T18:39:42.089Z",
+    "updatedAt": "2026-11-12T18:39:42.089Z",
+    "examId": "id_1794508782080_if4wntlgt",
+    "code": "A",
+    "name": "Part A: General Studies",
+    "language": "English",
+    "questionWeightage": 75,
+    "displayOrder": 1
+  },
+  {
+    "_id": "id_1794508782107_kqdy8rv73",
+    "createdAt": "2026-11-12T18:39:42.107Z",
+    "updatedAt": "2026-11-12T18:39:42.107Z",
+    "examId": "id_1794508782080_if4wntlgt",
+    "code": "B",
+    "name": "Part B: Aptitude and Mental Ability",
+    "language": "English",
+    "questionWeightage": 25,
+    "displayOrder": 2
+  },
+  {
+    "_id": "id_1794508782110_kjmt98aof",
+    "createdAt": "2026-11-12T18:39:42.110Z",
+    "updatedAt": "2026-11-12T18:39:42.110Z",
+    "examId": "id_1794508782080_if4wntlgt",
+    "code": "C",
+    "name": "Part C: Tamil Eligibility-cum-Scoring Test (பொதுத் தமிழ்)",
+    "language": "Tamil",
+    "questionWeightage": 100,
+    "displayOrder": 3
+  },
+  {
+    "_id": "id_1794508782119_9zp9iexp1",
+    "createdAt": "2026-11-12T18:39:42.119Z",
+    "updatedAt": "2026-11-12T18:39:42.119Z",
+    "examId": "id_1794508782080_if4wntlgt",
+    "code": "C_EN",
+    "name": "Part C (Optional): General English (Differently-Abled Only)",
+    "language": "English",
+    "questionWeightage": 100,
+    "displayOrder": 4
+  }
+]

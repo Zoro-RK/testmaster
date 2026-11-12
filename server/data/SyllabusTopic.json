@@ -1,0 +1,1442 @@
+[
+  {
+    "_id": "id_1794508782090_181n7dl1t",
+    "createdAt": "2026-11-12T18:39:42.090Z",
+    "updatedAt": "2026-11-12T18:39:42.090Z",
+    "unitId": "id_1794508782089_704hushb4",
+    "slug": "nature-of-universe",
+    "name": "Nature of Universe",
+    "nameTa": "Nature of Universe",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782090_emdqi0x97",
+    "createdAt": "2026-11-12T18:39:42.090Z",
+    "updatedAt": "2026-11-12T18:39:42.090Z",
+    "unitId": "id_1794508782089_704hushb4",
+    "slug": "measurement-physical-quantities",
+    "name": "Measurement of physical quantities",
+    "nameTa": "Measurement of physical quantities",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782090_wec9zbc26",
+    "createdAt": "2026-11-12T18:39:42.090Z",
+    "updatedAt": "2026-11-12T18:39:42.090Z",
+    "unitId": "id_1794508782089_704hushb4",
+    "slug": "scientific-laws-motion",
+    "name": "General scientific laws in motion",
+    "nameTa": "General scientific laws in motion",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782090_a76n2x3s8",
+    "createdAt": "2026-11-12T18:39:42.090Z",
+    "updatedAt": "2026-11-12T18:39:42.090Z",
+    "unitId": "id_1794508782089_704hushb4",
+    "slug": "force-pressure-energy",
+    "name": "Force, pressure and energy",
+    "nameTa": "Force, pressure and energy",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782090_ubc2j3qtr",
+    "createdAt": "2026-11-12T18:39:42.090Z",
+    "updatedAt": "2026-11-12T18:39:42.090Z",
+    "unitId": "id_1794508782089_704hushb4",
+    "slug": "everyday-physics",
+    "name": "Everyday applications of mechanics, electricity, magnetism, light, sound, heat and nuclear physics",
+    "nameTa": "Everyday applications of mechanics, electricity, magnetism, light, sound, heat and nuclear physics",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782091_dztsuucjr",
+    "createdAt": "2026-11-12T18:39:42.091Z",
+    "updatedAt": "2026-11-12T18:39:42.091Z",
+    "unitId": "id_1794508782089_704hushb4",
+    "slug": "elements-compounds",
+    "name": "Elements and compounds",
+    "nameTa": "Elements and compounds",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782091_1vpu4o6hq",
+    "createdAt": "2026-11-12T18:39:42.091Z",
+    "updatedAt": "2026-11-12T18:39:42.091Z",
+    "unitId": "id_1794508782089_704hushb4",
+    "slug": "acids-bases-salts",
+    "name": "Acids, bases and salts",
+    "nameTa": "Acids, bases and salts",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782092_20okx1v33",
+    "createdAt": "2026-11-12T18:39:42.092Z",
+    "updatedAt": "2026-11-12T18:39:42.092Z",
+    "unitId": "id_1794508782089_704hushb4",
+    "slug": "petroleum-fertilizers-pesticides",
+    "name": "Petroleum products, fertilizers and pesticides",
+    "nameTa": "Petroleum products, fertilizers and pesticides",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782092_msu0d0pfe",
+    "createdAt": "2026-11-12T18:39:42.092Z",
+    "updatedAt": "2026-11-12T18:39:42.092Z",
+    "unitId": "id_1794508782089_704hushb4",
+    "slug": "metallurgy-food-adulterants",
+    "name": "Metallurgy and food adulterants",
+    "nameTa": "Metallurgy and food adulterants",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782092_xptvqqmj0",
+    "createdAt": "2026-11-12T18:39:42.092Z",
+    "updatedAt": "2026-11-12T18:39:42.092Z",
+    "unitId": "id_1794508782089_704hushb4",
+    "slug": "concepts-life-science",
+    "name": "Main concepts of life science",
+    "nameTa": "Main concepts of life science",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782092_85g7mvfh5",
+    "createdAt": "2026-11-12T18:39:42.092Z",
+    "updatedAt": "2026-11-12T18:39:42.092Z",
+    "unitId": "id_1794508782089_704hushb4",
+    "slug": "classification-organisms",
+    "name": "Classification of living organisms",
+    "nameTa": "Classification of living organisms",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782092_n1puwxnlt",
+    "createdAt": "2026-11-12T18:39:42.092Z",
+    "updatedAt": "2026-11-12T18:39:42.092Z",
+    "unitId": "id_1794508782089_704hushb4",
+    "slug": "evolution-genetics",
+    "name": "Evolution and genetics",
+    "nameTa": "Evolution and genetics",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782093_ptcghj8ny",
+    "createdAt": "2026-11-12T18:39:42.093Z",
+    "updatedAt": "2026-11-12T18:39:42.093Z",
+    "unitId": "id_1794508782089_704hushb4",
+    "slug": "physiology-nutrition-health",
+    "name": "Physiology, nutrition, health and hygiene",
+    "nameTa": "Physiology, nutrition, health and hygiene",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782093_qtalxk2la",
+    "createdAt": "2026-11-12T18:39:42.093Z",
+    "updatedAt": "2026-11-12T18:39:42.093Z",
+    "unitId": "id_1794508782089_704hushb4",
+    "slug": "human-diseases",
+    "name": "Human diseases",
+    "nameTa": "Human diseases",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782093_lo02grtie",
+    "createdAt": "2026-11-12T18:39:42.093Z",
+    "updatedAt": "2026-11-12T18:39:42.093Z",
+    "unitId": "id_1794508782089_704hushb4",
+    "slug": "environmental-science",
+    "name": "Environmental science",
+    "nameTa": "Environmental science",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782093_7c7170h0e",
+    "createdAt": "2026-11-12T18:39:42.093Z",
+    "updatedAt": "2026-11-12T18:39:42.093Z",
+    "unitId": "id_1794508782089_704hushb4",
+    "slug": "latest-inventions-sci-tech",
+    "name": "Latest inventions in science and technology",
+    "nameTa": "Latest inventions in science and technology",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782094_lgkzjrqtf",
+    "createdAt": "2026-11-12T18:39:42.094Z",
+    "updatedAt": "2026-11-12T18:39:42.094Z",
+    "unitId": "id_1794508782089_704hushb4",
+    "slug": "science-current-affairs",
+    "name": "Current affairs in Science",
+    "nameTa": "Current affairs in Science",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782094_o418sa65c",
+    "createdAt": "2026-11-12T18:39:42.094Z",
+    "updatedAt": "2026-11-12T18:39:42.094Z",
+    "unitId": "id_1794508782094_ykkba91n8",
+    "slug": "earth-location",
+    "name": "Earth location",
+    "nameTa": "Earth location",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782094_pfu6hmyvt",
+    "createdAt": "2026-11-12T18:39:42.094Z",
+    "updatedAt": "2026-11-12T18:39:42.094Z",
+    "unitId": "id_1794508782094_ykkba91n8",
+    "slug": "physical-features",
+    "name": "Physical features",
+    "nameTa": "Physical features",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782095_vsoe7esdl",
+    "createdAt": "2026-11-12T18:39:42.095Z",
+    "updatedAt": "2026-11-12T18:39:42.095Z",
+    "unitId": "id_1794508782094_ykkba91n8",
+    "slug": "monsoon-weather-climate",
+    "name": "Monsoon, rainfall, weather and climate",
+    "nameTa": "Monsoon, rainfall, weather and climate",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782095_s9ggdap1d",
+    "createdAt": "2026-11-12T18:39:42.095Z",
+    "updatedAt": "2026-11-12T18:39:42.095Z",
+    "unitId": "id_1794508782094_ykkba91n8",
+    "slug": "water-resources-rivers",
+    "name": "Water resources and rivers",
+    "nameTa": "Water resources and rivers",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782095_vugkyy3vh",
+    "createdAt": "2026-11-12T18:39:42.095Z",
+    "updatedAt": "2026-11-12T18:39:42.095Z",
+    "unitId": "id_1794508782094_ykkba91n8",
+    "slug": "soil-minerals-resources",
+    "name": "Soil, minerals and natural resources",
+    "nameTa": "Soil, minerals and natural resources",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782096_5i61vmph6",
+    "createdAt": "2026-11-12T18:39:42.096Z",
+    "updatedAt": "2026-11-12T18:39:42.096Z",
+    "unitId": "id_1794508782094_ykkba91n8",
+    "slug": "forest-wildlife",
+    "name": "Forest and wildlife",
+    "nameTa": "Forest and wildlife",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782096_r949qde9s",
+    "createdAt": "2026-11-12T18:39:42.096Z",
+    "updatedAt": "2026-11-12T18:39:42.096Z",
+    "unitId": "id_1794508782094_ykkba91n8",
+    "slug": "agriculture-pattern",
+    "name": "Agriculture pattern",
+    "nameTa": "Agriculture pattern",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782096_4wr144vqe",
+    "createdAt": "2026-11-12T18:39:42.096Z",
+    "updatedAt": "2026-11-12T18:39:42.096Z",
+    "unitId": "id_1794508782094_ykkba91n8",
+    "slug": "transport-communication",
+    "name": "Transport and communication",
+    "nameTa": "Transport and communication",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782096_t9lyxjzv2",
+    "createdAt": "2026-11-12T18:39:42.096Z",
+    "updatedAt": "2026-11-12T18:39:42.096Z",
+    "unitId": "id_1794508782094_ykkba91n8",
+    "slug": "population-density-distribution",
+    "name": "Population density and distribution in Tamil Nadu and India",
+    "nameTa": "Population density and distribution in Tamil Nadu and India",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782096_25sjid6eu",
+    "createdAt": "2026-11-12T18:39:42.096Z",
+    "updatedAt": "2026-11-12T18:39:42.097Z",
+    "unitId": "id_1794508782094_ykkba91n8",
+    "slug": "calamities-disaster-management",
+    "name": "Calamities and disaster management",
+    "nameTa": "Calamities and disaster management",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782097_n37833kht",
+    "createdAt": "2026-11-12T18:39:42.097Z",
+    "updatedAt": "2026-11-12T18:39:42.097Z",
+    "unitId": "id_1794508782094_ykkba91n8",
+    "slug": "environment-climate-change",
+    "name": "Environment and climate change",
+    "nameTa": "Environment and climate change",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782097_afsy3l0oz",
+    "createdAt": "2026-11-12T18:39:42.097Z",
+    "updatedAt": "2026-11-12T18:39:42.097Z",
+    "unitId": "id_1794508782094_ykkba91n8",
+    "slug": "geographical-landmarks",
+    "name": "Geographical landmarks",
+    "nameTa": "Geographical landmarks",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782097_nn66mx9x9",
+    "createdAt": "2026-11-12T18:39:42.097Z",
+    "updatedAt": "2026-11-12T18:39:42.097Z",
+    "unitId": "id_1794508782094_ykkba91n8",
+    "slug": "geography-current-affairs",
+    "name": "Current affairs in Geography",
+    "nameTa": "Current affairs in Geography",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782098_crfjuky9z",
+    "createdAt": "2026-11-12T18:39:42.098Z",
+    "updatedAt": "2026-11-12T18:39:42.098Z",
+    "unitId": "id_1794508782097_masnytr0r",
+    "slug": "indus-valley-civilization",
+    "name": "Indus Valley Civilization",
+    "nameTa": "Indus Valley Civilization",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782098_lnz46oxoz",
+    "createdAt": "2026-11-12T18:39:42.098Z",
+    "updatedAt": "2026-11-12T18:39:42.098Z",
+    "unitId": "id_1794508782097_masnytr0r",
+    "slug": "guptas-sultans-mughals-marathas",
+    "name": "Guptas, Delhi Sultans, Mughals and Marathas",
+    "nameTa": "Guptas, Delhi Sultans, Mughals and Marathas",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782098_oppmsyina",
+    "createdAt": "2026-11-12T18:39:42.098Z",
+    "updatedAt": "2026-11-12T18:39:42.098Z",
+    "unitId": "id_1794508782097_masnytr0r",
+    "slug": "south-indian-history",
+    "name": "South Indian History",
+    "nameTa": "South Indian History",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782098_hmnwyp5lw",
+    "createdAt": "2026-11-12T18:39:42.098Z",
+    "updatedAt": "2026-11-12T18:39:42.098Z",
+    "unitId": "id_1794508782097_masnytr0r",
+    "slug": "national-renaissance",
+    "name": "National Renaissance",
+    "nameTa": "National Renaissance",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782099_afsn8axmd",
+    "createdAt": "2026-11-12T18:39:42.099Z",
+    "updatedAt": "2026-11-12T18:39:42.099Z",
+    "unitId": "id_1794508782097_masnytr0r",
+    "slug": "early-uprising-british-rule",
+    "name": "Early uprising against British Rule",
+    "nameTa": "Early uprising against British Rule",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782099_7zhog26xg",
+    "createdAt": "2026-11-12T18:39:42.099Z",
+    "updatedAt": "2026-11-12T18:39:42.099Z",
+    "unitId": "id_1794508782097_masnytr0r",
+    "slug": "indian-national-congress",
+    "name": "Indian National Congress",
+    "nameTa": "Indian National Congress",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782099_b1enjqqin",
+    "createdAt": "2026-11-12T18:39:42.099Z",
+    "updatedAt": "2026-11-12T18:39:42.099Z",
+    "unitId": "id_1794508782097_masnytr0r",
+    "slug": "emergence-of-leaders",
+    "name": "Emergence of leaders (Ambedkar, Bhagat Singh, Bharathiar, VOC, Periyar, Nehru, Tagore, Kamarajar, Gandhi, Azad, Rajaji, Bose, Muthulakshmi Ammaiyar, Muvalur Ramamirtham)",
+    "nameTa": "Emergence of leaders (Ambedkar, Bhagat Singh, Bharathiar, VOC, Periyar, Nehru, Tagore, Kamarajar, Gandhi, Azad, Rajaji, Bose, Muthulakshmi Ammaiyar, Muvalur Ramamirtham)",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782099_hbmwli3q9",
+    "createdAt": "2026-11-12T18:39:42.099Z",
+    "updatedAt": "2026-11-12T18:39:42.099Z",
+    "unitId": "id_1794508782097_masnytr0r",
+    "slug": "agitation-modes-tamil-nadu",
+    "name": "Different modes of agitation in Tamil Nadu and movements",
+    "nameTa": "Different modes of agitation in Tamil Nadu and movements",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782099_37mj1hfsc",
+    "createdAt": "2026-11-12T18:39:42.099Z",
+    "updatedAt": "2026-11-12T18:39:42.099Z",
+    "unitId": "id_1794508782097_masnytr0r",
+    "slug": "characteristics-indian-culture",
+    "name": "Characteristics of Indian Culture",
+    "nameTa": "Characteristics of Indian Culture",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782099_1emivrd1z",
+    "createdAt": "2026-11-12T18:39:42.099Z",
+    "updatedAt": "2026-11-12T18:39:42.099Z",
+    "unitId": "id_1794508782097_masnytr0r",
+    "slug": "unity-in-diversity",
+    "name": "Unity in Diversity: race, language and custom",
+    "nameTa": "Unity in Diversity: race, language and custom",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782100_qkihvzhyf",
+    "createdAt": "2026-11-12T18:39:42.100Z",
+    "updatedAt": "2026-11-12T18:39:42.100Z",
+    "unitId": "id_1794508782097_masnytr0r",
+    "slug": "india-secular-state",
+    "name": "India as a secular state",
+    "nameTa": "India as a secular state",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782100_cys4f4ffm",
+    "createdAt": "2026-11-12T18:39:42.100Z",
+    "updatedAt": "2026-11-12T18:39:42.100Z",
+    "unitId": "id_1794508782100_ftxcmrv70",
+    "slug": "constitution-of-india",
+    "name": "Constitution of India",
+    "nameTa": "Constitution of India",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782100_b9gu6ipx1",
+    "createdAt": "2026-11-12T18:39:42.100Z",
+    "updatedAt": "2026-11-12T18:39:42.100Z",
+    "unitId": "id_1794508782100_ftxcmrv70",
+    "slug": "preamble-constitution",
+    "name": "Preamble to the Constitution",
+    "nameTa": "Preamble to the Constitution",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782100_w5sxry9ir",
+    "createdAt": "2026-11-12T18:39:42.100Z",
+    "updatedAt": "2026-11-12T18:39:42.100Z",
+    "unitId": "id_1794508782100_ftxcmrv70",
+    "slug": "salient-features-constitution",
+    "name": "Salient features of the Constitution",
+    "nameTa": "Salient features of the Constitution",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782100_6o03qo0h2",
+    "createdAt": "2026-11-12T18:39:42.100Z",
+    "updatedAt": "2026-11-12T18:39:42.100Z",
+    "unitId": "id_1794508782100_ftxcmrv70",
+    "slug": "union-state-territory",
+    "name": "Union, State and Union Territory",
+    "nameTa": "Union, State and Union Territory",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782101_g2tu19tj0",
+    "createdAt": "2026-11-12T18:39:42.101Z",
+    "updatedAt": "2026-11-12T18:39:42.101Z",
+    "unitId": "id_1794508782100_ftxcmrv70",
+    "slug": "citizenship",
+    "name": "Citizenship",
+    "nameTa": "Citizenship",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782101_oo90dbgkx",
+    "createdAt": "2026-11-12T18:39:42.101Z",
+    "updatedAt": "2026-11-12T18:39:42.101Z",
+    "unitId": "id_1794508782100_ftxcmrv70",
+    "slug": "fundamental-rights",
+    "name": "Fundamental Rights",
+    "nameTa": "Fundamental Rights",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782101_zgf4el751",
+    "createdAt": "2026-11-12T18:39:42.101Z",
+    "updatedAt": "2026-11-12T18:39:42.101Z",
+    "unitId": "id_1794508782100_ftxcmrv70",
+    "slug": "fundamental-duties",
+    "name": "Fundamental Duties",
+    "nameTa": "Fundamental Duties",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782101_no74h7fx0",
+    "createdAt": "2026-11-12T18:39:42.101Z",
+    "updatedAt": "2026-11-12T18:39:42.101Z",
+    "unitId": "id_1794508782100_ftxcmrv70",
+    "slug": "directive-principles-state-policy",
+    "name": "Directive Principles of State Policy",
+    "nameTa": "Directive Principles of State Policy",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782101_fnxmyqpfh",
+    "createdAt": "2026-11-12T18:39:42.101Z",
+    "updatedAt": "2026-11-12T18:39:42.101Z",
+    "unitId": "id_1794508782100_ftxcmrv70",
+    "slug": "union-executive-legislature",
+    "name": "Union Executive and Union Legislature",
+    "nameTa": "Union Executive and Union Legislature",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782101_071i8xpig",
+    "createdAt": "2026-11-12T18:39:42.101Z",
+    "updatedAt": "2026-11-12T18:39:42.101Z",
+    "unitId": "id_1794508782100_ftxcmrv70",
+    "slug": "state-executive-legislature",
+    "name": "State Executive and State Legislature",
+    "nameTa": "State Executive and State Legislature",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782102_2m05pf9jz",
+    "createdAt": "2026-11-12T18:39:42.102Z",
+    "updatedAt": "2026-11-12T18:39:42.102Z",
+    "unitId": "id_1794508782100_ftxcmrv70",
+    "slug": "local-governments-panchayat-raj",
+    "name": "Local Governments and Panchayat Raj",
+    "nameTa": "Local Governments and Panchayat Raj",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782102_9c547n2b7",
+    "createdAt": "2026-11-12T18:39:42.102Z",
+    "updatedAt": "2026-11-12T18:39:42.102Z",
+    "unitId": "id_1794508782100_ftxcmrv70",
+    "slug": "federalism-centre-state-relations",
+    "name": "Spirit of federalism and Centre–State relationships",
+    "nameTa": "Spirit of federalism and Centre–State relationships",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782102_hx4xnhgxh",
+    "createdAt": "2026-11-12T18:39:42.102Z",
+    "updatedAt": "2026-11-12T18:39:42.102Z",
+    "unitId": "id_1794508782100_ftxcmrv70",
+    "slug": "election",
+    "name": "Election",
+    "nameTa": "Election",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782102_e236u6g1p",
+    "createdAt": "2026-11-12T18:39:42.102Z",
+    "updatedAt": "2026-11-12T18:39:42.102Z",
+    "unitId": "id_1794508782100_ftxcmrv70",
+    "slug": "judiciary-in-india",
+    "name": "Judiciary in India",
+    "nameTa": "Judiciary in India",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782102_qq0pc6hsn",
+    "createdAt": "2026-11-12T18:39:42.102Z",
+    "updatedAt": "2026-11-12T18:39:42.102Z",
+    "unitId": "id_1794508782100_ftxcmrv70",
+    "slug": "rule-of-law",
+    "name": "Rule of Law",
+    "nameTa": "Rule of Law",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782102_sxwadsc2l",
+    "createdAt": "2026-11-12T18:39:42.102Z",
+    "updatedAt": "2026-11-12T18:39:42.102Z",
+    "unitId": "id_1794508782100_ftxcmrv70",
+    "slug": "anti-corruption-lokpal-lokayukta",
+    "name": "Corruption in public life, Lokpal and Lokayukta",
+    "nameTa": "Corruption in public life, Lokpal and Lokayukta",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782103_lyjg2vp3f",
+    "createdAt": "2026-11-12T18:39:42.103Z",
+    "updatedAt": "2026-11-12T18:39:42.103Z",
+    "unitId": "id_1794508782100_ftxcmrv70",
+    "slug": "right-to-information",
+    "name": "Right to Information",
+    "nameTa": "Right to Information",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782103_myvc9v8ex",
+    "createdAt": "2026-11-12T18:39:42.103Z",
+    "updatedAt": "2026-11-12T18:39:42.103Z",
+    "unitId": "id_1794508782100_ftxcmrv70",
+    "slug": "empowerment-of-women",
+    "name": "Empowerment of Women",
+    "nameTa": "Empowerment of Women",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782103_jrtb0p3un",
+    "createdAt": "2026-11-12T18:39:42.103Z",
+    "updatedAt": "2026-11-12T18:39:42.103Z",
+    "unitId": "id_1794508782100_ftxcmrv70",
+    "slug": "consumer-protection-forums",
+    "name": "Consumer Protection Forums",
+    "nameTa": "Consumer Protection Forums",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782103_ojoesqn09",
+    "createdAt": "2026-11-12T18:39:42.103Z",
+    "updatedAt": "2026-11-12T18:39:42.103Z",
+    "unitId": "id_1794508782100_ftxcmrv70",
+    "slug": "human-rights-charter",
+    "name": "Human Rights Charter",
+    "nameTa": "Human Rights Charter",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782103_xp031gkf2",
+    "createdAt": "2026-11-12T18:39:42.103Z",
+    "updatedAt": "2026-11-12T18:39:42.103Z",
+    "unitId": "id_1794508782100_ftxcmrv70",
+    "slug": "political-parties-system",
+    "name": "Political parties and political system in Tamil Nadu and India",
+    "nameTa": "Political parties and political system in Tamil Nadu and India",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782103_haztw8at5",
+    "createdAt": "2026-11-12T18:39:42.103Z",
+    "updatedAt": "2026-11-12T18:39:42.103Z",
+    "unitId": "id_1794508782100_ftxcmrv70",
+    "slug": "polity-current-affairs",
+    "name": "Current affairs in Polity",
+    "nameTa": "Current affairs in Polity",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782104_t8yqwy0bu",
+    "createdAt": "2026-11-12T18:39:42.104Z",
+    "updatedAt": "2026-11-12T18:39:42.104Z",
+    "unitId": "id_1794508782104_dkmt8njku",
+    "slug": "nature-of-indian-economy",
+    "name": "Nature of Indian economy",
+    "nameTa": "Nature of Indian economy",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782104_m5b3abw8s",
+    "createdAt": "2026-11-12T18:39:42.104Z",
+    "updatedAt": "2026-11-12T18:39:42.104Z",
+    "unitId": "id_1794508782104_dkmt8njku",
+    "slug": "five-year-plans-niti-aayog",
+    "name": "Five-year plan models, Planning Commission and Niti Aayog",
+    "nameTa": "Five-year plan models, Planning Commission and Niti Aayog",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782104_gisdnenvz",
+    "createdAt": "2026-11-12T18:39:42.104Z",
+    "updatedAt": "2026-11-12T18:39:42.104Z",
+    "unitId": "id_1794508782104_dkmt8njku",
+    "slug": "sources-of-revenue-rbi-finance-comm",
+    "name": "Sources of revenue, Reserve Bank of India and Finance Commission",
+    "nameTa": "Sources of revenue, Reserve Bank of India and Finance Commission",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782104_kmbts0xur",
+    "createdAt": "2026-11-12T18:39:42.104Z",
+    "updatedAt": "2026-11-12T18:39:42.104Z",
+    "unitId": "id_1794508782104_dkmt8njku",
+    "slug": "resource-sharing-gst",
+    "name": "Resource sharing between Union and State Governments and GST",
+    "nameTa": "Resource sharing between Union and State Governments and GST",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782104_o04iks1g5",
+    "createdAt": "2026-11-12T18:39:42.104Z",
+    "updatedAt": "2026-11-12T18:39:42.104Z",
+    "unitId": "id_1794508782104_dkmt8njku",
+    "slug": "economic-trends-employment",
+    "name": "Economic trends and employment generation",
+    "nameTa": "Economic trends and employment generation",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782105_1kw3lls9j",
+    "createdAt": "2026-11-12T18:39:42.105Z",
+    "updatedAt": "2026-11-12T18:39:42.105Z",
+    "unitId": "id_1794508782104_dkmt8njku",
+    "slug": "land-reforms-agriculture",
+    "name": "Land reforms, agriculture, and science & technology in agriculture",
+    "nameTa": "Land reforms, agriculture, and science & technology in agriculture",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782105_1cd2faj80",
+    "createdAt": "2026-11-12T18:39:42.105Z",
+    "updatedAt": "2026-11-12T18:39:42.105Z",
+    "unitId": "id_1794508782104_dkmt8njku",
+    "slug": "industrial-growth-rural-welfare",
+    "name": "Industrial growth and rural welfare-oriented programmes",
+    "nameTa": "Industrial growth and rural welfare-oriented programmes",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782105_td8655dpj",
+    "createdAt": "2026-11-12T18:39:42.105Z",
+    "updatedAt": "2026-11-12T18:39:42.105Z",
+    "unitId": "id_1794508782104_dkmt8njku",
+    "slug": "social-problems",
+    "name": "Social problems: population, education, health, employment and poverty",
+    "nameTa": "Social problems: population, education, health, employment and poverty",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782105_v9vz5ceao",
+    "createdAt": "2026-11-12T18:39:42.105Z",
+    "updatedAt": "2026-11-12T18:39:42.105Z",
+    "unitId": "id_1794508782104_dkmt8njku",
+    "slug": "social-justice-harmony",
+    "name": "Social Justice and Social Harmony as cornerstones of development",
+    "nameTa": "Social Justice and Social Harmony as cornerstones of development",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782105_zee7t6mu8",
+    "createdAt": "2026-11-12T18:39:42.105Z",
+    "updatedAt": "2026-11-12T18:39:42.105Z",
+    "unitId": "id_1794508782104_dkmt8njku",
+    "slug": "education-health-tamil-nadu",
+    "name": "Education and Health systems in Tamil Nadu",
+    "nameTa": "Education and Health systems in Tamil Nadu",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782106_8n0ammxt5",
+    "createdAt": "2026-11-12T18:39:42.106Z",
+    "updatedAt": "2026-11-12T18:39:42.106Z",
+    "unitId": "id_1794508782104_dkmt8njku",
+    "slug": "geography-economic-growth-tn",
+    "name": "Geography of Tamil Nadu and its impact on economic growth",
+    "nameTa": "Geography of Tamil Nadu and its impact on economic growth",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782106_sog4yw4ka",
+    "createdAt": "2026-11-12T18:39:42.106Z",
+    "updatedAt": "2026-11-12T18:39:42.106Z",
+    "unitId": "id_1794508782104_dkmt8njku",
+    "slug": "government-welfare-schemes",
+    "name": "Welfare schemes of Government",
+    "nameTa": "Welfare schemes of Government",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782106_nyh3ryten",
+    "createdAt": "2026-11-12T18:39:42.106Z",
+    "updatedAt": "2026-11-12T18:39:42.106Z",
+    "unitId": "id_1794508782104_dkmt8njku",
+    "slug": "current-socio-economic-issues",
+    "name": "Current socio-economic issues",
+    "nameTa": "Current socio-economic issues",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782106_w4z3xbhk6",
+    "createdAt": "2026-11-12T18:39:42.106Z",
+    "updatedAt": "2026-11-12T18:39:42.106Z",
+    "unitId": "id_1794508782106_zcq3p6b4r",
+    "slug": "history-tamil-society-archaeology",
+    "name": "History of Tamil Society and related archaeological discoveries",
+    "nameTa": "History of Tamil Society and related archaeological discoveries",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782106_mm7mpf5vv",
+    "createdAt": "2026-11-12T18:39:42.106Z",
+    "updatedAt": "2026-11-12T18:39:42.106Z",
+    "unitId": "id_1794508782106_zcq3p6b4r",
+    "slug": "tamil-literature-sangam-contemporary",
+    "name": "Tamil Literature from Sangam age till contemporary times",
+    "nameTa": "Tamil Literature from Sangam age till contemporary times",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782107_q87bd8moy",
+    "createdAt": "2026-11-12T18:39:42.107Z",
+    "updatedAt": "2026-11-12T18:39:42.107Z",
+    "unitId": "id_1794508782106_zcq3p6b4r",
+    "slug": "thirukkural-secular-values",
+    "name": "Thirukkural: Significance as secular literature, relevance to everyday life, and universal values",
+    "nameTa": "Thirukkural: Significance as secular literature, relevance to everyday life, and universal values",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782107_domue6r8b",
+    "createdAt": "2026-11-12T18:39:42.107Z",
+    "updatedAt": "2026-11-12T18:39:42.107Z",
+    "unitId": "id_1794508782106_zcq3p6b4r",
+    "slug": "role-tamil-nadu-freedom-struggle",
+    "name": "Role of Tamil Nadu in the freedom struggle and early agitations",
+    "nameTa": "Role of Tamil Nadu in the freedom struggle and early agitations",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782107_oh5tpls00",
+    "createdAt": "2026-11-12T18:39:42.107Z",
+    "updatedAt": "2026-11-12T18:39:42.107Z",
+    "unitId": "id_1794508782106_zcq3p6b4r",
+    "slug": "role-women-freedom-struggle",
+    "name": "Role of women in the freedom struggle",
+    "nameTa": "Role of women in the freedom struggle",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782107_dv3yhypj9",
+    "createdAt": "2026-11-12T18:39:42.107Z",
+    "updatedAt": "2026-11-12T18:39:42.107Z",
+    "unitId": "id_1794508782106_zcq3p6b4r",
+    "slug": "social-reformers-movements-tn",
+    "name": "Various social reformers and social reform movements",
+    "nameTa": "Various social reformers and social reform movements",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782107_tksw2qoz1",
+    "createdAt": "2026-11-12T18:39:42.107Z",
+    "updatedAt": "2026-11-12T18:39:42.107Z",
+    "unitId": "id_1794508782106_zcq3p6b4r",
+    "slug": "social-transformation-tamil-nadu",
+    "name": "Social transformation of Tamil Nadu",
+    "nameTa": "Social transformation of Tamil Nadu",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782108_8tmzfk8kn",
+    "createdAt": "2026-11-12T18:39:42.108Z",
+    "updatedAt": "2026-11-12T18:39:42.108Z",
+    "unitId": "id_1794508782107_1eu0ypt3e",
+    "slug": "simplification",
+    "name": "Simplification",
+    "nameTa": "Simplification",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782108_7zebi9by3",
+    "createdAt": "2026-11-12T18:39:42.108Z",
+    "updatedAt": "2026-11-12T18:39:42.108Z",
+    "unitId": "id_1794508782107_1eu0ypt3e",
+    "slug": "percentage",
+    "name": "Percentage",
+    "nameTa": "Percentage",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782108_bfekmos17",
+    "createdAt": "2026-11-12T18:39:42.108Z",
+    "updatedAt": "2026-11-12T18:39:42.108Z",
+    "unitId": "id_1794508782107_1eu0ypt3e",
+    "slug": "hcf-and-lcm",
+    "name": "Highest Common Factor (HCF) & Lowest Common Multiple (LCM)",
+    "nameTa": "Highest Common Factor (HCF) & Lowest Common Multiple (LCM)",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782108_s5hlkl1cl",
+    "createdAt": "2026-11-12T18:39:42.108Z",
+    "updatedAt": "2026-11-12T18:39:42.108Z",
+    "unitId": "id_1794508782107_1eu0ypt3e",
+    "slug": "ratio-and-proportion",
+    "name": "Ratio and Proportion",
+    "nameTa": "Ratio and Proportion",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782108_752kavz8p",
+    "createdAt": "2026-11-12T18:39:42.108Z",
+    "updatedAt": "2026-11-12T18:39:42.108Z",
+    "unitId": "id_1794508782107_1eu0ypt3e",
+    "slug": "simple-interest",
+    "name": "Simple Interest",
+    "nameTa": "Simple Interest",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782108_d7zqwg3ky",
+    "createdAt": "2026-11-12T18:39:42.108Z",
+    "updatedAt": "2026-11-12T18:39:42.108Z",
+    "unitId": "id_1794508782107_1eu0ypt3e",
+    "slug": "compound-interest",
+    "name": "Compound Interest",
+    "nameTa": "Compound Interest",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782108_55ktis46w",
+    "createdAt": "2026-11-12T18:39:42.108Z",
+    "updatedAt": "2026-11-12T18:39:42.108Z",
+    "unitId": "id_1794508782107_1eu0ypt3e",
+    "slug": "area-and-volume",
+    "name": "Area and Volume",
+    "nameTa": "Area and Volume",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782109_dwsmg16vj",
+    "createdAt": "2026-11-12T18:39:42.109Z",
+    "updatedAt": "2026-11-12T18:39:42.109Z",
+    "unitId": "id_1794508782107_1eu0ypt3e",
+    "slug": "time-and-work",
+    "name": "Time and Work",
+    "nameTa": "Time and Work",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782109_ut2vqhkg0",
+    "createdAt": "2026-11-12T18:39:42.109Z",
+    "updatedAt": "2026-11-12T18:39:42.109Z",
+    "unitId": "id_1794508782109_gopawhtqb",
+    "slug": "logical-reasoning",
+    "name": "Logical Reasoning",
+    "nameTa": "Logical Reasoning",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782109_700h3htxx",
+    "createdAt": "2026-11-12T18:39:42.109Z",
+    "updatedAt": "2026-11-12T18:39:42.109Z",
+    "unitId": "id_1794508782109_gopawhtqb",
+    "slug": "puzzles-dice",
+    "name": "Puzzles and Dice",
+    "nameTa": "Puzzles and Dice",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782109_l05i6u144",
+    "createdAt": "2026-11-12T18:39:42.109Z",
+    "updatedAt": "2026-11-12T18:39:42.109Z",
+    "unitId": "id_1794508782109_gopawhtqb",
+    "slug": "visual-reasoning",
+    "name": "Visual Reasoning",
+    "nameTa": "Visual Reasoning",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782109_1i1a4deqj",
+    "createdAt": "2026-11-12T18:39:42.109Z",
+    "updatedAt": "2026-11-12T18:39:42.109Z",
+    "unitId": "id_1794508782109_gopawhtqb",
+    "slug": "alphanumeric-reasoning",
+    "name": "Alphanumeric Reasoning",
+    "nameTa": "Alphanumeric Reasoning",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782110_18tctqnf5",
+    "createdAt": "2026-11-12T18:39:42.110Z",
+    "updatedAt": "2026-11-12T18:39:42.110Z",
+    "unitId": "id_1794508782109_gopawhtqb",
+    "slug": "number-series",
+    "name": "Number Series",
+    "nameTa": "Number Series",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782110_rmaakyo7c",
+    "createdAt": "2026-11-12T18:39:42.110Z",
+    "updatedAt": "2026-11-12T18:39:42.110Z",
+    "unitId": "id_1794508782110_da02nv0a3",
+    "slug": "ta-pirithu-serthu",
+    "name": "பிரித்து எழுதுதல்; சேர்த்து எழுதுதல்",
+    "nameTa": "பிரித்து எழுதுதல்; சேர்த்து எழுதுதல்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782110_h4d7xtjkr",
+    "createdAt": "2026-11-12T18:39:42.110Z",
+    "updatedAt": "2026-11-12T18:39:42.110Z",
+    "unitId": "id_1794508782110_da02nv0a3",
+    "slug": "ta-sandhi-pizhai",
+    "name": "சந்திப்பிழை அறிதல்",
+    "nameTa": "சந்திப்பிழை அறிதல்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782110_s0k44un1o",
+    "createdAt": "2026-11-12T18:39:42.110Z",
+    "updatedAt": "2026-11-12T18:39:42.110Z",
+    "unitId": "id_1794508782110_da02nv0a3",
+    "slug": "ta-kuril-nedil",
+    "name": "குறில், நெடில் வேறுபாடு",
+    "nameTa": "குறில், நெடில் வேறுபாடு",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782110_18gij1i9e",
+    "createdAt": "2026-11-12T18:39:42.110Z",
+    "updatedAt": "2026-11-12T18:39:42.110Z",
+    "unitId": "id_1794508782110_da02nv0a3",
+    "slug": "ta-la-zha-verupaadu",
+    "name": "லகர, ளகர, ழகர வேறுபாடு",
+    "nameTa": "லகர, ளகர, ழகர வேறுபாடு",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782112_2vvi0b0cp",
+    "createdAt": "2026-11-12T18:39:42.112Z",
+    "updatedAt": "2026-11-12T18:39:42.112Z",
+    "unitId": "id_1794508782110_da02nv0a3",
+    "slug": "ta-na-na-verupaadu",
+    "name": "னகர, ணகர வேறுபாடு",
+    "nameTa": "னகர, ணகர வேறுபாடு",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782112_w402crf5g",
+    "createdAt": "2026-11-12T18:39:42.112Z",
+    "updatedAt": "2026-11-12T18:39:42.112Z",
+    "unitId": "id_1794508782110_da02nv0a3",
+    "slug": "ta-ra-ra-verupaadu",
+    "name": "ரகர, றகர வேறுபாடு",
+    "nameTa": "ரகர, றகர வேறுபாடு",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782112_yq2s2tcwd",
+    "createdAt": "2026-11-12T18:39:42.112Z",
+    "updatedAt": "2026-11-12T18:39:42.112Z",
+    "unitId": "id_1794508782110_da02nv0a3",
+    "slug": "ta-ina-ezhuthukal",
+    "name": "இன எழுத்துகள் அறிதல்",
+    "nameTa": "இன எழுத்துகள் அறிதல்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782112_8tfw8x0w9",
+    "createdAt": "2026-11-12T18:39:42.112Z",
+    "updatedAt": "2026-11-12T18:39:42.112Z",
+    "unitId": "id_1794508782110_da02nv0a3",
+    "slug": "ta-suttu-vina-ezhuthukal",
+    "name": "சுட்டு எழுத்துகள்; வினா எழுத்துகள்",
+    "nameTa": "சுட்டு எழுத்துகள்; வினா எழுத்துகள்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782112_vgqxzlr5b",
+    "createdAt": "2026-11-12T18:39:42.112Z",
+    "updatedAt": "2026-11-12T18:39:42.112Z",
+    "unitId": "id_1794508782110_da02nv0a3",
+    "slug": "ta-orumai-panmai",
+    "name": "ஒருமை, பன்மை அறிதல்",
+    "nameTa": "ஒருமை, பன்மை அறிதல்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782113_vvrapp2ip",
+    "createdAt": "2026-11-12T18:39:42.113Z",
+    "updatedAt": "2026-11-12T18:39:42.113Z",
+    "unitId": "id_1794508782110_da02nv0a3",
+    "slug": "ta-vinaimutru-vinaiyecham",
+    "name": "வினைமுற்று, வினையெச்சம், வினையாலணையும் பெயர், பெயரெச்சம் வகை அறிதல்",
+    "nameTa": "வினைமுற்று, வினையெச்சம், வினையாலணையும் பெயர், பெயரெச்சம் வகை அறிதல்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782113_wo2curx3w",
+    "createdAt": "2026-11-12T18:39:42.113Z",
+    "updatedAt": "2026-11-12T18:39:42.113Z",
+    "unitId": "id_1794508782110_da02nv0a3",
+    "slug": "ta-ayarchol-thamizhchol",
+    "name": "அயற்சொல் / தமிழ்ச்சொல் அறிதல்",
+    "nameTa": "அயற்சொல் / தமிழ்ச்சொல் அறிதல்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782113_fhqvr3vrq",
+    "createdAt": "2026-11-12T18:39:42.113Z",
+    "updatedAt": "2026-11-12T18:39:42.113Z",
+    "unitId": "id_1794508782110_da02nv0a3",
+    "slug": "ta-ethirchol-vinaichol",
+    "name": "எதிர்ச்சொல்; வினைச்சொல்",
+    "nameTa": "எதிர்ச்சொல்; வினைச்சொல்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782113_9bubnvz7b",
+    "createdAt": "2026-11-12T18:39:42.113Z",
+    "updatedAt": "2026-11-12T18:39:42.113Z",
+    "unitId": "id_1794508782110_da02nv0a3",
+    "slug": "ta-ezhuthuppizhai-otruppizhai",
+    "name": "எழுத்துப்பிழை மற்றும் ஒற்றுப்பிழை நீக்குதல்",
+    "nameTa": "எழுத்துப்பிழை மற்றும் ஒற்றுப்பிழை நீக்குதல்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782113_e0tjup574",
+    "createdAt": "2026-11-12T18:39:42.113Z",
+    "updatedAt": "2026-11-12T18:39:42.113Z",
+    "unitId": "id_1794508782113_kvycp3rvm",
+    "slug": "ta-ethirchol-ezhuthuthal",
+    "name": "எதிர்ச்சொல் எழுதுதல்",
+    "nameTa": "எதிர்ச்சொல் எழுதுதல்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782113_doeao29r3",
+    "createdAt": "2026-11-12T18:39:42.113Z",
+    "updatedAt": "2026-11-12T18:39:42.113Z",
+    "unitId": "id_1794508782113_kvycp3rvm",
+    "slug": "ta-orezuthu-orumozhi",
+    "name": "ஓரெழுத்து ஒரு மொழி",
+    "nameTa": "ஓரெழுத்து ஒரு மொழி",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782114_yk4q6b1td",
+    "createdAt": "2026-11-12T18:39:42.114Z",
+    "updatedAt": "2026-11-12T18:39:42.114Z",
+    "unitId": "id_1794508782113_kvycp3rvm",
+    "slug": "ta-uriya-porul",
+    "name": "உரிய பொருளைக் கண்டறிதல்",
+    "nameTa": "உரிய பொருளைக் கண்டறிதல்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782114_l7rjf2sek",
+    "createdAt": "2026-11-12T18:39:42.114Z",
+    "updatedAt": "2026-11-12T18:39:42.114Z",
+    "unitId": "id_1794508782113_kvycp3rvm",
+    "slug": "ta-oruporul-pala-sorkal",
+    "name": "ஒருபொருள் தரும் பல சொற்கள்",
+    "nameTa": "ஒருபொருள் தரும் பல சொற்கள்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782114_fbkeo1spa",
+    "createdAt": "2026-11-12T18:39:42.114Z",
+    "updatedAt": "2026-11-12T18:39:42.114Z",
+    "unitId": "id_1794508782113_kvycp3rvm",
+    "slug": "ta-poruntha-chol",
+    "name": "பொருந்தாச் சொல்லைக் கண்டறிதல்",
+    "nameTa": "பொருந்தாச் சொல்லைக் கண்டறிதல்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782114_4ppoi1gi6",
+    "createdAt": "2026-11-12T18:39:42.114Z",
+    "updatedAt": "2026-11-12T18:39:42.114Z",
+    "unitId": "id_1794508782113_kvycp3rvm",
+    "slug": "ta-agara-varisai",
+    "name": "அகர வரிசைப்படி சொற்களைச் சீரமைத்தல்",
+    "nameTa": "அகர வரிசைப்படி சொற்களைச் சீரமைத்தல்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782114_vl3j2bf1p",
+    "createdAt": "2026-11-12T18:39:42.114Z",
+    "updatedAt": "2026-11-12T18:39:42.114Z",
+    "unitId": "id_1794508782113_kvycp3rvm",
+    "slug": "ta-iruporul-kurikkum-sorkal",
+    "name": "இருபொருள் குறிக்கும் சொற்கள்",
+    "nameTa": "இருபொருள் குறிக்கும் சொற்கள்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782114_fihti6e2i",
+    "createdAt": "2026-11-12T18:39:42.114Z",
+    "updatedAt": "2026-11-12T18:39:42.114Z",
+    "unitId": "id_1794508782113_kvycp3rvm",
+    "slug": "ta-pechu-ezhuthu-vazhakku",
+    "name": "பேச்சு வழக்கு மற்றும் எழுத்து வழக்கு",
+    "nameTa": "பேச்சு வழக்கு மற்றும் எழுத்து வழக்கு",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782115_0ggr6felv",
+    "createdAt": "2026-11-12T18:39:42.115Z",
+    "updatedAt": "2026-11-12T18:39:42.115Z",
+    "unitId": "id_1794508782113_kvycp3rvm",
+    "slug": "ta-oor-peyar-maruuvu",
+    "name": "ஊர்ப் பெயர்களின் மரூஉ",
+    "nameTa": "ஊர்ப் பெயர்களின் மரூஉ",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782115_1y0rtt23n",
+    "createdAt": "2026-11-12T18:39:42.115Z",
+    "updatedAt": "2026-11-12T18:39:42.115Z",
+    "unitId": "id_1794508782113_kvycp3rvm",
+    "slug": "ta-thooiya-thamizh-sorkal",
+    "name": "பேச்சு வழக்குச் சொற்களுக்கு இணையான தூய தமிழ்ச் சொற்கள்",
+    "nameTa": "பேச்சு வழக்குச் சொற்களுக்கு இணையான தூய தமிழ்ச் சொற்கள்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782115_rymx603w3",
+    "createdAt": "2026-11-12T18:39:42.115Z",
+    "updatedAt": "2026-11-12T18:39:42.115Z",
+    "unitId": "id_1794508782115_e60slhamu",
+    "slug": "ta-sol-ozhungupaduthal",
+    "name": "சொற்களை ஒழுங்குபடுத்திச் சொற்றொடர் அமைத்தல்",
+    "nameTa": "சொற்களை ஒழுங்குபடுத்திச் சொற்றொடர் அமைத்தல்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782115_wa4qrz8gg",
+    "createdAt": "2026-11-12T18:39:42.115Z",
+    "updatedAt": "2026-11-12T18:39:42.115Z",
+    "unitId": "id_1794508782115_e60slhamu",
+    "slug": "ta-thodar-vagaigal",
+    "name": "தொடர் வகைகள்",
+    "nameTa": "தொடர் வகைகள்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782115_bap4z041c",
+    "createdAt": "2026-11-12T18:39:42.115Z",
+    "updatedAt": "2026-11-12T18:39:42.115Z",
+    "unitId": "id_1794508782115_e60slhamu",
+    "slug": "ta-seivinai-seyappaattuvinai",
+    "name": "செய்வினை, செயப்பாட்டு வினை",
+    "nameTa": "செய்வினை, செயப்பாட்டு வினை",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782116_nmmr0l0n7",
+    "createdAt": "2026-11-12T18:39:42.116Z",
+    "updatedAt": "2026-11-12T18:39:42.116Z",
+    "unitId": "id_1794508782115_e60slhamu",
+    "slug": "ta-thanvinai-piravinai",
+    "name": "தன்வினை, பிறவினை",
+    "nameTa": "தன்வினை, பிறவினை",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782116_lcci02rhr",
+    "createdAt": "2026-11-12T18:39:42.116Z",
+    "updatedAt": "2026-11-12T18:39:42.116Z",
+    "unitId": "id_1794508782115_e60slhamu",
+    "slug": "ta-marabu-thamizh",
+    "name": "மரபுத் தமிழ் (திணை, பால், காலம், ஒலி, வினை, தொகை மரபு)",
+    "nameTa": "மரபுத் தமிழ் (திணை, பால், காலம், ஒலி, வினை, தொகை மரபு)",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782116_o4vj6crap",
+    "createdAt": "2026-11-12T18:39:42.116Z",
+    "updatedAt": "2026-11-12T18:39:42.116Z",
+    "unitId": "id_1794508782115_e60slhamu",
+    "slug": "ta-niruthatkuriyeedugal",
+    "name": "நிறுத்தல் குறியீடுகள் அறிதல்",
+    "nameTa": "நிறுத்தல் குறியீடுகள் அறிதல்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782116_n5bi7ifrv",
+    "createdAt": "2026-11-12T18:39:42.116Z",
+    "updatedAt": "2026-11-12T18:39:42.116Z",
+    "unitId": "id_1794508782116_kxyrfaaip",
+    "slug": "ta-kalai-ariviyal-kalvi",
+    "name": "அறிவியல் மற்றும் கல்வி கலைச்சொற்கள்",
+    "nameTa": "அறிவியல் மற்றும் கல்வி கலைச்சொற்கள்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782116_0z5its8d8",
+    "createdAt": "2026-11-12T18:39:42.116Z",
+    "updatedAt": "2026-11-12T18:39:42.116Z",
+    "unitId": "id_1794508782116_kxyrfaaip",
+    "slug": "ta-kalai-maruthuvam-melanmai",
+    "name": "மருத்துவம் மற்றும் மேலாண்மை கலைச்சொற்கள்",
+    "nameTa": "மருத்துவம் மற்றும் மேலாண்மை கலைச்சொற்கள்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782117_37v9pjh6a",
+    "createdAt": "2026-11-12T18:39:42.117Z",
+    "updatedAt": "2026-11-12T18:39:42.117Z",
+    "unitId": "id_1794508782116_kxyrfaaip",
+    "slug": "ta-kalai-sattam-puviyiyal",
+    "name": "சட்டம் மற்றும் புவியியல் கலைச்சொற்கள்",
+    "nameTa": "சட்டம் மற்றும் புவியியல் கலைச்சொற்கள்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782117_orh1tf975",
+    "createdAt": "2026-11-12T18:39:42.117Z",
+    "updatedAt": "2026-11-12T18:39:42.117Z",
+    "unitId": "id_1794508782116_kxyrfaaip",
+    "slug": "ta-kalai-thozhilnutpam-it",
+    "name": "தொழில்நுட்பம், ஊடகம் மற்றும் தகவல் தொழில்நுட்பம் கலைச்சொற்கள்",
+    "nameTa": "தொழில்நுட்பம், ஊடகம் மற்றும் தகவல் தொழில்நுட்பம் கலைச்சொற்கள்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782117_vlqchqcxj",
+    "createdAt": "2026-11-12T18:39:42.117Z",
+    "updatedAt": "2026-11-12T18:39:42.117Z",
+    "unitId": "id_1794508782117_dllbt0nn7",
+    "slug": "ta-paththi-vinaakkal",
+    "name": "பத்திகள் படித்துச் சரியான விடையைத் தேர்ந்தெடுத்தல்",
+    "nameTa": "பத்திகள் படித்துச் சரியான விடையைத் தேர்ந்தெடுத்தல்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782117_0e3mihk74",
+    "createdAt": "2026-11-12T18:39:42.117Z",
+    "updatedAt": "2026-11-12T18:39:42.117Z",
+    "unitId": "id_1794508782117_dllbt0nn7",
+    "slug": "ta-seithithal-seithigal",
+    "name": "நாளிதழ் செய்திகள், தலையங்கங்கள் மற்றும் அரசு அறிவிப்புகள்",
+    "nameTa": "நாளிதழ் செய்திகள், தலையங்கங்கள் மற்றும் அரசு அறிவிப்புகள்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782117_lik6w5sii",
+    "createdAt": "2026-11-12T18:39:42.117Z",
+    "updatedAt": "2026-11-12T18:39:42.117Z",
+    "unitId": "id_1794508782117_dllbt0nn7",
+    "slug": "ta-uvamai-pazhamozhi",
+    "name": "உவமை மற்றும் பழமொழிகளின் பொருள் அறிதல்",
+    "nameTa": "உவமை மற்றும் பழமொழிகளின் பொருள் அறிதல்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782118_2ck1vcze8",
+    "createdAt": "2026-11-12T18:39:42.118Z",
+    "updatedAt": "2026-11-12T18:39:42.118Z",
+    "unitId": "id_1794508782118_tr6amh0js",
+    "slug": "ta-angila-sorkal-thamizhaakkam",
+    "name": "ஆங்கிலச் சொற்களுக்கு இணையான தமிழ்ச் சொற்கள்",
+    "nameTa": "ஆங்கிலச் சொற்களுக்கு இணையான தமிழ்ச் சொற்கள்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782118_5ik60p070",
+    "createdAt": "2026-11-12T18:39:42.118Z",
+    "updatedAt": "2026-11-12T18:39:42.118Z",
+    "unitId": "id_1794508782118_tr6amh0js",
+    "slug": "ta-kaditham-manukkal-mozhipeyarppu",
+    "name": "கடிதம், தலைப்புகள், கோப்புகள் மற்றும் மனுக்கள் மொழிபெயர்ப்பு",
+    "nameTa": "கடிதம், தலைப்புகள், கோப்புகள் மற்றும் மனுக்கள் மொழிபெயர்ப்பு",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782118_uuq079tp8",
+    "createdAt": "2026-11-12T18:39:42.118Z",
+    "updatedAt": "2026-11-12T18:39:42.118Z",
+    "unitId": "id_1794508782118_vdah3jj09",
+    "slug": "ta-thirukkural-20-adhigarangal",
+    "name": "திருக்குறள் (ஒழுக்கமுடைமை, பொறையுடைமை, ஊக்கமுடைமை, விருந்தோம்பல், அன்புடைமை, கல்வி உள்ளிட்ட 20 அதிகாரங்கள்)",
+    "nameTa": "திருக்குறள் (ஒழுக்கமுடைமை, பொறையுடைமை, ஊக்கமுடைமை, விருந்தோம்பல், அன்புடைமை, கல்வி உள்ளிட்ட 20 அதிகாரங்கள்)",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782119_hyld1gos1",
+    "createdAt": "2026-11-12T18:39:42.119Z",
+    "updatedAt": "2026-11-12T18:39:42.119Z",
+    "unitId": "id_1794508782118_vdah3jj09",
+    "slug": "ta-aranoolgal-pathinenkeezhkanakku",
+    "name": "அறநூல்கள்: நாலடியார், நான்மணிக்கடிகை, பழமொழி நானூறு, திரிகடுகம், சிறுபஞ்சமூலம், ஏலாதி",
+    "nameTa": "அறநூல்கள்: நாலடியார், நான்மணிக்கடிகை, பழமொழி நானூறு, திரிகடுகம், சிறுபஞ்சமூலம், ஏலாதி",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782119_libmp3cnk",
+    "createdAt": "2026-11-12T18:39:42.119Z",
+    "updatedAt": "2026-11-12T18:39:42.119Z",
+    "unitId": "id_1794508782118_vdah3jj09",
+    "slug": "ta-thamizh-arinjargal-thondum",
+    "name": "தமிழ் அறிஞர்கள்: உ.வே.சா., பாரதியார், பாரதிதாசன், பெருஞ்சித்திரனார், ஜி.யு. போப், வீரமாமுனிவர், வேலுநாச்சியார்",
+    "nameTa": "தமிழ் அறிஞர்கள்: உ.வே.சா., பாரதியார், பாரதிதாசன், பெருஞ்சித்திரனார், ஜி.யு. போப், வீரமாமுனிவர், வேலுநாச்சியார்",
+    "language": "Tamil"
+  },
+  {
+    "_id": "id_1794508782119_451jz17g2",
+    "createdAt": "2026-11-12T18:39:42.119Z",
+    "updatedAt": "2026-11-12T18:39:42.119Z",
+    "unitId": "id_1794508782119_u0us4hlnu",
+    "slug": "en-parts-of-speech",
+    "name": "Parts of Speech, Tenses and Voice",
+    "nameTa": "Parts of Speech, Tenses and Voice",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782119_u654gvphn",
+    "createdAt": "2026-11-12T18:39:42.119Z",
+    "updatedAt": "2026-11-12T18:39:42.119Z",
+    "unitId": "id_1794508782119_u0us4hlnu",
+    "slug": "en-sentence-structure-prepositions",
+    "name": "Sentence pattern, Prepositions and Articles",
+    "nameTa": "Sentence pattern, Prepositions and Articles",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782120_xrm38z6tp",
+    "createdAt": "2026-11-12T18:39:42.120Z",
+    "updatedAt": "2026-11-12T18:39:42.120Z",
+    "unitId": "id_1794508782119_wa0bs08ux",
+    "slug": "en-synonyms-antonyms",
+    "name": "Synonyms and Antonyms",
+    "nameTa": "Synonyms and Antonyms",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782120_4ru17rwbr",
+    "createdAt": "2026-11-12T18:39:42.120Z",
+    "updatedAt": "2026-11-12T18:39:42.120Z",
+    "unitId": "id_1794508782119_wa0bs08ux",
+    "slug": "en-prefixes-suffixes-idioms",
+    "name": "Prefixes, Suffixes and Idiomatic Phrases",
+    "nameTa": "Prefixes, Suffixes and Idiomatic Phrases",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782120_iqyqbi1ev",
+    "createdAt": "2026-11-12T18:39:42.120Z",
+    "updatedAt": "2026-11-12T18:39:42.120Z",
+    "unitId": "id_1794508782120_4nutjqfvu",
+    "slug": "en-official-correspondence",
+    "name": "Official correspondence, notes, and technical terms",
+    "nameTa": "Official correspondence, notes, and technical terms",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782121_ptolxkl61",
+    "createdAt": "2026-11-12T18:39:42.121Z",
+    "updatedAt": "2026-11-12T18:39:42.121Z",
+    "unitId": "id_1794508782121_re21fdr54",
+    "slug": "en-comprehension-passages",
+    "name": "Comprehension passages from prose and poetry",
+    "nameTa": "Comprehension passages from prose and poetry",
+    "language": "English"
+  },
+  {
+    "_id": "id_1794508782121_756o6voce",
+    "createdAt": "2026-11-12T18:39:42.121Z",
+    "updatedAt": "2026-11-12T18:39:42.121Z",
+    "unitId": "id_1794508782121_re21fdr54",
+    "slug": "en-literary-figures-appreciation",
+    "name": "Poetic devices and literary appreciation",
+    "nameTa": "Poetic devices and literary appreciation",
+    "language": "English"
+  }
+]

@@ -1,0 +1,192 @@
+[
+  {
+    "_id": "id_1794508782089_704hushb4",
+    "createdAt": "2026-11-12T18:39:42.089Z",
+    "updatedAt": "2026-11-12T18:39:42.089Z",
+    "partId": "id_1794508782089_58caiyssb",
+    "code": "Unit I",
+    "name": "General Science",
+    "questionWeightage": 5,
+    "displayOrder": 1
+  },
+  {
+    "_id": "id_1794508782094_ykkba91n8",
+    "createdAt": "2026-11-12T18:39:42.094Z",
+    "updatedAt": "2026-11-12T18:39:42.094Z",
+    "partId": "id_1794508782089_58caiyssb",
+    "code": "Unit II",
+    "name": "Geography",
+    "questionWeightage": 5,
+    "displayOrder": 2
+  },
+  {
+    "_id": "id_1794508782097_masnytr0r",
+    "createdAt": "2026-11-12T18:39:42.097Z",
+    "updatedAt": "2026-11-12T18:39:42.097Z",
+    "partId": "id_1794508782089_58caiyssb",
+    "code": "Unit III",
+    "name": "History, Culture of India and Indian National Movement",
+    "questionWeightage": 10,
+    "displayOrder": 3
+  },
+  {
+    "_id": "id_1794508782100_ftxcmrv70",
+    "createdAt": "2026-11-12T18:39:42.100Z",
+    "updatedAt": "2026-11-12T18:39:42.100Z",
+    "partId": "id_1794508782089_58caiyssb",
+    "code": "Unit IV",
+    "name": "Indian Polity",
+    "questionWeightage": 15,
+    "displayOrder": 4
+  },
+  {
+    "_id": "id_1794508782104_dkmt8njku",
+    "createdAt": "2026-11-12T18:39:42.104Z",
+    "updatedAt": "2026-11-12T18:39:42.104Z",
+    "partId": "id_1794508782089_58caiyssb",
+    "code": "Unit V",
+    "name": "Indian Economy and Development Administration in Tamil Nadu",
+    "questionWeightage": 20,
+    "displayOrder": 5
+  },
+  {
+    "_id": "id_1794508782106_zcq3p6b4r",
+    "createdAt": "2026-11-12T18:39:42.106Z",
+    "updatedAt": "2026-11-12T18:39:42.106Z",
+    "partId": "id_1794508782089_58caiyssb",
+    "code": "Unit VI",
+    "name": "History, Culture, Heritage and Socio-Political Movements of Tamil Nadu",
+    "questionWeightage": 20,
+    "displayOrder": 6
+  },
+  {
+    "_id": "id_1794508782107_1eu0ypt3e",
+    "createdAt": "2026-11-12T18:39:42.107Z",
+    "updatedAt": "2026-11-12T18:39:42.107Z",
+    "partId": "id_1794508782107_kqdy8rv73",
+    "code": "Unit I",
+    "name": "Aptitude",
+    "questionWeightage": 15,
+    "displayOrder": 1
+  },
+  {
+    "_id": "id_1794508782109_gopawhtqb",
+    "createdAt": "2026-11-12T18:39:42.109Z",
+    "updatedAt": "2026-11-12T18:39:42.109Z",
+    "partId": "id_1794508782107_kqdy8rv73",
+    "code": "Unit II",
+    "name": "Reasoning",
+    "questionWeightage": 10,
+    "displayOrder": 2
+  },
+  {
+    "_id": "id_1794508782110_da02nv0a3",
+    "createdAt": "2026-11-12T18:39:42.110Z",
+    "updatedAt": "2026-11-12T18:39:42.110Z",
+    "partId": "id_1794508782110_kjmt98aof",
+    "code": "அலகு I",
+    "name": "இலக்கணம்",
+    "questionWeightage": 25,
+    "displayOrder": 1
+  },
+  {
+    "_id": "id_1794508782113_kvycp3rvm",
+    "createdAt": "2026-11-12T18:39:42.113Z",
+    "updatedAt": "2026-11-12T18:39:42.113Z",
+    "partId": "id_1794508782110_kjmt98aof",
+    "code": "அலகு II",
+    "name": "சொல்லகராதி",
+    "questionWeightage": 15,
+    "displayOrder": 2
+  },
+  {
+    "_id": "id_1794508782115_e60slhamu",
+    "createdAt": "2026-11-12T18:39:42.115Z",
+    "updatedAt": "2026-11-12T18:39:42.115Z",
+    "partId": "id_1794508782110_kjmt98aof",
+    "code": "அலகு III",
+    "name": "எழுதும் திறன்",
+    "questionWeightage": 15,
+    "displayOrder": 3
+  },
+  {
+    "_id": "id_1794508782116_kxyrfaaip",
+    "createdAt": "2026-11-12T18:39:42.116Z",
+    "updatedAt": "2026-11-12T18:39:42.116Z",
+    "partId": "id_1794508782110_kjmt98aof",
+    "code": "அலகு IV",
+    "name": "கலைச் சொற்கள்",
+    "questionWeightage": 10,
+    "displayOrder": 4
+  },
+  {
+    "_id": "id_1794508782117_dllbt0nn7",
+    "createdAt": "2026-11-12T18:39:42.117Z",
+    "updatedAt": "2026-11-12T18:39:42.117Z",
+    "partId": "id_1794508782110_kjmt98aof",
+    "code": "அலகு V",
+    "name": "வாசித்தல் – புரிந்து கொள்ளும் திறன்",
+    "questionWeightage": 15,
+    "displayOrder": 5
+  },
+  {
+    "_id": "id_1794508782118_tr6amh0js",
+    "createdAt": "2026-11-12T18:39:42.118Z",
+    "updatedAt": "2026-11-12T18:39:42.118Z",
+    "partId": "id_1794508782110_kjmt98aof",
+    "code": "அலகு VI",
+    "name": "எளிய மொழி பெயர்ப்பு",
+    "questionWeightage": 5,
+    "displayOrder": 6
+  },
+  {
+    "_id": "id_1794508782118_vdah3jj09",
+    "createdAt": "2026-11-12T18:39:42.118Z",
+    "updatedAt": "2026-11-12T18:39:42.118Z",
+    "partId": "id_1794508782110_kjmt98aof",
+    "code": "அலகு VII",
+    "name": "இலக்கியம், தமிழ் அறிஞர்களும் தமிழ்த்தொண்டும்",
+    "questionWeightage": 15,
+    "displayOrder": 7
+  },
+  {
+    "_id": "id_1794508782119_u0us4hlnu",
+    "createdAt": "2026-11-12T18:39:42.119Z",
+    "updatedAt": "2026-11-12T18:39:42.119Z",
+    "partId": "id_1794508782119_9zp9iexp1",
+    "code": "Unit I",
+    "name": "Grammar",
+    "questionWeightage": 25,
+    "displayOrder": 1
+  },
+  {
+    "_id": "id_1794508782119_wa0bs08ux",
+    "createdAt": "2026-11-12T18:39:42.119Z",
+    "updatedAt": "2026-11-12T18:39:42.119Z",
+    "partId": "id_1794508782119_9zp9iexp1",
+    "code": "Unit II",
+    "name": "Vocabulary",
+    "questionWeightage": 15,
+    "displayOrder": 2
+  },
+  {
+    "_id": "id_1794508782120_4nutjqfvu",
+    "createdAt": "2026-11-12T18:39:42.120Z",
+    "updatedAt": "2026-11-12T18:39:42.120Z",
+    "partId": "id_1794508782119_9zp9iexp1",
+    "code": "Unit III",
+    "name": "Writing Skills & Technical Terms",
+    "questionWeightage": 20,
+    "displayOrder": 3
+  },
+  {
+    "_id": "id_1794508782121_re21fdr54",
+    "createdAt": "2026-11-12T18:39:42.121Z",
+    "updatedAt": "2026-11-12T18:39:42.121Z",
+    "partId": "id_1794508782119_9zp9iexp1",
+    "code": "Unit IV",
+    "name": "Reading Comprehension & Literary Works",
+    "questionWeightage": 40,
+    "displayOrder": 4
+  }
+]

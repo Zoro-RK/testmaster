@@ -1,0 +1,34 @@
+[
+  {
+    "_id": "id_1794508782259_xzqa63dvt",
+    "createdAt": "2026-11-12T18:39:42.259Z",
+    "updatedAt": "2026-11-12T18:39:42.259Z",
+    "groupId": "id_1794508782121_u36brs5sc",
+    "createdBy": "id_1794508782247_7rf3ilswk",
+    "title": "Indian Polity - Fundamental Rights & Preamble",
+    "description": "Comprehensive practice test covering fundamental rights, writs, and preamble provisions.",
+    "examId": "id_1794508782080_if4wntlgt",
+    "partId": "id_1794508782089_58caiyssb",
+    "questionCount": 5,
+    "durationMinutes": 10,
+    "language": "English",
+    "status": "published",
+    "publishedAt": "2026-11-09T18:39:42.259Z"
+  },
+  {
+    "_id": "id_1794508782260_f4othm1h1",
+    "createdAt": "2026-11-12T18:39:42.260Z",
+    "updatedAt": "2026-11-12T18:39:42.260Z",
+    "groupId": "id_1794508782121_u36brs5sc",
+    "createdBy": "id_1794508782247_2apmufwc6",
+    "title": "பொதுத் தமிழ் - அலகு I இலக்கணம் மற்றும் திருக்குறள்",
+    "description": "TNPSC குரூப் 4 பொதுத் தமிழ் இலக்கணம், புணர்ச்சி மற்றும் திருக்குறள் வினாத்தாள்.",
+    "examId": "id_1794508782080_if4wntlgt",
+    "partId": "id_1794508782110_kjmt98aof",
+    "questionCount": 5,
+    "durationMinutes": 10,
+    "language": "Tamil",
+    "status": "published",
+    "publishedAt": "2026-11-11T18:39:42.260Z"
+  }
+]
