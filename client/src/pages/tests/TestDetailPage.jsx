@@ -18,7 +18,7 @@ import {
   FolderDown,
   Sparkles
 } from 'lucide-react';
-import { api } from '../../services/api';
+import { api, BACKEND_URL } from '../../services/api';
 import LoadingScreen from '../../components/common/LoadingScreen';
 import PortionPdfModal from '../../components/tests/PortionPdfModal';
 
@@ -149,7 +149,9 @@ export default function TestDetailPage() {
   }
 
   const token = localStorage.getItem('tnpsc_token');
-  const rawPdfUrl = testData.portionPdfUrl || `/api/tests/${testId}/portion-pdf`;
+  const rawPdfUrl = testData.portionPdfUrl 
+    ? (testData.portionPdfUrl.startsWith('http') ? testData.portionPdfUrl : `${BACKEND_URL}${testData.portionPdfUrl}`)
+    : api.getPortionPdfUrl(testId);
   const pdfUrl = token ? `${rawPdfUrl}${rawPdfUrl.includes('?') ? '&' : '?'}token=${encodeURIComponent(token)}` : rawPdfUrl;
   const pdfName = testData.portionPdfName || 'Portion_Study_Guide.pdf';
 

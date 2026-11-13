@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, BookOpen, FileText, FolderDown, CheckCircle2, Clock, RotateCcw, Circle } from 'lucide-react';
-import { api } from '../../services/api';
+import { api, BACKEND_URL } from '../../services/api';
 import LoadingScreen from '../../components/common/LoadingScreen';
 
 export default function TopicDetailPage() {
@@ -184,7 +184,7 @@ export default function TopicDetailPage() {
                     <div style={{ fontSize: '14px', fontWeight: 700 }}>{m.title}</div>
                     <div style={{ fontSize: '12px', color: 'var(--color-muted)' }}>{m.fileName}</div>
                   </div>
-                  <a href={`/uploads/${m.fileName}`} target="_blank" rel="noreferrer" className="btn btn-secondary" style={{ padding: '6px 12px', fontSize: '12px' }}>
+                  <a href={m.fileName.startsWith('http') ? m.fileName : `${BACKEND_URL}/uploads/${m.fileName}`} target="_blank" rel="noreferrer" className="btn btn-secondary" style={{ padding: '6px 12px', fontSize: '12px' }}>
                     View
                   </a>
                 </div>
