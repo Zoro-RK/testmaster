@@ -8,10 +8,19 @@ import {
   PlayCircle, 
   RotateCcw, 
   CheckCircle2, 
-  FileText 
+  FileText,
+  BookOpen,
+  Download,
+  Eye,
+  ExternalLink,
+  ChevronDown,
+  ChevronUp,
+  FolderDown,
+  Sparkles
 } from 'lucide-react';
 import { api } from '../../services/api';
 import LoadingScreen from '../../components/common/LoadingScreen';
+import PortionPdfModal from '../../components/tests/PortionPdfModal';
 
 export default function TestDetailPage() {
   const { testId } = useParams();
@@ -20,6 +29,9 @@ export default function TestDetailPage() {
   const [testData, setTestData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [starting, setStarting] = useState(false);
+  const [isPdfModalOpen, setIsPdfModalOpen] = useState(false);
+  const [showInlinePdf, setShowInlinePdf] = useState(false);
+  const [showSynopsis, setShowSynopsis] = useState(false);
 
   useEffect(() => {
     async function loadTest() {
@@ -48,11 +60,14 @@ export default function TestDetailPage() {
     }
   };
 
-  if (loading) return <LoadingScreen message="Loading test details and instructions…" />;
+  if (loading) return <LoadingScreen message="Loading test details and portion study guide…" />;
   if (!testData) return <div className="page-container">Test not found.</div>;
 
+  const pdfUrl = testData.portionPdfUrl || `/api/tests/${testId}/portion-pdf`;
+  const pdfName = testData.portionPdfName || 'Portion_Study_Guide.pdf';
+
   return (
-    <div className="page-container" style={{ maxWidth: '840px' }}>
+    <div className="page-container" style={{ maxWidth: '880px' }}>
       <Link to="/tests" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '13px', fontWeight: 600, marginBottom: '20px', color: 'var(--color-ink-700)' }}>
         <ArrowLeft size={16} /> Back to Test Library
       </Link>
@@ -83,7 +98,7 @@ export default function TestDetailPage() {
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
           gap: '16px',
-          margin: '28px 0',
+          margin: '24px 0',
           padding: '20px',
           backgroundColor: 'var(--color-paper-50)',
           borderRadius: 'var(--radius-sm)',
@@ -115,12 +130,210 @@ export default function TestDetailPage() {
           </div>
         </div>
 
-        {/* Instructions */}
+        {/* ============================================================== */}
+        {/* NEW FEATURE: STUDY PORTION PDF BEFORE ATTENDING THE MCQ        */}
+        {/* ============================================================== */}
+        <div style={{
+          backgroundColor: 'var(--color-paper-100)',
+          border: '1.5px solid var(--color-teal-700)',
+          borderRadius: 'var(--radius-md)',
+          padding: '24px',
+          marginBottom: '28px',
+          boxShadow: '0 4px 14px rgba(23, 107, 103, 0.08)'
+        }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '14px', marginBottom: '16px' }}>
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+              <div style={{
+                width: '42px',
+                height: '42px',
+                borderRadius: '8px',
+                backgroundColor: 'var(--color-teal-700)',
+                color: 'var(--color-white)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexShrink: 0
+              }}>
+                <BookOpen size={22} />
+              </div>
+              <div>
+                <div style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  fontSize: '11px',
+                  fontWeight: 800,
+                  color: 'var(--color-teal-700)',
+                  backgroundColor: 'var(--color-teal-100)',
+                  padding: '2px 8px',
+                  borderRadius: 'var(--radius-pill)',
+                  marginBottom: '4px',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.04em'
+                }}>
+                  <Sparkles size={12} />
+                  Recommended Preparation
+                </div>
+                <h3 style={{ fontSize: '18px', fontWeight: 800, color: 'var(--color-ink-900)' }}>
+                  Study Portion Covered in this Test
+                </h3>
+                <p style={{ fontSize: '13px', color: 'var(--color-ink-700)', marginTop: '2px' }}>
+                  Review the study portion PDF before starting your timed MCQ exam.
+                </p>
+              </div>
+            </div>
+
+            {/* Main Action Buttons */}
+            <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+              <button
+                type="button"
+                onClick={() => setIsPdfModalOpen(true)}
+                className="btn btn-primary"
+                style={{
+                  padding: '9px 16px',
+                  fontSize: '13px',
+                  backgroundColor: 'var(--color-teal-700)',
+                  boxShadow: '0 2px 8px rgba(23, 107, 103, 0.25)'
+                }}
+              >
+                <BookOpen size={16} /> View & Study PDF
+              </button>
+
+              <a
+                href={pdfUrl}
+                download={pdfName}
+                className="btn btn-secondary"
+                style={{ padding: '9px 14px', fontSize: '13px' }}
+                title="Download Portion PDF"
+              >
+                <Download size={15} /> Download PDF
+              </a>
+
+              <button
+                type="button"
+                onClick={() => setShowInlinePdf(!showInlinePdf)}
+                className="btn btn-ghost"
+                style={{ padding: '9px 12px', fontSize: '13px', backgroundColor: 'var(--color-white)', border: '1px solid var(--color-line)' }}
+              >
+                <Eye size={15} /> {showInlinePdf ? 'Hide Inline' : 'Preview Inline'}
+              </button>
+            </div>
+          </div>
+
+          {/* Topics Covered Chips */}
+          {testData.linkedTopics && testData.linkedTopics.length > 0 && (
+            <div style={{ marginTop: '12px', paddingTop: '12px', borderTop: '1px solid var(--color-line)' }}>
+              <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--color-ink-700)', marginBottom: '8px' }}>
+                Topics Included in this Portion:
+              </div>
+              <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                {testData.linkedTopics.map(t => (
+                  <span
+                    key={t.id}
+                    style={{
+                      fontSize: '12px',
+                      padding: '4px 10px',
+                      borderRadius: 'var(--radius-pill)',
+                      backgroundColor: 'var(--color-white)',
+                      border: '1px solid var(--color-line)',
+                      color: 'var(--color-ink-900)',
+                      fontWeight: 600
+                    }}
+                  >
+                    • {t.name}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Expandable Key Concepts Synopsis */}
+          {testData.portionKeyPoints && testData.portionKeyPoints.length > 0 && (
+            <div style={{ marginTop: '14px' }}>
+              <button
+                type="button"
+                onClick={() => setShowSynopsis(!showSynopsis)}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  fontSize: '13px',
+                  fontWeight: 700,
+                  color: 'var(--color-teal-700)',
+                  padding: '4px 0'
+                }}
+              >
+                {showSynopsis ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                {showSynopsis ? 'Hide High-Yield Concept Summary' : 'Quick View High-Yield Concepts & Revision Notes'}
+              </button>
+
+              {showSynopsis && (
+                <div style={{
+                  marginTop: '10px',
+                  padding: '16px',
+                  backgroundColor: 'var(--color-white)',
+                  borderRadius: 'var(--radius-sm)',
+                  border: '1px solid var(--color-line)',
+                  fontSize: '13px',
+                  color: 'var(--color-ink-900)'
+                }}>
+                  <div style={{ fontWeight: 700, color: 'var(--color-teal-700)', marginBottom: '8px' }}>
+                    Core Concepts to Remember for this Test:
+                  </div>
+                  <ul style={{ paddingLeft: '18px', lineHeight: 1.6 }}>
+                    {testData.portionKeyPoints.map((pt, idx) => (
+                      <li key={idx} style={{ marginBottom: '6px' }}>{pt}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Optional Inline PDF Viewer */}
+          {showInlinePdf && (
+            <div style={{
+              marginTop: '18px',
+              borderRadius: 'var(--radius-sm)',
+              overflow: 'hidden',
+              border: '1px solid var(--color-line)',
+              height: '520px',
+              backgroundColor: '#525659'
+            }}>
+              <iframe
+                src={`${pdfUrl}#toolbar=1`}
+                title="Portion Study PDF Inline Preview"
+                style={{ width: '100%', height: '100%', border: 'none' }}
+              />
+            </div>
+          )}
+
+          {/* Linked Group Notes if any */}
+          {testData.linkedMaterials && testData.linkedMaterials.length > 0 && (
+            <div style={{ marginTop: '12px', fontSize: '12px', color: 'var(--color-ink-700)' }}>
+              <strong>Circle Study Notes:</strong>{' '}
+              {testData.linkedMaterials.map(m => (
+                <a
+                  key={m.id}
+                  href={m.fileUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ marginLeft: '6px', color: 'var(--color-teal-700)', textDecoration: 'underline' }}
+                >
+                  {m.title} ({m.fileName})
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Examination Instructions */}
         <div style={{ marginBottom: '32px' }}>
           <h3 style={{ fontSize: '16px', fontWeight: 700, marginBottom: '12px', color: 'var(--color-ink-900)' }}>
             Examination Instructions:
           </h3>
           <ul style={{ paddingLeft: '20px', fontSize: '14px', color: 'var(--color-ink-700)', lineHeight: 1.7 }}>
+            <li>Review the portion PDF above before initiating the examination.</li>
             <li>The timer starts as soon as you click <strong>Start Examination</strong>.</li>
             <li>Each question has exactly 4 options with one correct answer.</li>
             <li>You can mark questions for review and navigate using the Question Palette.</li>
@@ -159,7 +372,16 @@ export default function TestDetailPage() {
         )}
 
         {/* Action Button */}
-        <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '14px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '14px' }}>
+          <button
+            type="button"
+            onClick={() => setIsPdfModalOpen(true)}
+            className="btn btn-secondary"
+            style={{ padding: '12px 20px', fontSize: '14px' }}
+          >
+            <BookOpen size={16} /> Open Portion PDF
+          </button>
+
           <button
             onClick={handleStartExam}
             className="btn btn-primary"
@@ -173,7 +395,16 @@ export default function TestDetailPage() {
           </button>
         </div>
       </div>
+
+      {/* Interactive Fullscreen/Modal PDF Study Reader */}
+      <PortionPdfModal
+        isOpen={isPdfModalOpen}
+        onClose={() => setIsPdfModalOpen(false)}
+        pdfUrl={pdfUrl}
+        pdfName={pdfName}
+        title={testData.title}
+        onStartExam={handleStartExam}
+      />
     </div>
   );
 }
-

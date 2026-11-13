@@ -1,3 +1,5 @@
+const fs = require('fs');
+const path = require('path');
 const Test = require('../models/Test');
 const TestVersion = require('../models/TestVersion');
 const TestAttempt = require('../models/TestAttempt');
@@ -5,8 +7,10 @@ const ActivityEvent = require('../models/ActivityEvent');
 const SyllabusPart = require('../models/SyllabusPart');
 const SyllabusUnit = require('../models/SyllabusUnit');
 const SyllabusTopic = require('../models/SyllabusTopic');
+const Material = require('../models/Material');
 const User = require('../models/User');
 const { validateTestSchema } = require('../validators/testValidator');
+const { getOrGeneratePortionPdf, PORTION_NOTES, getPortionCategory } = require('../services/pdfService');
 
 async function validateTestJson(req, res) {
   try {
@@ -200,6 +204,29 @@ async function getTestById(req, res) {
     const userAttempts = await TestAttempt.find({ testId: test._id, userId: req.user._id });
     const latestAttempt = [...userAttempts].sort((a, b) => new Date(b.startedAt) - new Date(a.startedAt))[0];
 
+    // Fetch linked topics
+    let linkedTopics = [];
+    if (test.topicIds && test.topicIds.length > 0) {
+      linkedTopics = await SyllabusTopic.find({
+        $or: [
+          { _id: { $in: test.topicIds } },
+          { slug: { $in: test.topicIds } }
+        ]
+      });
+    }
+
+    // Fetch any shared materials related to this test's topics
+    let linkedMaterials = [];
+    if (test.topicIds && test.topicIds.length > 0) {
+      linkedMaterials = await Material.find({
+        groupId: test.groupId,
+        topicIds: { $in: test.topicIds }
+      });
+    }
+
+    const category = getPortionCategory(test.title, test.partId, part ? part.name : '');
+    const portionNotes = PORTION_NOTES[category] || PORTION_NOTES['default'];
+
     res.json({
       test: {
         id: test._id,
@@ -211,6 +238,15 @@ async function getTestById(req, res) {
         status: test.status,
         currentVersion: test.currentVersion,
         partName: part ? part.name : test.partId,
+        partCode: part ? part.code : 'A',
+        topicIds: test.topicIds || [],
+        linkedTopics: linkedTopics.map(t => ({ id: t._id, slug: t.slug, name: t.name, nameTa: t.nameTa })),
+        linkedMaterials: linkedMaterials.map(m => ({ id: m._id, title: m.title, fileName: m.fileName, fileUrl: `/uploads/${m.fileStorageKey}` })),
+        portionPdfUrl: `/api/tests/${test._id}/portion-pdf`,
+        portionPdfName: `${(test.title || 'Portion_Study_Guide').replace(/[^a-zA-Z0-9_-]/g, '_')}_Portion_Guide.pdf`,
+        portionOverview: portionNotes.overview,
+        portionKeyPoints: portionNotes.keyPoints,
+        portionSummarySections: portionNotes.summarySections,
         creator: {
           id: test.createdBy,
           displayName: creator ? creator.displayName : 'Group Member'
@@ -226,7 +262,27 @@ async function getTestById(req, res) {
       }
     });
   } catch (err) {
+    console.error('getTestById error:', err);
     res.status(500).json({ error: 'Failed to fetch test details.' });
+  }
+}
+
+async function getPortionPdf(req, res) {
+  try {
+    const { testId } = req.params;
+    const test = await Test.findById(testId);
+    if (!test) {
+      return res.status(404).json({ error: 'Test not found.' });
+    }
+
+    const { fullPath, filename } = await getOrGeneratePortionPdf(test);
+    res.setHeader('Content-Type', 'application/pdf');
+    res.setHeader('Content-Disposition', `inline; filename="${filename}"`);
+    const stream = fs.createReadStream(fullPath);
+    stream.pipe(res);
+  } catch (err) {
+    console.error('getPortionPdf error:', err);
+    res.status(500).json({ error: 'Failed to generate or serve portion study PDF.' });
   }
 }
 
@@ -300,6 +356,7 @@ module.exports = {
   createTest,
   getTests,
   getTestById,
+  getPortionPdf,
   publishTest,
   archiveTest,
   getMyTests

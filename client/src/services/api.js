@@ -70,6 +70,7 @@ export const api = {
     return request(`/tests${q ? `?${q}` : ''}`);
   },
   getTestById: (testId) => request(`/tests/${testId}`),
+  getPortionPdfUrl: (testId) => `/api/tests/${testId}/portion-pdf`,
   publishTest: (testId) => request(`/tests/${testId}/publish`, { method: 'POST' }),
   archiveTest: (testId) => request(`/tests/${testId}/archive`, { method: 'POST' }),
   getMyTests: () => request('/tests/my'),

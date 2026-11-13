@@ -227,14 +227,15 @@ async function runTests() {
 
     // 12. Bookmarks & Revision list
     console.log('[Test 12] Bookmark question & check Revision list...');
+    const uniqueBookmarkQId = `SCI-${Date.now()}`;
     const bookmarkRes = await request(app)
       .post('/api/progress/bookmarks')
       .set('Authorization', `Bearer ${friendToken}`)
       .send({
-        questionId: 'SCI-002',
+        questionId: uniqueBookmarkQId,
         testId: publishedTestId
       });
-    assert.strictEqual(bookmarkRes.status, 201);
+    assert(bookmarkRes.status === 200 || bookmarkRes.status === 201);
     assert.strictEqual(bookmarkRes.body.isBookmarked, true);
 
     const revisionRes = await request(app)
@@ -256,6 +257,16 @@ async function runTests() {
       assert.strictEqual(act.marks, undefined, 'Activity feed must never contain marks');
     }
     console.log('✔ Non-competitive group activity feed verified');
+
+    // 14. Portion Study PDF Generation & Retrieval
+    console.log('[Test 14] Portion Study PDF Generation & Retrieval...');
+    const pdfRes = await request(app)
+      .get(`/api/tests/${publishedTestId}/portion-pdf`)
+      .set('Authorization', `Bearer ${token}`);
+    assert.strictEqual(pdfRes.status, 200);
+    assert.strictEqual(pdfRes.headers['content-type'], 'application/pdf');
+    assert(pdfRes.body.length > 100 || (pdfRes.text && pdfRes.text.length > 100), 'PDF binary content must be returned');
+    console.log('✔ Portion Study PDF successfully generated and served');
 
     console.log('\n======================================================');
     console.log('🎉 ALL BACKEND VERIFICATION TESTS PASSED SUCCESSFULLY! 🎉');

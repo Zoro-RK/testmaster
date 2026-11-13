@@ -24,3 +24,4 @@ Thumbs.db
 # Uploads and temporary data
 server/uploads/*
 !server/uploads/.gitkeep
+
