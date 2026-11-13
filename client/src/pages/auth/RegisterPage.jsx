@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { User, Mail, Lock, Key, ArrowRight } from 'lucide-react';
+import { User, Lock, ArrowRight, Eye, EyeOff } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import Logo from '../../components/common/Logo';
 
 export default function RegisterPage() {
   const [displayName, setDisplayName] = useState('');
-  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [invitationCode, setInvitationCode] = useState('TNPSC2025');
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -20,11 +19,7 @@ export default function RegisterPage() {
     setError('');
 
     if (!displayName.trim()) {
-      setError('Display name is required.');
-      return;
-    }
-    if (!email.trim()) {
-      setError('Email address is required.');
+      setError('Name is required.');
       return;
     }
     if (password.length < 6) {
@@ -34,7 +29,7 @@ export default function RegisterPage() {
 
     try {
       setLoading(true);
-      await register(displayName.trim(), email.trim(), password, invitationCode.trim());
+      await register(displayName.trim(), password);
       navigate('/dashboard');
     } catch (err) {
       setError(err.message || 'Registration failed. Please try again.');
@@ -74,7 +69,7 @@ export default function RegisterPage() {
 
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label className="form-label" htmlFor="reg-name">Your Full Name / Display Name</label>
+          <label className="form-label" htmlFor="reg-name">Your Name</label>
           <div style={{ position: 'relative' }}>
             <input
               id="reg-name"
@@ -85,28 +80,11 @@ export default function RegisterPage() {
               value={displayName}
               onChange={(e) => setDisplayName(e.target.value)}
               required
+              autoFocus
             />
             <User size={16} color="var(--color-muted)" style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)' }} />
           </div>
-          <span className="form-hint">This name will be visible to friends in the study directory.</span>
-        </div>
-
-        <div className="form-group">
-          <label className="form-label" htmlFor="reg-email">Email Address</label>
-          <div style={{ position: 'relative' }}>
-            <input
-              id="reg-email"
-              type="email"
-              className="form-input"
-              style={{ paddingLeft: '38px' }}
-              placeholder="anand@example.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              autoComplete="email"
-            />
-            <Mail size={16} color="var(--color-muted)" style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)' }} />
-          </div>
+          <span className="form-hint">This name will be visible to friends in the study circle directory.</span>
         </div>
 
         <div className="form-group">
@@ -114,9 +92,9 @@ export default function RegisterPage() {
           <div style={{ position: 'relative' }}>
             <input
               id="reg-password"
-              type="password"
+              type={showPassword ? 'text' : 'password'}
               className="form-input"
-              style={{ paddingLeft: '38px' }}
+              style={{ paddingLeft: '38px', paddingRight: '40px' }}
               placeholder="Minimum 6 characters"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -124,25 +102,21 @@ export default function RegisterPage() {
               minLength={6}
             />
             <Lock size={16} color="var(--color-muted)" style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)' }} />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              aria-label={showPassword ? 'Hide password' : 'Show password'}
+              style={{
+                position: 'absolute',
+                right: '12px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                color: 'var(--color-muted)'
+              }}
+            >
+              {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
+            </button>
           </div>
-        </div>
-
-        <div className="form-group">
-          <label className="form-label" htmlFor="reg-code">Group Invitation Code</label>
-          <div style={{ position: 'relative' }}>
-            <input
-              id="reg-code"
-              type="text"
-              className="form-input"
-              style={{ paddingLeft: '38px', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: 600 }}
-              placeholder="TNPSC2025"
-              value={invitationCode}
-              onChange={(e) => setInvitationCode(e.target.value)}
-              required
-            />
-            <Key size={16} color="var(--color-saffron-500)" style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)' }} />
-          </div>
-          <span className="form-hint">Default group code: <strong>TNPSC2025</strong></span>
         </div>
 
         <button

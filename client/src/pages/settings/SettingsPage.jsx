@@ -12,8 +12,6 @@ export default function SettingsPage() {
   const [profileSuccess, setProfileSuccess] = useState(false);
   const [groupSuccess, setGroupSuccess] = useState(false);
 
-  const isAdmin = group?.role === 'groupAdmin';
-
   const handleUpdateProfile = async (e) => {
     e.preventDefault();
     if (!displayName.trim()) return;
@@ -113,49 +111,43 @@ export default function SettingsPage() {
 
         <div style={{ marginBottom: '20px', fontSize: '14px', color: 'var(--color-ink-700)' }}>
           <div>Circle Name: <strong>{group?.name || 'TNPSC Study Circle'}</strong></div>
-          <div style={{ marginTop: '4px' }}>Your Role: <strong>{isAdmin ? 'Group Administrator' : 'Circle Member'}</strong></div>
+          <div style={{ marginTop: '4px' }}>Your Role: <strong>Circle Member</strong></div>
         </div>
 
-        {isAdmin ? (
-          <div>
-            {groupSuccess && (
-              <div style={{ backgroundColor: 'var(--color-success-light)', border: '1px solid #cce8d9', color: 'var(--color-success)', padding: '10px 14px', borderRadius: 'var(--radius-sm)', fontSize: '13px', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                <Check size={16} /> Group settings saved.
-              </div>
-            )}
+        <div>
+          {groupSuccess && (
+            <div style={{ backgroundColor: 'var(--color-success-light)', border: '1px solid #cce8d9', color: 'var(--color-success)', padding: '10px 14px', borderRadius: 'var(--radius-sm)', fontSize: '13px', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <Check size={16} /> Group settings saved.
+            </div>
+          )}
 
-            <form onSubmit={handleUpdateGroup}>
-              <div className="form-group">
-                <label className="form-label">Invitation Code for New Friends</label>
-                <div style={{ position: 'relative' }}>
-                  <input
-                    type="text"
-                    className="form-input"
-                    style={{ paddingLeft: '38px', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: 700 }}
-                    value={invitationCode}
-                    onChange={(e) => setInvitationCode(e.target.value)}
-                    required
-                  />
-                  <Key size={16} color="var(--color-saffron-500)" style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)' }} />
-                </div>
-                <span className="form-hint">Share this code with friends so they can join upon registration.</span>
+          <form onSubmit={handleUpdateGroup}>
+            <div className="form-group">
+              <label className="form-label">Invitation Code for Friends</label>
+              <div style={{ position: 'relative' }}>
+                <input
+                  type="text"
+                  className="form-input"
+                  style={{ paddingLeft: '38px', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: 700 }}
+                  value={invitationCode}
+                  onChange={(e) => setInvitationCode(e.target.value)}
+                  required
+                />
+                <Key size={16} color="var(--color-saffron-500)" style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)' }} />
               </div>
+              <span className="form-hint">Share this code with friends so they can connect with this study circle.</span>
+            </div>
 
-              <button
-                type="submit"
-                className="btn btn-primary"
-                disabled={savingGroup}
-                style={{ marginTop: '8px' }}
-              >
-                <Save size={15} /> {savingGroup ? 'Updating…' : 'Update Group Code'}
-              </button>
-            </form>
-          </div>
-        ) : (
-          <div style={{ backgroundColor: 'var(--color-paper-100)', padding: '12px 16px', borderRadius: 'var(--radius-sm)', fontSize: '13px', color: 'var(--color-muted)' }}>
-            Only group administrators can modify study circle settings.
-          </div>
-        )}
+            <button
+              type="submit"
+              className="btn btn-primary"
+              disabled={savingGroup}
+              style={{ marginTop: '8px' }}
+            >
+              <Save size={15} /> {savingGroup ? 'Updating…' : 'Update Group Code'}
+            </button>
+          </form>
+        </div>
       </div>
 
       {/* Privacy Guarantee Card */}

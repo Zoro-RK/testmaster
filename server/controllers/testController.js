@@ -231,8 +231,8 @@ async function getTestById(req, res) {
     const part = await SyllabusPart.findById(test.partId) || await SyllabusPart.findOne({ code: test.partId });
     const isOwner = String(test.createdBy) === String(req.user._id);
 
-    // If published or owner/admin, allow viewing details
-    if (test.status !== 'published' && !isOwner && !req.isGroupAdmin) {
+    // If published or owner, allow viewing details
+    if (test.status !== 'published' && !isOwner) {
       return res.status(403).json({ error: 'This draft test is not yet published.' });
     }
 
@@ -340,8 +340,8 @@ async function publishTest(req, res) {
       return res.status(404).json({ error: 'Test not found.' });
     }
 
-    if (String(test.createdBy) !== String(req.user._id) && !req.isGroupAdmin) {
-      return res.status(403).json({ error: 'Only the test creator or group admin can publish this test.' });
+    if (String(test.createdBy) !== String(req.user._id)) {
+      return res.status(403).json({ error: 'Only the test creator can publish this test.' });
     }
 
     const updated = await Test.findByIdAndUpdate(test._id, {
@@ -376,8 +376,8 @@ async function archiveTest(req, res) {
       return res.status(404).json({ error: 'Test not found.' });
     }
 
-    if (String(test.createdBy) !== String(req.user._id) && !req.isGroupAdmin) {
-      return res.status(403).json({ error: 'Only the creator or group admin can archive this test.' });
+    if (String(test.createdBy) !== String(req.user._id)) {
+      return res.status(403).json({ error: 'Only the creator can archive this test.' });
     }
 
     const updated = await Test.findByIdAndUpdate(test._id, { $set: { status: 'archived' } }, { new: true });

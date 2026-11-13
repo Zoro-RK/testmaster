@@ -5,7 +5,7 @@
     "updatedAt": "2026-11-12T18:39:42.247Z",
     "groupId": "id_1794508782121_u36brs5sc",
     "userId": "id_1794508782246_58lxuinbi",
-    "role": "groupAdmin",
+    "role": "member",
     "membershipStatus": "approved"
   },
   {
@@ -34,5 +34,16 @@
     "userId": "id_1794508782247_vzl87013n",
     "role": "member",
     "membershipStatus": "approved"
+  },
+  {
+    "_id": "id_1794590849065_gk5dhztlp",
+    "createdAt": "2026-11-13T17:27:29.065Z",
+    "updatedAt": "2026-11-13T17:27:29.065Z",
+    "groupId": "6af60a91769c2489866b00c1",
+    "userId": "id_1794590849059_pt7ujvoon",
+    "role": "member",
+    "membershipStatus": "approved",
+    "joinedAt": "2026-11-13T17:27:29.065Z",
+    "__v": 0
   }
 ]

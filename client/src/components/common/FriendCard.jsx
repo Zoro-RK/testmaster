@@ -33,7 +33,7 @@ export default function FriendCard({ member }) {
               {displayName}
             </div>
             <div style={{ fontSize: '12px', color: 'var(--color-muted)' }}>
-              {role === 'groupAdmin' ? 'Group Admin' : 'Circle Member'}
+              Circle Member
             </div>
           </div>
         </div>

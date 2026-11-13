@@ -80,12 +80,11 @@ async function seed() {
     console.log('[Seeding] Created Default Group with Invitation Code: TNPSC2025');
   }
 
-  // 4. Seed Users
+  // 4. Seed Users (all peer members, no admin role)
   const passwordHash = await bcrypt.hash('TNPSCUser#2025', 10);
-  const adminPasswordHash = await bcrypt.hash('TNPSCAdmin#2025', 10);
 
   const usersToSeed = [
-    { displayName: 'Senthil Kumar (Admin)', email: 'admin@studycircle.tnpsc', passwordHash: adminPasswordHash, role: 'groupAdmin' },
+    { displayName: 'Senthil Kumar', email: 'senthil@studycircle.tnpsc', passwordHash, role: 'member' },
     { displayName: 'Kavitha Rajan', email: 'kavitha@studycircle.tnpsc', passwordHash, role: 'member' },
     { displayName: 'Manojkumar S.', email: 'manoj@studycircle.tnpsc', passwordHash, role: 'member' },
     { displayName: 'Deepa Sundaram', email: 'deepa@studycircle.tnpsc', passwordHash, role: 'member' }
@@ -94,6 +93,18 @@ async function seed() {
   const seededUsers = [];
   for (const u of usersToSeed) {
     let user = await User.findOne({ email: u.email });
+    if (!user && u.email === 'senthil@studycircle.tnpsc') {
+      // Check legacy admin user and migrate to peer member
+      user = await User.findOne({ email: 'admin@studycircle.tnpsc' });
+      if (user) {
+        user = await User.findByIdAndUpdate(user._id, {
+          displayName: 'Senthil Kumar',
+          email: 'senthil@studycircle.tnpsc',
+          passwordHash
+        });
+      }
+    }
+
     if (!user) {
       user = await User.create({
         displayName: u.displayName,
@@ -102,18 +113,22 @@ async function seed() {
         accountStatus: 'active'
       });
       console.log(`[Seeding] Created user: ${user.displayName} (${user.email})`);
+    } else if (user.displayName.includes('(Admin)')) {
+      user = await User.findByIdAndUpdate(user._id, { displayName: 'Senthil Kumar' });
     }
     seededUsers.push(user);
 
-    // Ensure group membership
+    // Ensure group membership as equal peer member
     let membership = await GroupMember.findOne({ groupId: group._id, userId: user._id });
     if (!membership) {
       await GroupMember.create({
         groupId: group._id,
         userId: user._id,
-        role: u.role,
+        role: 'member',
         membershipStatus: 'approved'
       });
+    } else if (membership.role === 'groupAdmin') {
+      await GroupMember.findByIdAndUpdate(membership._id, { role: 'member' });
     }
   }
 

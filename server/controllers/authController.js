@@ -8,40 +8,47 @@ const { JWT_SECRET } = require('../middleware/auth');
 
 async function register(req, res) {
   try {
-    const { displayName, email, password, invitationCode } = req.body;
+    const { displayName, name, email, password, invitationCode } = req.body;
+    const finalName = (displayName || name || '').trim();
 
-    if (!displayName || !displayName.trim()) {
-      return res.status(400).json({ error: 'Display name is required.' });
-    }
-    if (!email || !email.trim()) {
-      return res.status(400).json({ error: 'Valid email address is required.' });
+    if (!finalName) {
+      return res.status(400).json({ error: 'Name is required.' });
     }
     if (!password || password.length < 6) {
       return res.status(400).json({ error: 'Password must be at least 6 characters long.' });
     }
 
-    const normalizedEmail = email.trim().toLowerCase();
-    const existing = await User.findOne({ email: normalizedEmail });
-    if (existing) {
-      return res.status(400).json({ error: 'An account with this email address already exists.' });
+    // Auto-generate or normalize email
+    const safeHandle = finalName.toLowerCase().replace(/[^a-z0-9]/g, '') || 'candidate';
+    const normalizedEmail = (email && email.trim())
+      ? email.trim().toLowerCase()
+      : `${safeHandle}_${Math.random().toString(36).substring(2, 7)}@studycircle.tnpsc`;
+
+    // Check if an existing user has this exact displayName (case-insensitive) or email
+    const allExisting = await User.find({});
+    const duplicate = allExisting.find(u => 
+      (u.displayName && u.displayName.trim().toLowerCase() === finalName.toLowerCase()) ||
+      (u.email && u.email.trim().toLowerCase() === normalizedEmail)
+    );
+    if (duplicate) {
+      return res.status(400).json({ error: 'An account with this name already exists. Please sign in or use a different name.' });
     }
 
     const passwordHash = await bcrypt.hash(password, 10);
     const user = await User.create({
-      displayName: displayName.trim(),
+      displayName: finalName,
       email: normalizedEmail,
       passwordHash,
       accountStatus: 'active'
     });
 
-    // Handle group joining
+    // Handle group joining - connect user to study circle as a peer member
     let group = null;
     let membership = null;
 
     if (invitationCode) {
       group = await Group.findOne({ invitationCode: invitationCode.trim() });
     }
-    // If no group code or not matched, find default group
     if (!group) {
       const allGroups = await Group.find({});
       group = allGroups[0];
@@ -81,7 +88,7 @@ async function register(req, res) {
       group: group ? {
         id: group._id,
         name: group.name,
-        role: membership ? membership.role : 'member'
+        role: 'member'
       } : null
     });
   } catch (err) {
@@ -92,21 +99,32 @@ async function register(req, res) {
 
 async function login(req, res) {
   try {
-    const { email, password } = req.body;
+    const { email, name, displayName, identifier, password } = req.body;
+    const loginIdentifier = (identifier || email || displayName || name || '').trim();
 
-    if (!email || !password) {
-      return res.status(400).json({ error: 'Email and password are required.' });
+    if (!loginIdentifier || !password) {
+      return res.status(400).json({ error: 'Name and password are required.' });
     }
 
-    const normalizedEmail = email.trim().toLowerCase();
-    const user = await User.findOne({ email: normalizedEmail });
+    const normalizedIdentifier = loginIdentifier.toLowerCase();
+
+    // Find by email or displayName (case-insensitive)
+    let user = await User.findOne({ email: normalizedIdentifier });
     if (!user) {
-      return res.status(401).json({ error: 'Invalid email or password.' });
+      const allUsers = await User.find({});
+      user = allUsers.find(u => 
+        (u.displayName && u.displayName.trim().toLowerCase() === normalizedIdentifier) ||
+        (u.email && u.email.trim().toLowerCase() === normalizedIdentifier)
+      );
+    }
+
+    if (!user) {
+      return res.status(401).json({ error: 'Invalid name/email or password.' });
     }
 
     const isMatch = await bcrypt.compare(password, user.passwordHash);
     if (!isMatch) {
-      return res.status(401).json({ error: 'Invalid email or password.' });
+      return res.status(401).json({ error: 'Invalid name/email or password.' });
     }
 
     if (user.accountStatus === 'suspended') {
@@ -134,7 +152,7 @@ async function login(req, res) {
       group: group ? {
         id: group._id,
         name: group.name,
-        role: membership.role
+        role: 'member'
       } : null
     });
   } catch (err) {
@@ -162,7 +180,7 @@ async function getMe(req, res) {
       group: group ? {
         id: group._id,
         name: group.name,
-        role: membership ? membership.role : 'member',
+        role: 'member',
         invitationCode: group.invitationCode
       } : null
     });

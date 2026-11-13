@@ -28,7 +28,7 @@ async function requireGroupMember(req, res, next) {
 
     req.group = group;
     req.membership = membership;
-    req.isGroupAdmin = membership.role === 'groupAdmin';
+    req.isGroupAdmin = false; // Admin role removed - peer circle learning
     next();
   } catch (err) {
     console.error('Group verification error:', err);
@@ -37,9 +37,7 @@ async function requireGroupMember(req, res, next) {
 }
 
 function requireGroupAdmin(req, res, next) {
-  if (!req.isGroupAdmin) {
-    return res.status(403).json({ error: 'Admin privileges required for this action.' });
-  }
+  // All active circle members have equal peer access
   next();
 }
 

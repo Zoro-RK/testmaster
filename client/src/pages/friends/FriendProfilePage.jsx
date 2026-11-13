@@ -61,7 +61,7 @@ export default function FriendProfilePage() {
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <h1 style={{ fontSize: '24px', fontWeight: 800 }}>{member.displayName}</h1>
               <span className="status-chip status-notStarted" style={{ fontSize: '11px' }}>
-                {member.role === 'groupAdmin' ? 'Admin' : 'Member'}
+                Circle Member
               </span>
             </div>
             <div style={{ display: 'flex', gap: '16px', fontSize: '13px', color: 'var(--color-muted)', marginTop: '4px' }}>

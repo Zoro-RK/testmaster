@@ -20,5 +20,16 @@
     "testVersionId": "default",
     "questionSnapshot": null,
     "__v": 0
+  },
+  {
+    "_id": "id_1794590849258_nvb79u5jk",
+    "createdAt": "2026-11-13T17:27:29.258Z",
+    "updatedAt": "2026-11-13T17:27:29.258Z",
+    "userId": "6af60a91769c2489866b00d0",
+    "questionId": "SCI-1794590849255",
+    "testId": "id_1794590849227_p0geqzrto",
+    "testVersionId": "default",
+    "questionSnapshot": null,
+    "__v": 0
   }
 ]

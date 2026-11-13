@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Eye, EyeOff, Lock, Mail, ArrowRight } from 'lucide-react';
+import { Eye, EyeOff, Lock, Mail, ArrowRight, User } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import Logo from '../../components/common/Logo';
 
@@ -66,20 +66,20 @@ export default function LoginPage() {
 
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label className="form-label" htmlFor="login-email">Email Address</label>
+          <label className="form-label" htmlFor="login-email">Your Name or Email Address</label>
           <div style={{ position: 'relative' }}>
             <input
               id="login-email"
-              type="email"
+              type="text"
               className="form-input"
               style={{ paddingLeft: '38px' }}
-              placeholder="candidate@studycircle.tnpsc"
+              placeholder="e.g. Anand Murugan or senthil@studycircle.tnpsc"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              autoComplete="email"
+              autoComplete="username"
             />
-            <Mail size={16} color="var(--color-muted)" style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)' }} />
+            <User size={16} color="var(--color-muted)" style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)' }} />
           </div>
         </div>
 
@@ -138,12 +138,12 @@ export default function LoginPage() {
       }}>
         New to this private study circle?{' '}
         <Link to="/register" style={{ fontWeight: 700, color: 'var(--color-teal-700)' }}>
-          Join with Invitation Code
+          Create Account / Join
         </Link>
       </div>
 
       <div style={{ marginTop: '16px', padding: '10px 12px', backgroundColor: 'var(--color-paper-100)', borderRadius: 'var(--radius-sm)', fontSize: '11px', color: 'var(--color-ink-700)', textAlign: 'center' }}>
-        <strong>Demo Accounts:</strong> <code>kavitha@studycircle.tnpsc</code> or <code>admin@studycircle.tnpsc</code><br/>Password: <code>TNPSCUser#2025</code> (Admin: <code>TNPSCAdmin#2025</code>)
+        <strong>Demo Accounts:</strong> <code>kavitha@studycircle.tnpsc</code> or <code>senthil@studycircle.tnpsc</code><br/>Password: <code>TNPSCUser#2025</code>
       </div>
     </div>
   );

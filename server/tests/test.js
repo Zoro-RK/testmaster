@@ -30,6 +30,32 @@ async function runTests() {
     const token = loginRes.body.token;
     console.log('✔ Login passed, token received');
 
+    // 2b. Registration with ONLY name and password (no email, no admin role)
+    console.log('[Test 2b] Register with ONLY Name and Password...');
+    const testUsername = `Murugan_${Date.now()}`;
+    const registerRes = await request(app)
+      .post('/api/auth/register')
+      .send({
+        displayName: testUsername,
+        password: 'TestPassword#2025'
+      });
+    assert.strictEqual(registerRes.status, 201);
+    assert(registerRes.body.token, 'Token must be returned for new register');
+    assert.strictEqual(registerRes.body.user.displayName, testUsername);
+    assert.strictEqual(registerRes.body.group.role, 'member', 'New registrant must have standard member role');
+
+    // Login using just the name and password
+    const loginWithNameRes = await request(app)
+      .post('/api/auth/login')
+      .send({
+        identifier: testUsername,
+        password: 'TestPassword#2025'
+      });
+    assert.strictEqual(loginWithNameRes.status, 200);
+    assert.strictEqual(loginWithNameRes.body.user.displayName, testUsername);
+    assert.strictEqual(loginWithNameRes.body.group.role, 'member');
+    console.log('✔ Register with only name + password and login with name verified successfully');
+
     // 3. User profile check
     console.log('[Test 3] Profile /me check...');
     const meRes = await request(app)

@@ -128,8 +128,8 @@ async function deleteMaterial(req, res) {
       return res.status(404).json({ error: 'Material not found.' });
     }
 
-    if (String(material.uploadedBy) !== String(req.user._id) && !req.isGroupAdmin) {
-      return res.status(403).json({ error: 'Only the uploader or group admin can delete this material.' });
+    if (String(material.uploadedBy) !== String(req.user._id)) {
+      return res.status(403).json({ error: 'Only the uploader can delete this material.' });
     }
 
     await Material.findByIdAndDelete(material._id);

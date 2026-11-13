@@ -3,9 +3,9 @@
     "_id": "id_1794508782246_58lxuinbi",
     "createdAt": "2026-11-12T18:39:42.246Z",
     "updatedAt": "2026-11-12T18:39:42.246Z",
-    "displayName": "Senthil Kumar (Admin)",
-    "email": "admin@studycircle.tnpsc",
-    "passwordHash": "$2b$10$EFQnEvUVWNLKNNVg30lA0eqKnXS12oCLljOBEs7r6AiQ/ASUJ5yJa",
+    "displayName": "Senthil Kumar",
+    "email": "senthil@studycircle.tnpsc",
+    "passwordHash": "$2b$10$oXCqjY4qLvmCYTHeuXmWl.d8UkCwF1tKTPlevd7EsAlTLri57u7gq",
     "accountStatus": "active"
   },
   {
@@ -34,5 +34,16 @@
     "email": "deepa@studycircle.tnpsc",
     "passwordHash": "$2b$10$oXCqjY4qLvmCYTHeuXmWl.d8UkCwF1tKTPlevd7EsAlTLri57u7gq",
     "accountStatus": "active"
+  },
+  {
+    "_id": "id_1794590849059_pt7ujvoon",
+    "createdAt": "2026-11-13T17:27:29.061Z",
+    "updatedAt": "2026-11-13T17:27:29.061Z",
+    "displayName": "Murugan_1794590849003",
+    "email": "murugan1794590849003_ps3au@studycircle.tnpsc",
+    "passwordHash": "$2b$10$PAjxNbTeM2CFIQY59EXjIe0Xx2z/E/N1KDdhOTt09cTXg/zYcGn/q",
+    "profileImage": "",
+    "accountStatus": "active",
+    "__v": 0
   }
 ]

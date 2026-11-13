@@ -16,9 +16,9 @@ async function getCurrentGroup(req, res) {
       name: group.name,
       description: group.description,
       joinMode: group.joinMode,
-      invitationCode: req.isGroupAdmin ? group.invitationCode : undefined,
+      invitationCode: group.invitationCode,
       memberCount,
-      role: req.membership.role
+      role: 'member'
     });
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch group details.' });
