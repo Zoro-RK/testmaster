@@ -12,7 +12,11 @@ import {
   Copy, 
   Check, 
   ArrowRight, 
-  ArrowLeft 
+  ArrowLeft,
+  FileText,
+  Trash2,
+  BookOpen,
+  Sparkles
 } from 'lucide-react';
 import { api } from '../../services/api';
 
@@ -76,6 +80,7 @@ export default function UploadTestPage() {
   const [step, setStep] = useState(1);
   const [jsonText, setJsonText] = useState('');
   const [fileName, setFileName] = useState('');
+  const [portionPdfFile, setPortionPdfFile] = useState(null);
   const [validationResult, setValidationResult] = useState(null);
   const [parsedData, setParsedData] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -92,6 +97,21 @@ export default function UploadTestPage() {
       setJsonText(event.target.result);
     };
     reader.readAsText(file);
+  };
+
+  const handlePdfUpload = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    if (file.type !== 'application/pdf' && !file.name.toLowerCase().endsWith('.pdf')) {
+      setErrorMsg('Please select a valid PDF file for the portion study material.');
+      return;
+    }
+    setErrorMsg('');
+    setPortionPdfFile(file);
+  };
+
+  const handleRemovePdf = () => {
+    setPortionPdfFile(null);
   };
 
   const loadSample = () => {
@@ -134,7 +154,7 @@ export default function UploadTestPage() {
   const handleSaveDraft = async () => {
     try {
       setLoading(true);
-      await api.createTest({ ...parsedData, status: 'draft' });
+      await api.createTest({ ...parsedData, status: 'draft' }, portionPdfFile);
       navigate('/tests/my');
     } catch (err) {
       setErrorMsg('Failed to save draft: ' + err.message);
@@ -146,7 +166,7 @@ export default function UploadTestPage() {
   const handlePublish = async () => {
     try {
       setLoading(true);
-      await api.createTest({ ...parsedData, status: 'published' });
+      await api.createTest({ ...parsedData, status: 'published' }, portionPdfFile);
       navigate('/tests');
     } catch (err) {
       setErrorMsg('Failed to publish test: ' + err.message);
@@ -276,7 +296,134 @@ export default function UploadTestPage() {
             />
           </div>
 
-          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px', marginTop: '20px' }}>
+          {/* Cover Portion Study Material (PDF) Upload */}
+          <div style={{
+            marginTop: '28px',
+            paddingTop: '24px',
+            borderTop: '1px solid var(--color-line)'
+          }}>
+            <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flexWrap: 'wrap', gap: '10px', marginBottom: '14px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <div style={{
+                  width: '36px',
+                  height: '36px',
+                  borderRadius: '8px',
+                  backgroundColor: 'var(--color-teal-100)',
+                  color: 'var(--color-teal-700)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <BookOpen size={20} />
+                </div>
+                <div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <h4 style={{ fontSize: '16px', fontWeight: 800, color: 'var(--color-ink-900)' }}>
+                      Upload Cover Portion Study Material (PDF)
+                    </h4>
+                    <span style={{
+                      fontSize: '11px',
+                      fontWeight: 700,
+                      color: 'var(--color-teal-700)',
+                      backgroundColor: 'var(--color-teal-50)',
+                      border: '1px solid var(--color-teal-200)',
+                      padding: '2px 8px',
+                      borderRadius: 'var(--radius-pill)'
+                    }}>
+                      Pre-Exam Study Guide
+                    </span>
+                  </div>
+                  <p style={{ fontSize: '12px', color: 'var(--color-muted)', marginTop: '2px' }}>
+                    Upload notes or portion PDF covering the questions. Aspirants can view and study this material before attempting the MCQs.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {portionPdfFile ? (
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                padding: '16px 20px',
+                backgroundColor: 'var(--color-paper-50)',
+                border: '1.5px solid var(--color-teal-700)',
+                borderRadius: 'var(--radius-md)'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+                  <div style={{
+                    width: '40px',
+                    height: '40px',
+                    borderRadius: '8px',
+                    backgroundColor: 'var(--color-teal-700)',
+                    color: 'var(--color-white)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}>
+                    <FileText size={22} />
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '14px', fontWeight: 700, color: 'var(--color-ink-900)' }}>
+                      {portionPdfFile.name}
+                    </div>
+                    <div style={{ fontSize: '12px', color: 'var(--color-muted)', marginTop: '2px' }}>
+                      Size: {(portionPdfFile.size / 1024).toFixed(1)} KB • Attached as Cover Portion Study Material
+                    </div>
+                  </div>
+                </div>
+
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <label className="btn btn-secondary" style={{ fontSize: '12px', padding: '6px 12px', cursor: 'pointer' }}>
+                    Change PDF
+                    <input
+                      type="file"
+                      accept=".pdf"
+                      onChange={handlePdfUpload}
+                      style={{ display: 'none' }}
+                    />
+                  </label>
+                  <button
+                    type="button"
+                    onClick={handleRemovePdf}
+                    className="btn btn-ghost"
+                    style={{ fontSize: '12px', color: 'var(--color-danger)', padding: '6px 10px' }}
+                    title="Remove attached PDF"
+                  >
+                    <Trash2 size={16} />
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div style={{
+                border: '2px dashed var(--color-line-dark)',
+                borderRadius: 'var(--radius-md)',
+                padding: '24px 20px',
+                textAlign: 'center',
+                backgroundColor: 'var(--color-paper-50)'
+              }}>
+                <UploadCloud size={36} color="var(--color-teal-700)" style={{ margin: '0 auto 8px' }} />
+                <div style={{ fontSize: '14px', fontWeight: 700, color: 'var(--color-ink-900)' }}>
+                  Attach Cover Portion PDF (Optional / Recommended)
+                </div>
+                <div style={{ fontSize: '12px', color: 'var(--color-muted)', marginTop: '4px', maxWidth: '480px', margin: '4px auto 14px' }}>
+                  Upload Samacheer Kalvi / TNPSC study guide PDF covering the questions.
+                  If omitted, an official syllabus portion guide will be auto-generated.
+                </div>
+                <label className="btn btn-secondary" style={{ fontSize: '13px', padding: '7px 16px', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                  <FileText size={15} /> Choose Portion PDF
+                  <input
+                    type="file"
+                    accept=".pdf"
+                    onChange={handlePdfUpload}
+                    style={{ display: 'none' }}
+                  />
+                </label>
+              </div>
+            )}
+          </div>
+
+          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px', marginTop: '24px' }}>
             <button
               onClick={handleValidate}
               className="btn btn-primary"
@@ -340,6 +487,36 @@ export default function UploadTestPage() {
               <span>Suggested: {parsedData.durationMinutes} Minutes</span>
               <span>•</span>
               <span>Medium: {parsedData.language || 'English'}</span>
+            </div>
+
+            {/* Attached Portion Material Indicator in Preview */}
+            <div style={{
+              marginTop: '16px',
+              padding: '12px 16px',
+              borderRadius: 'var(--radius-sm)',
+              backgroundColor: portionPdfFile ? 'var(--color-teal-50)' : 'var(--color-paper-100)',
+              border: `1px solid ${portionPdfFile ? 'var(--color-teal-200)' : 'var(--color-line)'}`,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: '12px'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <BookOpen size={18} color="var(--color-teal-700)" />
+                <div>
+                  <div style={{ fontSize: '13px', fontWeight: 700, color: 'var(--color-ink-900)' }}>
+                    {portionPdfFile ? `Attached Portion PDF: ${portionPdfFile.name}` : 'TNPSC Portion Study Guide: Auto-compiled'}
+                  </div>
+                  <div style={{ fontSize: '11px', color: 'var(--color-muted)' }}>
+                    {portionPdfFile
+                      ? `${(portionPdfFile.size / 1024).toFixed(1)} KB • Candidates can read this PDF before starting the MCQs`
+                      : 'Candidates will receive a syllabus portion guide before starting the MCQs'}
+                  </div>
+                </div>
+              </div>
+              <span className="status-chip status-completed" style={{ fontSize: '11px' }}>
+                Pre-Exam Guide Ready
+              </span>
             </div>
 
             <div style={{ display: 'flex', gap: '12px', marginTop: '20px', flexWrap: 'wrap' }}>
@@ -457,6 +634,12 @@ export default function UploadTestPage() {
             <div style={{ display: 'flex', justifyContent: 'space-between', padding: '4px 0' }}>
               <span style={{ color: 'var(--color-muted)' }}>Language:</span>
               <strong>{parsedData.language || 'English'}</strong>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', padding: '4px 0', borderTop: '1px dashed var(--color-line)', marginTop: '4px', paddingTop: '4px' }}>
+              <span style={{ color: 'var(--color-muted)' }}>Study Portion PDF:</span>
+              <strong style={{ color: 'var(--color-teal-700)' }}>
+                {portionPdfFile ? portionPdfFile.name : 'Auto-compiled Syllabus PDF'}
+              </strong>
             </div>
           </div>
 

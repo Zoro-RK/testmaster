@@ -1,0 +1,24 @@
+[
+  {
+    "_id": "id_1794552900397_f44upyj3e",
+    "createdAt": "2026-11-13T06:55:00.398Z",
+    "updatedAt": "2026-11-13T06:55:00.398Z",
+    "userId": "6af60a91769c2489866b00d0",
+    "questionId": "SCI-1794552900395",
+    "testId": "id_1794552900367_3icxu3m4y",
+    "testVersionId": "default",
+    "questionSnapshot": null,
+    "__v": 0
+  },
+  {
+    "_id": "id_1794552981721_xsw2af74z",
+    "createdAt": "2026-11-13T06:56:21.721Z",
+    "updatedAt": "2026-11-13T06:56:21.721Z",
+    "userId": "6af60a91769c2489866b00d0",
+    "questionId": "SCI-1794552981719",
+    "testId": "id_1794552981686_sptcprvw7",
+    "testVersionId": "default",
+    "questionSnapshot": null,
+    "__v": 0
+  }
+]

@@ -28,6 +28,8 @@ export default function TestDetailPage() {
 
   const [testData, setTestData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState(null);
+  const [availableTests, setAvailableTests] = useState([]);
   const [starting, setStarting] = useState(false);
   const [isPdfModalOpen, setIsPdfModalOpen] = useState(false);
   const [showInlinePdf, setShowInlinePdf] = useState(false);
@@ -37,10 +39,20 @@ export default function TestDetailPage() {
     async function loadTest() {
       try {
         setLoading(true);
+        setLoadError(null);
         const res = await api.getTestById(testId);
         setTestData(res.test);
       } catch (err) {
         console.error('Failed to load test details:', err);
+        setLoadError(err.message || 'Test not found.');
+        try {
+          const listRes = await api.getTests();
+          if (listRes && listRes.tests) {
+            setAvailableTests(listRes.tests);
+          }
+        } catch (e) {
+          // ignore
+        }
       } finally {
         setLoading(false);
       }
@@ -61,7 +73,79 @@ export default function TestDetailPage() {
   };
 
   if (loading) return <LoadingScreen message="Loading test details and portion study guide…" />;
-  if (!testData) return <div className="page-container">Test not found.</div>;
+
+  if (!testData) {
+    return (
+      <div className="page-container" style={{ maxWidth: '880px' }}>
+        <Link to="/tests" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '13px', fontWeight: 600, marginBottom: '20px', color: 'var(--color-ink-700)' }}>
+          <ArrowLeft size={16} /> Back to Test Library
+        </Link>
+
+        <div className="card" style={{ padding: '40px 32px', textAlign: 'center', marginBottom: '24px' }}>
+          <div style={{
+            width: '64px',
+            height: '64px',
+            borderRadius: '50%',
+            backgroundColor: 'var(--color-paper-100)',
+            color: 'var(--color-teal-700)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: '0 auto 16px',
+            border: '1px solid var(--color-line)'
+          }}>
+            <HelpCircle size={32} />
+          </div>
+
+          <h2 style={{ fontSize: '22px', fontWeight: 800, color: 'var(--color-ink-900)' }}>
+            Practice Test Not Found
+          </h2>
+          <p style={{ fontSize: '14px', color: 'var(--color-muted)', maxWidth: '480px', margin: '8px auto 24px', lineHeight: 1.5 }}>
+            {loadError || 'The practice test you requested could not be located in the current study circle library, or it may have been moved or archived.'}
+          </p>
+
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
+            <Link to="/tests" className="btn btn-primary" style={{ padding: '10px 20px' }}>
+              <BookOpen size={16} /> Browse Test Library
+            </Link>
+            <Link to="/tests/upload" className="btn btn-secondary" style={{ padding: '10px 20px' }}>
+              Upload Practice Test
+            </Link>
+          </div>
+        </div>
+
+        {availableTests.length > 0 && (
+          <div>
+            <h3 style={{ fontSize: '16px', fontWeight: 800, color: 'var(--color-ink-900)', marginBottom: '14px' }}>
+              Available Practice Tests in Your Circle:
+            </h3>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px' }}>
+              {availableTests.slice(0, 4).map(t => (
+                <div key={t.id} className="card" style={{ padding: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                  <div>
+                    <span className="status-chip status-notStarted" style={{ fontSize: '11px', marginBottom: '8px' }}>
+                      {t.partName || 'TNPSC General Studies'}
+                    </span>
+                    <h4 style={{ fontSize: '16px', fontWeight: 800, color: 'var(--color-ink-900)', marginTop: '4px' }}>
+                      {t.title}
+                    </h4>
+                    <div style={{ fontSize: '12px', color: 'var(--color-muted)', marginTop: '6px' }}>
+                      {t.questionCount} Questions • {t.durationMinutes} Mins • {t.language}
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', display: 'flex', justifyContent: 'flex-end' }}>
+                    <Link to={`/tests/${t.id}`} className="btn btn-secondary" style={{ fontSize: '12px', padding: '6px 14px' }}>
+                      View & Study Portion <PlayCircle size={14} />
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  }
 
   const pdfUrl = testData.portionPdfUrl || `/api/tests/${testId}/portion-pdf`;
   const pdfName = testData.portionPdfName || 'Portion_Study_Guide.pdf';

@@ -64,7 +64,15 @@ export const api = {
 
   // Tests
   validateTestJson: (body) => request('/tests/validate', { method: 'POST', body }),
-  createTest: (body) => request('/tests', { method: 'POST', body }),
+  createTest: (body, portionPdfFile = null) => {
+    if (portionPdfFile) {
+      const formData = new FormData();
+      formData.append('testData', JSON.stringify(body));
+      formData.append('portionPdf', portionPdfFile);
+      return request('/tests', { method: 'POST', body: formData });
+    }
+    return request('/tests', { method: 'POST', body });
+  },
   getTests: (params = {}) => {
     const q = new URLSearchParams(params).toString();
     return request(`/tests${q ? `?${q}` : ''}`);

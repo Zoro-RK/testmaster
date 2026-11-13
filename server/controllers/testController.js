@@ -12,6 +12,11 @@ const User = require('../models/User');
 const { validateTestSchema } = require('../validators/testValidator');
 const { getOrGeneratePortionPdf, PORTION_NOTES, getPortionCategory } = require('../services/pdfService');
 
+const uploadsDir = path.join(__dirname, '..', 'uploads');
+if (!fs.existsSync(uploadsDir)) {
+  fs.mkdirSync(uploadsDir, { recursive: true });
+}
+
 async function validateTestJson(req, res) {
   try {
     const payload = req.body;
@@ -24,7 +29,16 @@ async function validateTestJson(req, res) {
 
 async function createTest(req, res) {
   try {
-    const payload = req.body;
+    let payload = req.body;
+    // If multipart/form-data with testData field
+    if (typeof payload.testData === 'string') {
+      try {
+        payload = JSON.parse(payload.testData);
+      } catch (e) {
+        return res.status(400).json({ error: 'Invalid testData JSON in form payload.' });
+      }
+    }
+
     const validation = validateTestSchema(payload);
 
     if (!validation.isValid) {
@@ -51,6 +65,17 @@ async function createTest(req, res) {
       questions
     } = payload;
 
+    // Handle attached Cover Portion PDF upload
+    let portionPdfName = payload.portionPdfName || '';
+    let portionPdfStorageKey = payload.portionPdfStorageKey || '';
+    let portionPdfUrl = payload.portionPdfUrl || '';
+
+    if (req.file) {
+      portionPdfName = req.file.originalname;
+      portionPdfStorageKey = req.file.filename;
+      portionPdfUrl = `/uploads/${req.file.filename}`;
+    }
+
     // Resolve part and exam if strings were passed
     let resolvedPartId = partId;
     if (!resolvedPartId && part) {
@@ -72,8 +97,16 @@ async function createTest(req, res) {
       language: language || 'English',
       status: status === 'published' ? 'published' : 'draft',
       currentVersion: 1,
-      publishedAt: status === 'published' ? new Date() : null
+      publishedAt: status === 'published' ? new Date() : null,
+      portionPdfName,
+      portionPdfStorageKey,
+      portionPdfUrl: portionPdfUrl || ''
     });
+
+    if (!test.portionPdfUrl) {
+      test.portionPdfUrl = `/api/tests/${test._id}/portion-pdf`;
+      await Test.findByIdAndUpdate(test._id, { portionPdfUrl: test.portionPdfUrl });
+    }
 
     await TestVersion.create({
       testId: test._id,
@@ -186,7 +219,10 @@ async function getTests(req, res) {
 async function getTestById(req, res) {
   try {
     const { testId } = req.params;
-    const test = await Test.findById(testId);
+    let test = await Test.findById(testId);
+    if (!test) {
+      test = await Test.findOne({ _id: String(testId) }) || await Test.findOne({ id: String(testId) });
+    }
     if (!test) {
       return res.status(404).json({ error: 'Test not found.' });
     }
@@ -273,6 +309,16 @@ async function getPortionPdf(req, res) {
     const test = await Test.findById(testId);
     if (!test) {
       return res.status(404).json({ error: 'Test not found.' });
+    }
+
+    // If an uploaded cover portion PDF exists, stream that exact uploaded file!
+    if (test.portionPdfStorageKey) {
+      const uploadedFilePath = path.join(uploadsDir, test.portionPdfStorageKey);
+      if (fs.existsSync(uploadedFilePath)) {
+        res.setHeader('Content-Type', 'application/pdf');
+        res.setHeader('Content-Disposition', `inline; filename="${test.portionPdfName || 'portion.pdf'}"`);
+        return fs.createReadStream(uploadedFilePath).pipe(res);
+      }
     }
 
     const { fullPath, filename } = await getOrGeneratePortionPdf(test);

@@ -177,3 +177,4 @@ export default function PortionPdfModal({ isOpen, onClose, pdfUrl, pdfName, titl
     </div>
   );
 }
+

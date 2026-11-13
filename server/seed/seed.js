@@ -262,7 +262,13 @@ async function seed() {
       durationMinutes: 10,
       language: 'English',
       status: 'published',
-      publishedAt: new Date(Date.now() - 86400000 * 3)
+      publishedAt: new Date(Date.now() - 86400000 * 3),
+      portionPdfName: 'TNPSC_Polity_Portion_Study_Guide.pdf',
+      portionPdfUrl: ''
+    });
+
+    await Test.findByIdAndUpdate(polityTest._id, {
+      portionPdfUrl: `/api/tests/${polityTest._id}/portion-pdf`
     });
 
     await TestVersion.create({
@@ -369,7 +375,13 @@ async function seed() {
       durationMinutes: 10,
       language: 'Tamil',
       status: 'published',
-      publishedAt: new Date(Date.now() - 86400000 * 1)
+      publishedAt: new Date(Date.now() - 86400000 * 1),
+      portionPdfName: 'TNPSC_Tamil_Grammar_Thirukkural_Study_Guide.pdf',
+      portionPdfUrl: ''
+    });
+
+    await Test.findByIdAndUpdate(tamilTest._id, {
+      portionPdfUrl: `/api/tests/${tamilTest._id}/portion-pdf`
     });
 
     await TestVersion.create({

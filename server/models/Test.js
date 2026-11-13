@@ -14,7 +14,11 @@ const Test = createModel('Test', {
   language: { type: String, default: 'English' }, // 'English' | 'Tamil' | 'Bilingual'
   status: { type: String, enum: ['draft', 'published', 'archived'], default: 'draft' },
   currentVersion: { type: Number, default: 1 },
-  publishedAt: { type: Date, default: null }
+  publishedAt: { type: Date, default: null },
+  portionPdfName: { type: String, default: '' },
+  portionPdfStorageKey: { type: String, default: '' },
+  portionPdfUrl: { type: String, default: '' },
+  studyNotesText: { type: String, default: '' }
 });
 
 module.exports = Test;

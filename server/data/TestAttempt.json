@@ -1,0 +1,68 @@
+[
+  {
+    "_id": "id_1794552900376_unc6f2ygl",
+    "createdAt": "2026-11-13T06:55:00.376Z",
+    "updatedAt": "2026-11-13T06:55:00.390Z",
+    "testId": "id_1794552900367_3icxu3m4y",
+    "testVersionId": "id_1794552900370_w0zk0qg3u",
+    "userId": "6af60a91769c2489866b00d0",
+    "startedAt": "2026-11-13T06:55:00.376Z",
+    "submittedAt": "2026-11-13T06:55:00.389Z",
+    "expiresAt": "2026-11-13T07:00:00.376Z",
+    "status": "submitted",
+    "score": 1,
+    "correctCount": 1,
+    "incorrectCount": 1,
+    "unansweredCount": 0,
+    "answers": [
+      {
+        "questionId": "SCI-001",
+        "selectedOption": "B",
+        "isCorrect": true,
+        "markedForReview": false,
+        "answeredAt": "2026-11-13T06:55:00.383Z"
+      },
+      {
+        "questionId": "SCI-002",
+        "selectedOption": "A",
+        "isCorrect": false,
+        "markedForReview": true,
+        "answeredAt": "2026-11-13T06:55:00.386Z"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "id_1794552981696_677wxf2ax",
+    "createdAt": "2026-11-13T06:56:21.697Z",
+    "updatedAt": "2026-11-13T06:56:21.712Z",
+    "testId": "id_1794552981686_sptcprvw7",
+    "testVersionId": "id_1794552981690_e47kg48wr",
+    "userId": "6af60a91769c2489866b00d0",
+    "startedAt": "2026-11-13T06:56:21.696Z",
+    "submittedAt": "2026-11-13T06:56:21.712Z",
+    "expiresAt": "2026-11-13T07:01:21.696Z",
+    "status": "submitted",
+    "score": 1,
+    "correctCount": 1,
+    "incorrectCount": 1,
+    "unansweredCount": 0,
+    "answers": [
+      {
+        "questionId": "SCI-001",
+        "selectedOption": "B",
+        "isCorrect": true,
+        "markedForReview": false,
+        "answeredAt": "2026-11-13T06:56:21.705Z"
+      },
+      {
+        "questionId": "SCI-002",
+        "selectedOption": "A",
+        "isCorrect": false,
+        "markedForReview": true,
+        "answeredAt": "2026-11-13T06:56:21.708Z"
+      }
+    ],
+    "__v": 0
+  }
+]
