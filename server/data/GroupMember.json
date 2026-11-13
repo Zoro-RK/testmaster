@@ -89,5 +89,16 @@
     "membershipStatus": "approved",
     "joinedAt": "2026-11-13T18:16:16.356Z",
     "__v": 0
+  },
+  {
+    "_id": "id_1794594100286_h86jgef10",
+    "createdAt": "2026-11-13T18:21:40.287Z",
+    "updatedAt": "2026-11-13T18:21:40.287Z",
+    "groupId": "6af60a91769c2489866b00c1",
+    "userId": "id_1794594100280_jykudhwnb",
+    "role": "member",
+    "membershipStatus": "approved",
+    "joinedAt": "2026-11-13T18:21:40.286Z",
+    "__v": 0
   }
 ]

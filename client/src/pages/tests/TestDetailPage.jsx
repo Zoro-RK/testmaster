@@ -34,6 +34,7 @@ export default function TestDetailPage() {
   const [isPdfModalOpen, setIsPdfModalOpen] = useState(false);
   const [showInlinePdf, setShowInlinePdf] = useState(false);
   const [showSynopsis, setShowSynopsis] = useState(false);
+  const [showAllTopics, setShowAllTopics] = useState(false);
 
   useEffect(() => {
     async function loadTest() {
@@ -306,16 +307,71 @@ export default function TestDetailPage() {
             </div>
           </div>
 
-          {/* Topics Covered Chips */}
+          {/* Topics Covered Chips with Dropdown Arrow */}
           {testData.linkedTopics && testData.linkedTopics.length > 0 && (
-            <div style={{ marginTop: '12px', paddingTop: '12px', borderTop: '1px solid var(--color-line)' }}>
-              <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--color-ink-700)', marginBottom: '8px' }}>
-                Topics Included in this Portion:
+            <div style={{ marginTop: '14px', paddingTop: '14px', borderTop: '1px solid var(--color-line)' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px', flexWrap: 'wrap', gap: '8px' }}>
+                <button
+                  type="button"
+                  onClick={() => setShowAllTopics(!showAllTopics)}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    fontSize: '13px',
+                    fontWeight: 700,
+                    color: 'var(--color-ink-900)',
+                    padding: 0,
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer'
+                  }}
+                  title={showAllTopics ? "Collapse topics list" : "Expand all topics list"}
+                >
+                  <span>Topics Included in this Portion ({testData.linkedTopics.length})</span>
+                  <span style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: '22px',
+                    height: '22px',
+                    borderRadius: '50%',
+                    backgroundColor: 'var(--color-white)',
+                    border: '1px solid var(--color-line)',
+                    color: 'var(--color-teal-700)',
+                    transition: 'transform 0.2s ease'
+                  }}>
+                    {showAllTopics ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+                  </span>
+                </button>
+
+                {testData.linkedTopics.length > 5 && (
+                  <button
+                    type="button"
+                    onClick={() => setShowAllTopics(!showAllTopics)}
+                    style={{
+                      fontSize: '12px',
+                      fontWeight: 700,
+                      color: 'var(--color-teal-700)',
+                      background: 'none',
+                      border: 'none',
+                      cursor: 'pointer',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '4px'
+                    }}
+                  >
+                    {showAllTopics ? 'Show Less' : `View All (${testData.linkedTopics.length})`}
+                    {showAllTopics ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+                  </button>
+                )}
               </div>
+
+              {/* Display preview topics or full list based on dropdown arrow */}
               <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-                {testData.linkedTopics.map(t => (
+                {(showAllTopics ? testData.linkedTopics : testData.linkedTopics.slice(0, 5)).map(t => (
                   <span
-                    key={t.id}
+                    key={t.id || t.slug || t.name}
                     style={{
                       fontSize: '12px',
                       padding: '4px 10px',
@@ -329,6 +385,29 @@ export default function TestDetailPage() {
                     • {t.name}
                   </span>
                 ))}
+
+                {!showAllTopics && testData.linkedTopics.length > 5 && (
+                  <button
+                    type="button"
+                    onClick={() => setShowAllTopics(true)}
+                    style={{
+                      fontSize: '12px',
+                      padding: '4px 10px',
+                      borderRadius: 'var(--radius-pill)',
+                      backgroundColor: 'var(--color-teal-50)',
+                      border: '1px solid var(--color-teal-200)',
+                      color: 'var(--color-teal-700)',
+                      fontWeight: 700,
+                      cursor: 'pointer',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '4px'
+                    }}
+                  >
+                    + {testData.linkedTopics.length - 5} more topics
+                    <ChevronDown size={14} />
+                  </button>
+                )}
               </div>
             </div>
           )}

@@ -271,5 +271,33 @@
     "portionPdfUrl": "/api/tests/id_1794593776523_e3nfe1xle/portion-pdf",
     "studyNotesText": "",
     "__v": 0
+  },
+  {
+    "_id": "id_1794594100447_0theopo84",
+    "createdAt": "2026-11-13T18:21:40.448Z",
+    "updatedAt": "2026-11-13T18:21:40.450Z",
+    "groupId": "6af60a91769c2489866b00c1",
+    "createdBy": "6af60a91769c2489866b00ca",
+    "title": "Science Basics Quick Test",
+    "description": "",
+    "examId": "default",
+    "partId": "6af60a91769c2489866afecc",
+    "unitIds": [
+      "General Science"
+    ],
+    "topicIds": [
+      "nature-of-universe"
+    ],
+    "questionCount": 2,
+    "durationMinutes": 5,
+    "language": "English",
+    "status": "published",
+    "currentVersion": 1,
+    "publishedAt": "2026-11-13T18:21:40.447Z",
+    "portionPdfName": "",
+    "portionPdfStorageKey": "",
+    "portionPdfUrl": "/api/tests/id_1794594100447_0theopo84/portion-pdf",
+    "studyNotesText": "",
+    "__v": 0
   }
 ]
