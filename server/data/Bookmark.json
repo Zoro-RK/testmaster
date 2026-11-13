@@ -53,5 +53,27 @@
     "testVersionId": "default",
     "questionSnapshot": null,
     "__v": 0
+  },
+  {
+    "_id": "id_1794593613180_tac22iqgw",
+    "createdAt": "2026-11-13T18:13:33.181Z",
+    "updatedAt": "2026-11-13T18:13:33.181Z",
+    "userId": "6af60a91769c2489866b00d0",
+    "questionId": "SCI-1794593613178",
+    "testId": "id_1794593613147_2io3ebca8",
+    "testVersionId": "default",
+    "questionSnapshot": null,
+    "__v": 0
+  },
+  {
+    "_id": "id_1794593776558_qn1ijguip",
+    "createdAt": "2026-11-13T18:16:16.558Z",
+    "updatedAt": "2026-11-13T18:16:16.558Z",
+    "userId": "6af60a91769c2489866b00d0",
+    "questionId": "SCI-1794593776556",
+    "testId": "id_1794593776523_e3nfe1xle",
+    "testVersionId": "default",
+    "questionSnapshot": null,
+    "__v": 0
   }
 ]

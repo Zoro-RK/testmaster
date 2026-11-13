@@ -170,5 +170,106 @@
     "portionPdfUrl": "/api/tests/id_1794592872716_387weui25/portion-pdf",
     "studyNotesText": "",
     "__v": 0
+  },
+  {
+    "_id": "id_1794593055855_g2cpnykcc",
+    "createdAt": "2026-11-13T18:04:15.862Z",
+    "updatedAt": "2026-11-13T18:04:15.862Z",
+    "groupId": "6af60a91769c2489866b00c1",
+    "createdBy": "6af60a91769c2489866b00ca",
+    "title": "TNPSC Group IV - General Studies - Unit I: General Science",
+    "description": "",
+    "examId": "default",
+    "partId": "6af60a91769c2489866afecc",
+    "unitIds": [
+      "Unit I: General Science"
+    ],
+    "topicIds": [
+      "6af60a91769c2489866afed2",
+      "6af60a91769c2489866afed5",
+      "6af60a91769c2489866afed8",
+      "6af60a91769c2489866afedb",
+      "6af60a91769c2489866afee1",
+      "6af60a91769c2489866afee4",
+      "6af60a91769c2489866afee7",
+      "6af60a91769c2489866afeea",
+      "6af60a91769c2489866afeed",
+      "6af60a91769c2489866afef0",
+      "6af60a91769c2489866afef3",
+      "6af60a91769c2489866afef6",
+      "6af60a91769c2489866afef9",
+      "6af60a91769c2489866afefc",
+      "6af60a91769c2489866afeff",
+      "6af60a91769c2489866aff02",
+      "6af60a91769c2489866aff2c",
+      "6af60a91769c2489866aff95"
+    ],
+    "questionCount": 100,
+    "durationMinutes": 100,
+    "language": "English",
+    "status": "published",
+    "currentVersion": 1,
+    "publishedAt": "2026-11-13T18:04:15.855Z",
+    "portionPdfName": "TNPSC_GS_Unit_I_General_Science_Portion.pdf",
+    "portionPdfStorageKey": "portion_1794593055841_m8v4f2.pdf",
+    "portionPdfUrl": "/uploads/portion_1794593055841_m8v4f2.pdf",
+    "studyNotesText": "",
+    "__v": 0
+  },
+  {
+    "_id": "id_1794593613147_2io3ebca8",
+    "createdAt": "2026-11-13T18:13:33.148Z",
+    "updatedAt": "2026-11-13T18:13:33.150Z",
+    "groupId": "6af60a91769c2489866b00c1",
+    "createdBy": "6af60a91769c2489866b00ca",
+    "title": "Science Basics Quick Test",
+    "description": "",
+    "examId": "default",
+    "partId": "6af60a91769c2489866afecc",
+    "unitIds": [
+      "General Science"
+    ],
+    "topicIds": [
+      "nature-of-universe"
+    ],
+    "questionCount": 2,
+    "durationMinutes": 5,
+    "language": "English",
+    "status": "published",
+    "currentVersion": 1,
+    "publishedAt": "2026-11-13T18:13:33.147Z",
+    "portionPdfName": "",
+    "portionPdfStorageKey": "",
+    "portionPdfUrl": "/api/tests/id_1794593613147_2io3ebca8/portion-pdf",
+    "studyNotesText": "",
+    "__v": 0
+  },
+  {
+    "_id": "id_1794593776523_e3nfe1xle",
+    "createdAt": "2026-11-13T18:16:16.523Z",
+    "updatedAt": "2026-11-13T18:16:16.526Z",
+    "groupId": "6af60a91769c2489866b00c1",
+    "createdBy": "6af60a91769c2489866b00ca",
+    "title": "Science Basics Quick Test",
+    "description": "",
+    "examId": "default",
+    "partId": "6af60a91769c2489866afecc",
+    "unitIds": [
+      "General Science"
+    ],
+    "topicIds": [
+      "nature-of-universe"
+    ],
+    "questionCount": 2,
+    "durationMinutes": 5,
+    "language": "English",
+    "status": "published",
+    "currentVersion": 1,
+    "publishedAt": "2026-11-13T18:16:16.523Z",
+    "portionPdfName": "",
+    "portionPdfStorageKey": "",
+    "portionPdfUrl": "/api/tests/id_1794593776523_e3nfe1xle/portion-pdf",
+    "studyNotesText": "",
+    "__v": 0
   }
 ]

@@ -331,18 +331,34 @@ async function getTestById(req, res) {
 async function getPortionPdf(req, res) {
   try {
     const { testId } = req.params;
-    const test = await Test.findById(testId);
+    let test = await Test.findById(testId);
+    if (!test) {
+      test = await Test.findOne({ _id: String(testId) }) || await Test.findOne({ id: String(testId) });
+    }
     if (!test) {
       return res.status(404).json({ error: 'Test not found.' });
     }
 
+    // If draft test, only the creator can view it
+    if (test.status !== 'published') {
+      if (!req.user || String(test.createdBy) !== String(req.user._id)) {
+        return res.status(403).json({ error: 'This draft test is not yet published.' });
+      }
+    }
+
     // If an uploaded cover portion PDF exists, stream that exact uploaded file!
     if (test.portionPdfStorageKey) {
-      const uploadedFilePath = path.join(uploadsDir, test.portionPdfStorageKey);
-      if (fs.existsSync(uploadedFilePath)) {
-        res.setHeader('Content-Type', 'application/pdf');
-        res.setHeader('Content-Disposition', `inline; filename="${test.portionPdfName || 'portion.pdf'}"`);
-        return fs.createReadStream(uploadedFilePath).pipe(res);
+      const candidates = [
+        path.join(uploadsDir, test.portionPdfStorageKey),
+        path.join(__dirname, '..', '..', test.portionPdfStorageKey),
+        path.join(__dirname, '..', test.portionPdfStorageKey)
+      ];
+      for (const fp of candidates) {
+        if (fs.existsSync(fp)) {
+          res.setHeader('Content-Type', 'application/pdf');
+          res.setHeader('Content-Disposition', `inline; filename="${test.portionPdfName || 'portion.pdf'}"`);
+          return fs.createReadStream(fp).pipe(res);
+        }
       }
     }
 

@@ -67,5 +67,27 @@
     "membershipStatus": "approved",
     "joinedAt": "2026-11-13T18:01:12.557Z",
     "__v": 0
+  },
+  {
+    "_id": "id_1794593612982_kh06i6dgh",
+    "createdAt": "2026-11-13T18:13:32.982Z",
+    "updatedAt": "2026-11-13T18:13:32.982Z",
+    "groupId": "6af60a91769c2489866b00c1",
+    "userId": "id_1794593612976_mrcydemgi",
+    "role": "member",
+    "membershipStatus": "approved",
+    "joinedAt": "2026-11-13T18:13:32.982Z",
+    "__v": 0
+  },
+  {
+    "_id": "id_1794593776356_ur278xq18",
+    "createdAt": "2026-11-13T18:16:16.357Z",
+    "updatedAt": "2026-11-13T18:16:16.357Z",
+    "groupId": "6af60a91769c2489866b00c1",
+    "userId": "id_1794593776349_t7qnl3h8p",
+    "role": "member",
+    "membershipStatus": "approved",
+    "joinedAt": "2026-11-13T18:16:16.356Z",
+    "__v": 0
   }
 ]

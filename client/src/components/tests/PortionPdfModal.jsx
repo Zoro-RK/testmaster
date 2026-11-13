@@ -6,6 +6,11 @@ export default function PortionPdfModal({ isOpen, onClose, pdfUrl, pdfName, titl
 
   if (!isOpen) return null;
 
+  const token = localStorage.getItem('tnpsc_token');
+  const resolvedPdfUrl = (token && !pdfUrl.includes('token='))
+    ? `${pdfUrl}${pdfUrl.includes('?') ? '&' : '?'}token=${encodeURIComponent(token)}`
+    : pdfUrl;
+
   return (
     <div style={{
       position: 'fixed',
@@ -66,7 +71,7 @@ export default function PortionPdfModal({ isOpen, onClose, pdfUrl, pdfName, titl
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             {/* Download Link */}
             <a
-              href={pdfUrl}
+              href={resolvedPdfUrl}
               download={pdfName}
               className="btn btn-secondary"
               style={{
@@ -83,7 +88,7 @@ export default function PortionPdfModal({ isOpen, onClose, pdfUrl, pdfName, titl
 
             {/* Open in New Window */}
             <a
-              href={pdfUrl}
+              href={resolvedPdfUrl}
               target="_blank"
               rel="noreferrer"
               className="btn btn-secondary"
@@ -124,7 +129,7 @@ export default function PortionPdfModal({ isOpen, onClose, pdfUrl, pdfName, titl
         {/* PDF Viewer Body */}
         <div style={{ flex: 1, backgroundColor: '#525659', position: 'relative' }}>
           <iframe
-            src={`${pdfUrl}#toolbar=1&navpanes=0&scrollbar=1`}
+            src={`${resolvedPdfUrl}#toolbar=1&navpanes=0&scrollbar=1`}
             title={`Portion Study Guide: ${title}`}
             style={{
               width: '100%',

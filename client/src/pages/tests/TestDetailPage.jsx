@@ -147,7 +147,9 @@ export default function TestDetailPage() {
     );
   }
 
-  const pdfUrl = testData.portionPdfUrl || `/api/tests/${testId}/portion-pdf`;
+  const token = localStorage.getItem('tnpsc_token');
+  const rawPdfUrl = testData.portionPdfUrl || `/api/tests/${testId}/portion-pdf`;
+  const pdfUrl = token ? `${rawPdfUrl}${rawPdfUrl.includes('?') ? '&' : '?'}token=${encodeURIComponent(token)}` : rawPdfUrl;
   const pdfName = testData.portionPdfName || 'Portion_Study_Guide.pdf';
 
   return (

@@ -163,5 +163,790 @@
       }
     ],
     "__v": 0
+  },
+  {
+    "_id": "id_1794593088622_afkygvqqh",
+    "createdAt": "2026-11-13T18:04:48.623Z",
+    "updatedAt": "2026-11-13T18:08:32.551Z",
+    "testId": "id_1794593055855_g2cpnykcc",
+    "testVersionId": "id_1794593055867_dprdurjbb",
+    "userId": "6af60a91769c2489866b00ca",
+    "startedAt": "2026-11-13T18:04:48.622Z",
+    "submittedAt": "2026-11-13T18:08:32.547Z",
+    "expiresAt": "2026-11-13T19:44:48.622Z",
+    "status": "submitted",
+    "score": 4,
+    "correctCount": 4,
+    "incorrectCount": 2,
+    "unansweredCount": 94,
+    "answers": [
+      {
+        "questionId": "GS1-001",
+        "selectedOption": "C",
+        "isCorrect": true,
+        "markedForReview": false,
+        "answeredAt": "2026-11-13T18:04:55.188Z"
+      },
+      {
+        "questionId": "GS1-002",
+        "selectedOption": "B",
+        "isCorrect": true,
+        "markedForReview": false,
+        "answeredAt": "2026-11-13T18:05:03.229Z"
+      },
+      {
+        "questionId": "GS1-003",
+        "selectedOption": "B",
+        "isCorrect": true,
+        "markedForReview": false,
+        "answeredAt": "2026-11-13T18:05:12.528Z"
+      },
+      {
+        "questionId": "GS1-004",
+        "selectedOption": "C",
+        "isCorrect": true,
+        "markedForReview": false,
+        "answeredAt": "2026-11-13T18:05:44.801Z"
+      },
+      {
+        "questionId": "GS1-005",
+        "selectedOption": "A",
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": "2026-11-13T18:08:14.968Z"
+      },
+      {
+        "questionId": "GS1-006",
+        "selectedOption": "A",
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": "2026-11-13T18:08:27.097Z"
+      },
+      {
+        "questionId": "GS1-007",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-008",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-009",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-010",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-011",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-012",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-013",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-014",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-015",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-016",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-017",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-018",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-019",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-020",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-021",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-022",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-023",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-024",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-025",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-026",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-027",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-028",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-029",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-030",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-031",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-032",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-033",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-034",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-035",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-036",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-037",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-038",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-039",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-040",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-041",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-042",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-043",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-044",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-045",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-046",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-047",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-048",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-049",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-050",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-051",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-052",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-053",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-054",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-055",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-056",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-057",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-058",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-059",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-060",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-061",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-062",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-063",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-064",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-065",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-066",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-067",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-068",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-069",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-070",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-071",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-072",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-073",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-074",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-075",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-076",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-077",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-078",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-079",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-080",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-081",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-082",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-083",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-084",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-085",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-086",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-087",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-088",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-089",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-090",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-091",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-092",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-093",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-094",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-095",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-096",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-097",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-098",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-099",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      },
+      {
+        "questionId": "GS1-100",
+        "selectedOption": null,
+        "isCorrect": false,
+        "markedForReview": false,
+        "answeredAt": null
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "id_1794593613158_gasnwp50q",
+    "createdAt": "2026-11-13T18:13:33.158Z",
+    "updatedAt": "2026-11-13T18:13:33.171Z",
+    "testId": "id_1794593613147_2io3ebca8",
+    "testVersionId": "id_1794593613150_lynhmg4d4",
+    "userId": "6af60a91769c2489866b00d0",
+    "startedAt": "2026-11-13T18:13:33.158Z",
+    "submittedAt": "2026-11-13T18:13:33.171Z",
+    "expiresAt": "2026-11-13T18:18:33.158Z",
+    "status": "submitted",
+    "score": 1,
+    "correctCount": 1,
+    "incorrectCount": 1,
+    "unansweredCount": 0,
+    "answers": [
+      {
+        "questionId": "SCI-001",
+        "selectedOption": "B",
+        "isCorrect": true,
+        "markedForReview": false,
+        "answeredAt": "2026-11-13T18:13:33.164Z"
+      },
+      {
+        "questionId": "SCI-002",
+        "selectedOption": "A",
+        "isCorrect": false,
+        "markedForReview": true,
+        "answeredAt": "2026-11-13T18:13:33.167Z"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "id_1794593776533_u50utez5w",
+    "createdAt": "2026-11-13T18:16:16.533Z",
+    "updatedAt": "2026-11-13T18:16:16.549Z",
+    "testId": "id_1794593776523_e3nfe1xle",
+    "testVersionId": "id_1794593776526_v2dk5xfkd",
+    "userId": "6af60a91769c2489866b00d0",
+    "startedAt": "2026-11-13T18:16:16.533Z",
+    "submittedAt": "2026-11-13T18:16:16.549Z",
+    "expiresAt": "2026-11-13T18:21:16.533Z",
+    "status": "submitted",
+    "score": 1,
+    "correctCount": 1,
+    "incorrectCount": 1,
+    "unansweredCount": 0,
+    "answers": [
+      {
+        "questionId": "SCI-001",
+        "selectedOption": "B",
+        "isCorrect": true,
+        "markedForReview": false,
+        "answeredAt": "2026-11-13T18:16:16.542Z"
+      },
+      {
+        "questionId": "SCI-002",
+        "selectedOption": "A",
+        "isCorrect": false,
+        "markedForReview": true,
+        "answeredAt": "2026-11-13T18:16:16.545Z"
+      }
+    ],
+    "__v": 0
   }
 ]

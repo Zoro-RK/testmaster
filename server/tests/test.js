@@ -312,6 +312,19 @@ async function runTests() {
     assert(pdfRes.body.length > 100 || (pdfRes.text && pdfRes.text.length > 100), 'PDF binary content must be returned');
     console.log('✔ Portion Study PDF successfully generated and served');
 
+    // 14b. Verify browser iframe and query token PDF retrieval without header
+    console.log('[Test 14b] Browser iframe retrieval without Authorization header...');
+    const iframeRes = await request(app)
+      .get(`/api/tests/${publishedTestId}/portion-pdf`);
+    assert.strictEqual(iframeRes.status, 200, 'Iframe browser request without header must succeed for published test');
+    assert.strictEqual(iframeRes.headers['content-type'], 'application/pdf');
+
+    const queryTokenRes = await request(app)
+      .get(`/api/tests/${publishedTestId}/portion-pdf?token=${token}`);
+    assert.strictEqual(queryTokenRes.status, 200);
+    assert.strictEqual(queryTokenRes.headers['content-type'], 'application/pdf');
+    console.log('✔ Browser iframe and query token PDF streaming verified successfully');
+
     console.log('\n======================================================');
     console.log('🎉 ALL BACKEND VERIFICATION TESTS PASSED SUCCESSFULLY! 🎉');
     console.log('======================================================\n');
