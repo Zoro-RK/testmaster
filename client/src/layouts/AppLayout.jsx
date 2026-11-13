@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { NavLink, useNavigate, useLocation, Outlet } from 'react-router-dom';
 import { 
   LayoutDashboard, 
   Users, 
@@ -300,7 +300,7 @@ export default function AppLayout({ children }) {
         flexDirection: 'column'
       }}>
         <div style={{ flex: 1 }}>
-          {children}
+          {children || <Outlet />}
         </div>
       </main>
 
