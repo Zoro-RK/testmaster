@@ -12,5 +12,21 @@
     "fileType": "application/pdf",
     "fileSize": 358400,
     "visibility": "group"
+  },
+  {
+    "_id": "id_1794596109053_hc9o9cimi",
+    "createdAt": "2026-11-13T18:55:09.055Z",
+    "updatedAt": "2026-11-13T18:55:09.055Z",
+    "groupId": "id_1794596103325_p9nqfrzvy",
+    "uploadedBy": "id_1794596103928_w4ntivqn7",
+    "topicIds": [],
+    "title": "Indian Constitution Quick Revision Notes",
+    "description": "Handmade summary of Fundamental Rights articles 12-35 with landmark cases.",
+    "fileStorageKey": "sample_notes_polity.pdf",
+    "fileName": "polity_quick_revision.pdf",
+    "fileType": "application/pdf",
+    "fileSize": 358400,
+    "visibility": "group",
+    "__v": 0
   }
 ]

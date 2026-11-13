@@ -7,5 +7,15 @@
     "code": "TNPSC_GROUP_IV",
     "description": "Official syllabus based on TNPSC notification for Combined Civil Services Examination IV (Group IV Services).",
     "isActive": true
+  },
+  {
+    "_id": "id_1794596071556_26xfl0vw2",
+    "createdAt": "2026-11-13T18:54:31.563Z",
+    "updatedAt": "2026-11-13T18:54:31.563Z",
+    "name": "TNPSC Combined Civil Services Examination – IV (Group IV Services)",
+    "code": "TNPSC_GROUP_IV",
+    "description": "Official syllabus based on TNPSC notification for Combined Civil Services Examination IV (Group IV Services).",
+    "isActive": true,
+    "__v": 0
   }
 ]

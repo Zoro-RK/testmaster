@@ -3478,5 +3478,341 @@
     "schemaVersion": "1.0",
     "createdBy": "6af60a91769c2489866b00ca",
     "__v": 0
+  },
+  {
+    "_id": "id_1794596108498_shpg7ypn8",
+    "createdAt": "2026-11-13T18:55:08.500Z",
+    "updatedAt": "2026-11-13T18:55:08.500Z",
+    "testId": "id_1794596108350_xfat18u78",
+    "versionNumber": 1,
+    "questions": [
+      {
+        "id": "POL-001",
+        "question": "Under which Article of the Indian Constitution is the \"Right to Equality before Law\" guaranteed?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Article 14"
+          },
+          {
+            "key": "B",
+            "text": "Article 19"
+          },
+          {
+            "key": "C",
+            "text": "Article 21"
+          },
+          {
+            "key": "D",
+            "text": "Article 32"
+          }
+        ],
+        "correctAnswer": "A",
+        "explanation": "Article 14 of the Indian Constitution states that the State shall not deny to any person equality before the law or the equal protection of the laws within the territory of India.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "POL-002",
+        "question": "Which Constitutional Amendment introduced the words \"Socialist, Secular and Integrity\" into the Preamble of India?",
+        "options": [
+          {
+            "key": "A",
+            "text": "44th Constitutional Amendment Act, 1978"
+          },
+          {
+            "key": "B",
+            "text": "42nd Constitutional Amendment Act, 1976"
+          },
+          {
+            "key": "C",
+            "text": "86th Constitutional Amendment Act, 2002"
+          },
+          {
+            "key": "D",
+            "text": "73rd Constitutional Amendment Act, 1992"
+          }
+        ],
+        "correctAnswer": "B",
+        "explanation": "The 42nd Amendment Act of 1976 added three new words—Socialist, Secular and Integrity—to the Preamble of the Indian Constitution.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "POL-003",
+        "question": "Which of the following Fundamental Rights cannot be suspended even during a National Emergency under Article 352?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Article 19 and Article 20"
+          },
+          {
+            "key": "B",
+            "text": "Article 20 and Article 21"
+          },
+          {
+            "key": "C",
+            "text": "Article 14 and Article 21"
+          },
+          {
+            "key": "D",
+            "text": "Article 21 and Article 22"
+          }
+        ],
+        "correctAnswer": "B",
+        "explanation": "By the 44th Amendment Act, Articles 20 (protection in respect of conviction for offences) and 21 (protection of life and personal liberty) cannot be suspended during an emergency.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "POL-004",
+        "question": "Who described the Right to Constitutional Remedies (Article 32) as the \"Heart and Soul of the Constitution\"?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Jawaharlal Nehru"
+          },
+          {
+            "key": "B",
+            "text": "Dr. B. R. Ambedkar"
+          },
+          {
+            "key": "C",
+            "text": "Dr. Rajendra Prasad"
+          },
+          {
+            "key": "D",
+            "text": "Sardar Vallabhbhai Patel"
+          }
+        ],
+        "correctAnswer": "B",
+        "explanation": "Dr. B. R. Ambedkar referred to Article 32 (Right to Constitutional Remedies) as the very heart and soul of the Constitution.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "POL-005",
+        "question": "Which writ is issued by courts to secure the release of a person unlawfully detained?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Mandamus"
+          },
+          {
+            "key": "B",
+            "text": "Quo-Warranto"
+          },
+          {
+            "key": "C",
+            "text": "Habeas Corpus"
+          },
+          {
+            "key": "D",
+            "text": "Certiorari"
+          }
+        ],
+        "correctAnswer": "C",
+        "explanation": "Habeas Corpus literally means \"to have the body of\" and is issued to produce a detained person before the court to examine the legality of detention.",
+        "difficulty": "easy"
+      }
+    ],
+    "schemaVersion": "1.0",
+    "createdBy": "id_1794596103928_w4ntivqn7",
+    "__v": 0
+  },
+  {
+    "_id": "id_1794596108823_eevsn0bwk",
+    "createdAt": "2026-11-13T18:55:08.823Z",
+    "updatedAt": "2026-11-13T18:55:08.823Z",
+    "testId": "id_1794596108684_uqa06046c",
+    "versionNumber": 1,
+    "questions": [
+      {
+        "id": "TAM-001",
+        "question": "“கற்க கசடறக் கற்பவை கற்றபின் நிற்க அதற்குத் தக” - இக்குறட்பாவில் பயின்று வந்துள்ள மோனை யாது?",
+        "options": [
+          {
+            "key": "A",
+            "text": "பொழிப்பு மோனை"
+          },
+          {
+            "key": "B",
+            "text": "முற்று மோனை"
+          },
+          {
+            "key": "C",
+            "text": "கூழை மோனை"
+          },
+          {
+            "key": "D",
+            "text": "இணை மோனை"
+          }
+        ],
+        "correctAnswer": "B",
+        "explanation": "செய்யுளின் நான்கு சீர்களிலும் முதல் எழுத்து ஒன்றி வருவது \"முற்று மோனை\" எனப்படும் (கற்க, கசடறக், கற்பவை, கற்றபின்).",
+        "difficulty": "medium"
+      },
+      {
+        "id": "TAM-002",
+        "question": "‘செங்கதிர்’ - பிரித்து எழுதுக:",
+        "options": [
+          {
+            "key": "A",
+            "text": "செம்மை + கதிர்"
+          },
+          {
+            "key": "B",
+            "text": "செம் + கதிர்"
+          },
+          {
+            "key": "C",
+            "text": "செந் + கதிர்"
+          },
+          {
+            "key": "D",
+            "text": "செழுமை + கதிர்"
+          }
+        ],
+        "correctAnswer": "A",
+        "explanation": "ஈறுபோதல் விதியின்படி செம்மை + கதிர் என்பது \"செங்கதிர்\" எனப் புணரும்.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "TAM-003",
+        "question": "‘ஒழுக்கமுடைமை’ அதிகாரம் திருக்குறளில் எந்தப் பாலில் அமைந்துள்ளது?",
+        "options": [
+          {
+            "key": "A",
+            "text": "அறத்துப்பால்"
+          },
+          {
+            "key": "B",
+            "text": "பொருட்பால்"
+          },
+          {
+            "key": "C",
+            "text": "காமத்துப்பால்"
+          },
+          {
+            "key": "D",
+            "text": "இன்பத்துப்பால்"
+          }
+        ],
+        "correctAnswer": "A",
+        "explanation": "ஒழுக்கமுடைமை அதிகாரம் அறத்துப்பாலில் இல்லறவியலில் 14-வது அதிகாரமாக அமைந்துள்ளது.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "TAM-004",
+        "question": "பொருந்தாச் சொல்லைக் கண்டறிக:",
+        "options": [
+          {
+            "key": "A",
+            "text": "அன்புடைமை"
+          },
+          {
+            "key": "B",
+            "text": "விருந்தோம்பல்"
+          },
+          {
+            "key": "C",
+            "text": "பெரியாரைத் துணைக் கோடல்"
+          },
+          {
+            "key": "D",
+            "text": "மரூஉ"
+          }
+        ],
+        "correctAnswer": "D",
+        "explanation": "முதல் மூன்றும் திருக்குறளின் அதிகாரப் பெயர்கள்; மரூஉ என்பது இலக்கணச் சொல் வகை ஆகும்.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "TAM-005",
+        "question": "“தமிழ்த்தாத்தா” என்று போற்றப்படும் தமிழ் அறிஞர் யார்?",
+        "options": [
+          {
+            "key": "A",
+            "text": "பாரதியார்"
+          },
+          {
+            "key": "B",
+            "text": "உ.வே. சாமிநாதையர்"
+          },
+          {
+            "key": "C",
+            "text": "மறைமலையடிகள்"
+          },
+          {
+            "key": "D",
+            "text": "தேவநேயப் பாவாணர்"
+          }
+        ],
+        "correctAnswer": "B",
+        "explanation": "பழங்காலத் தமிழ் ஓலைச்சுவடிகளைத் தேடித் தொகுத்துப் பதிப்பித்த உ.வே. சாமிநாதையர் \"தமிழ்த்தாத்தா\" என அழைக்கப்படுகிறார்.",
+        "difficulty": "easy"
+      }
+    ],
+    "schemaVersion": "1.0",
+    "createdBy": "id_1794596104153_pgi65nyhw",
+    "__v": 0
+  },
+  {
+    "_id": "id_1794596386646_8tr43q5oh",
+    "createdAt": "2026-11-13T18:59:46.647Z",
+    "updatedAt": "2026-11-13T18:59:46.647Z",
+    "testId": "id_1794596386523_xoybqrjcp",
+    "versionNumber": 1,
+    "questions": [
+      {
+        "id": "SCI-001",
+        "question": "What is the primary source of energy for the earth?",
+        "options": [
+          {
+            "key": "A",
+            "text": "The Moon"
+          },
+          {
+            "key": "B",
+            "text": "The Sun"
+          },
+          {
+            "key": "C",
+            "text": "Geothermal vents"
+          },
+          {
+            "key": "D",
+            "text": "Tides"
+          }
+        ],
+        "correctAnswer": "B",
+        "explanation": "The Sun is the star at the center of the Solar System and principal energy source.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "SCI-002",
+        "question": "Which of the following is a scalar quantity?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Velocity"
+          },
+          {
+            "key": "B",
+            "text": "Acceleration"
+          },
+          {
+            "key": "C",
+            "text": "Mass"
+          },
+          {
+            "key": "D",
+            "text": "Force"
+          }
+        ],
+        "correctAnswer": "C",
+        "explanation": "Mass has magnitude only and is therefore a scalar quantity.",
+        "difficulty": "easy"
+      }
+    ],
+    "schemaVersion": "1.0",
+    "createdBy": "id_1794596103928_w4ntivqn7",
+    "__v": 0
   }
 ]

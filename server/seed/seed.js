@@ -1,3 +1,6 @@
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
+require('dotenv').config({ path: path.join(__dirname, '..', '..', '.env') });
 const bcrypt = require('bcryptjs');
 const { connectDB } = require('../config/db');
 const User = require('../models/User');
@@ -59,12 +62,26 @@ async function seed() {
             slug: topicData.slug,
             name: topicData.name,
             nameTa: topicData.nameTa || topicData.name,
-            language: partData.language
+            language: partData.language,
+            isActive: true
           });
         }
       }
     }
   }
+
+  // Ensure all topics in database have isActive: true
+  try {
+    if (SyllabusTopic.mongooseModel) {
+      await SyllabusTopic.mongooseModel.updateMany(
+        { $or: [{ isActive: { $exists: false } }, { isActive: null }] },
+        { $set: { isActive: true } }
+      );
+    }
+  } catch (e) {
+    // ignore
+  }
+
   console.log('[Seeding] Canonical Syllabus parts, units and topics verified.');
 
   // 3. Seed Default Group

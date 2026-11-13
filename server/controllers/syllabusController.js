@@ -39,7 +39,7 @@ async function getExamSyllabus(req, res) {
 
       const unitsWithTopics = [];
       for (const unit of units) {
-        const topics = await SyllabusTopic.find({ unitId: unit._id, isActive: true });
+        const topics = await SyllabusTopic.find({ unitId: unit._id, isActive: { $ne: false } });
         topics.sort((a, b) => (a.displayOrder || 0) - (b.displayOrder || 0));
 
         unitsWithTopics.push({

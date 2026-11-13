@@ -30,9 +30,9 @@ function createModel(modelName, schemaDefinition) {
       if (isConnectedToMongo()) {
         try {
           const docs = await MongooseModel.find(query).lean();
-          if (docs && docs.length > 0) return docs;
+          return docs || [];
         } catch (e) {
-          // fallback to store
+          // fallback to store only on connection/query failure
         }
       }
       return getStore(modelName).find(query);
@@ -42,9 +42,9 @@ function createModel(modelName, schemaDefinition) {
       if (isConnectedToMongo()) {
         try {
           const doc = await MongooseModel.findOne(query).lean();
-          if (doc) return doc;
+          return doc || null;
         } catch (e) {
-          // fallback to store
+          // fallback to store only on connection/query failure
         }
       }
       return getStore(modelName).findOne(query);
@@ -54,17 +54,15 @@ function createModel(modelName, schemaDefinition) {
       if (!id) return null;
       if (isConnectedToMongo()) {
         try {
-          // Try both ObjectId and string matches to handle Mixed _id safely
           if (mongoose.isValidObjectId(id)) {
             const objId = new mongoose.Types.ObjectId(id);
             const doc = await MongooseModel.findOne({ _id: objId }).lean() || await MongooseModel.findById(id).lean();
             if (doc) return doc;
           }
-          // Also try finding by _id as string or id field
           const byStr = await MongooseModel.findOne({ _id: String(id) }).lean() || await MongooseModel.findOne({ id: String(id) }).lean();
-          if (byStr) return byStr;
+          return byStr || null;
         } catch (e) {
-          // fallback
+          // fallback to store only on connection/query failure
         }
       }
       return getStore(modelName).findById(id);
@@ -165,8 +163,7 @@ function createModel(modelName, schemaDefinition) {
     async countDocuments(query = {}) {
       if (isConnectedToMongo()) {
         try {
-          const count = await MongooseModel.countDocuments(query);
-          if (count > 0) return count;
+          return await MongooseModel.countDocuments(query);
         } catch (e) {}
       }
       return getStore(modelName).countDocuments(query);

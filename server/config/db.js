@@ -1,6 +1,18 @@
 const mongoose = require('mongoose');
 const fs = require('fs');
 const path = require('path');
+const dns = require('dns');
+
+// Configure reliable DNS servers for MongoDB Atlas SRV lookup
+try {
+  dns.setServers(['8.8.8.8', '1.1.1.1']);
+} catch (e) {
+  // Ignore in environments where setServers is restricted
+}
+
+// Ensure environment variables are loaded
+require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
+require('dotenv').config({ path: path.join(__dirname, '..', '..', '.env') });
 
 const dataDir = path.join(__dirname, '..', 'data');
 if (!fs.existsSync(dataDir)) {
@@ -138,14 +150,40 @@ function getStore(name) {
 }
 
 async function connectDB() {
-  const mongoUri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/tnpsc_study_circle';
+  let mongoUri = process.env.MONGO_URI || process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/tnpsc_study_circle';
+
+  // If MongoDB Atlas URI without a database name, append default tnpsc_study_circle database
+  if (mongoUri.includes('mongodb+srv://') || mongoUri.includes('mongodb://')) {
+    try {
+      const parsed = new URL(mongoUri);
+      if (!parsed.pathname || parsed.pathname === '/' || parsed.pathname === '') {
+        parsed.pathname = '/tnpsc_study_circle';
+        if (!parsed.searchParams.has('retryWrites')) {
+          parsed.searchParams.set('retryWrites', 'true');
+        }
+        if (!parsed.searchParams.has('w')) {
+          parsed.searchParams.set('w', 'majority');
+        }
+        mongoUri = parsed.toString();
+      }
+    } catch {
+      if (mongoUri.endsWith('/')) {
+        mongoUri = `${mongoUri}tnpsc_study_circle?retryWrites=true&w=majority`;
+      }
+    }
+  }
+
+  const isAtlas = mongoUri.includes('mongodb+srv') || mongoUri.includes('.mongodb.net');
+  const timeoutMs = isAtlas ? 10000 : 3000;
+
   try {
-    // Attempt Mongoose connection with a short timeout
+    const maskedUri = mongoUri.replace(/(:\/\/[^:]+:)([^@]+)(@)/, '$1******$3');
+    console.log(`[Database] Connecting to MongoDB (${isAtlas ? 'Atlas Cloud' : 'Local'})...`);
     await mongoose.connect(mongoUri, {
-      serverSelectionTimeoutMS: 2000
+      serverSelectionTimeoutMS: timeoutMs
     });
     isConnectedToMongo = true;
-    console.log(`[Database] Connected successfully to MongoDB at ${mongoUri}`);
+    console.log(`[Database] Connected successfully to MongoDB at ${maskedUri}`);
   } catch (err) {
     console.log(`[Database] MongoDB not reachable (${err.message}). Using local embedded JSON datastore in ./server/data/`);
     isConnectedToMongo = false;
