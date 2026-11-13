@@ -83,6 +83,31 @@ async function createTest(req, res) {
       if (p) resolvedPartId = p._id;
     }
 
+    // Auto-resolve questionCount and durationMinutes
+    const resolvedQuestionCount = questionCount || payload.practiceQuestionCount || payload.totalQuestions || (questions ? questions.length : 0);
+    const resolvedDurationMinutes = durationMinutes || payload.duration || payload.timeMinutes || Math.max(10, questions ? questions.length : 60);
+
+    // Auto-resolve topicIds from questions if not provided
+    let resolvedTopicIds = topicIds || topics || [];
+    if ((!resolvedTopicIds || resolvedTopicIds.length === 0) && Array.isArray(questions)) {
+      const extractedTopics = [...new Set(questions.map(q => q.topic).filter(Boolean))];
+      if (extractedTopics.length > 0) {
+        const allTopics = await SyllabusTopic.find({});
+        const matched = allTopics.filter(t => 
+          extractedTopics.some(et => 
+            et.toLowerCase().trim() === t.name.toLowerCase().trim() ||
+            t.name.toLowerCase().includes(et.toLowerCase()) ||
+            et.toLowerCase().includes(t.name.toLowerCase())
+          )
+        );
+        if (matched.length > 0) {
+          resolvedTopicIds = matched.map(m => m._id);
+        } else {
+          resolvedTopicIds = extractedTopics;
+        }
+      }
+    }
+
     const test = await Test.create({
       groupId: req.group._id,
       createdBy: req.user._id,
@@ -91,9 +116,9 @@ async function createTest(req, res) {
       examId: examId || 'default',
       partId: resolvedPartId || 'A',
       unitIds: unitIds || (unit ? [unit] : []),
-      topicIds: topicIds || topics || [],
-      questionCount: questions.length,
-      durationMinutes: durationMinutes || 60,
+      topicIds: resolvedTopicIds,
+      questionCount: resolvedQuestionCount,
+      durationMinutes: resolvedDurationMinutes,
       language: language || 'English',
       status: status === 'published' ? 'published' : 'draft',
       currentVersion: 1,

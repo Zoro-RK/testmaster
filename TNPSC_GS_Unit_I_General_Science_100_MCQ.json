@@ -1,0 +1,2711 @@
+{
+  "schemaVersion": "1.0",
+  "title": "TNPSC Group IV - General Studies - Unit I: General Science",
+  "exam": "TNPSC Group IV",
+  "part": "A",
+  "unit": "Unit I: General Science",
+  "language": "English",
+  "practiceQuestionCount": 100,
+  "questions": [
+    {
+      "id": "GS1-001",
+      "topic": "Nature of Universe",
+      "question": "Which star is at the centre of our solar system?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Polaris"
+        },
+        {
+          "key": "B",
+          "text": "Sirius"
+        },
+        {
+          "key": "C",
+          "text": "The Sun"
+        },
+        {
+          "key": "D",
+          "text": "Alpha Centauri"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Sun is the star at the centre of the solar system; the planets orbit it.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-002",
+      "topic": "Nature of Universe",
+      "question": "Which planet is commonly called the Red Planet?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Venus"
+        },
+        {
+          "key": "B",
+          "text": "Mars"
+        },
+        {
+          "key": "C",
+          "text": "Jupiter"
+        },
+        {
+          "key": "D",
+          "text": "Saturn"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Iron-rich dust on Mars gives its surface a reddish appearance.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-003",
+      "topic": "Nature of Universe",
+      "question": "What is the main cause of day and night on Earth?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Earth's revolution"
+        },
+        {
+          "key": "B",
+          "text": "Earth's rotation"
+        },
+        {
+          "key": "C",
+          "text": "The Moon's revolution"
+        },
+        {
+          "key": "D",
+          "text": "The Sun's rotation"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Earth rotates on its axis, bringing different regions into and out of sunlight.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-004",
+      "topic": "Nature of Universe",
+      "question": "A light-year is a unit of measurement of what?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Time"
+        },
+        {
+          "key": "B",
+          "text": "Brightness"
+        },
+        {
+          "key": "C",
+          "text": "Distance"
+        },
+        {
+          "key": "D",
+          "text": "Mass"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "A light-year is the distance light travels in one year.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-005",
+      "topic": "Measurement of Physical Quantities",
+      "question": "What is the SI unit of length?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Centimetre"
+        },
+        {
+          "key": "B",
+          "text": "Metre"
+        },
+        {
+          "key": "C",
+          "text": "Kilometre"
+        },
+        {
+          "key": "D",
+          "text": "Foot"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "The metre (m) is the SI base unit of length.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-006",
+      "topic": "Measurement of Physical Quantities",
+      "question": "Which instrument is commonly used to measure electric current?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Voltmeter"
+        },
+        {
+          "key": "B",
+          "text": "Ammeter"
+        },
+        {
+          "key": "C",
+          "text": "Barometer"
+        },
+        {
+          "key": "D",
+          "text": "Thermometer"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "An ammeter measures electric current and is connected in series in a circuit.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-007",
+      "topic": "Measurement of Physical Quantities",
+      "question": "What is the SI unit of force?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Joule"
+        },
+        {
+          "key": "B",
+          "text": "Watt"
+        },
+        {
+          "key": "C",
+          "text": "Newton"
+        },
+        {
+          "key": "D",
+          "text": "Pascal"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "Force is measured in newtons (N).",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-008",
+      "topic": "Measurement of Physical Quantities",
+      "question": "Which of the following is a derived SI unit?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Kilogram"
+        },
+        {
+          "key": "B",
+          "text": "Second"
+        },
+        {
+          "key": "C",
+          "text": "Kelvin"
+        },
+        {
+          "key": "D",
+          "text": "Joule"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "The joule is a derived unit of energy, equivalent to newton metre.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-009",
+      "topic": "General Scientific Laws in Motion",
+      "question": "Which quantity is calculated by dividing distance travelled by time taken?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Acceleration"
+        },
+        {
+          "key": "B",
+          "text": "Speed"
+        },
+        {
+          "key": "C",
+          "text": "Force"
+        },
+        {
+          "key": "D",
+          "text": "Momentum"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Average speed equals total distance travelled divided by total time taken.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-010",
+      "topic": "General Scientific Laws in Motion",
+      "question": "Newton's first law of motion is also known as the law of:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Gravitation"
+        },
+        {
+          "key": "B",
+          "text": "Inertia"
+        },
+        {
+          "key": "C",
+          "text": "Action and reaction"
+        },
+        {
+          "key": "D",
+          "text": "Conservation of energy"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "The first law describes the tendency of an object to resist changes in its state of motion, called inertia.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-011",
+      "topic": "General Scientific Laws in Motion",
+      "question": "According to Newton's third law, action and reaction forces are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Equal and opposite"
+        },
+        {
+          "key": "B",
+          "text": "Unequal and parallel"
+        },
+        {
+          "key": "C",
+          "text": "Acting on the same body"
+        },
+        {
+          "key": "D",
+          "text": "Always balanced on one object"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Action and reaction are equal in magnitude, opposite in direction and act on different bodies.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-012",
+      "topic": "General Scientific Laws in Motion",
+      "question": "The SI unit of acceleration is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "m/s"
+        },
+        {
+          "key": "B",
+          "text": "m/s²"
+        },
+        {
+          "key": "C",
+          "text": "kg m/s"
+        },
+        {
+          "key": "D",
+          "text": "N/m²"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Acceleration is the change in velocity per unit time, measured in metres per second squared.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-013",
+      "topic": "Force, Pressure and Energy",
+      "question": "Pressure is defined as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Force multiplied by area"
+        },
+        {
+          "key": "B",
+          "text": "Force per unit area"
+        },
+        {
+          "key": "C",
+          "text": "Mass per unit volume"
+        },
+        {
+          "key": "D",
+          "text": "Work per unit time"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Pressure is the normal force acting per unit area.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-014",
+      "topic": "Force, Pressure and Energy",
+      "question": "Which form of energy does a moving object possess?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Potential energy"
+        },
+        {
+          "key": "B",
+          "text": "Kinetic energy"
+        },
+        {
+          "key": "C",
+          "text": "Chemical energy"
+        },
+        {
+          "key": "D",
+          "text": "Nuclear energy"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Kinetic energy is the energy an object possesses because of its motion.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-015",
+      "topic": "Force, Pressure and Energy",
+      "question": "The SI unit of power is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Joule"
+        },
+        {
+          "key": "B",
+          "text": "Newton"
+        },
+        {
+          "key": "C",
+          "text": "Watt"
+        },
+        {
+          "key": "D",
+          "text": "Pascal"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "Power is the rate of doing work or transferring energy; its SI unit is the watt.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-016",
+      "topic": "Force, Pressure and Energy",
+      "question": "A compressed spring stores mainly:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Kinetic energy"
+        },
+        {
+          "key": "B",
+          "text": "Elastic potential energy"
+        },
+        {
+          "key": "C",
+          "text": "Sound energy"
+        },
+        {
+          "key": "D",
+          "text": "Nuclear energy"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "When compressed, a spring stores elastic potential energy.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-017",
+      "topic": "Everyday Applications of Basic Principles of Mechanics, Electricity, Magnetism, Light, Sound, Heat and Nuclear Physics",
+      "question": "A fuse in a household electrical circuit is used mainly to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Increase voltage"
+        },
+        {
+          "key": "B",
+          "text": "Prevent excessive current"
+        },
+        {
+          "key": "C",
+          "text": "Store electric charge"
+        },
+        {
+          "key": "D",
+          "text": "Measure resistance"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "A fuse melts and breaks the circuit when current exceeds a safe value.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-018",
+      "topic": "Everyday Applications of Basic Principles of Mechanics, Electricity, Magnetism, Light, Sound, Heat and Nuclear Physics",
+      "question": "Which process transfers heat through a metal spoon placed in hot tea?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Conduction"
+        },
+        {
+          "key": "B",
+          "text": "Convection"
+        },
+        {
+          "key": "C",
+          "text": "Radiation"
+        },
+        {
+          "key": "D",
+          "text": "Evaporation"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Conduction transfers heat through a material by particle interactions.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-019",
+      "topic": "Everyday Applications of Basic Principles of Mechanics, Electricity, Magnetism, Light, Sound, Heat and Nuclear Physics",
+      "question": "The bending of light when it passes from air into water is called:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Reflection"
+        },
+        {
+          "key": "B",
+          "text": "Refraction"
+        },
+        {
+          "key": "C",
+          "text": "Dispersion"
+        },
+        {
+          "key": "D",
+          "text": "Diffraction"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Refraction is the change in direction of light due to a change in its speed between media.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-020",
+      "topic": "Everyday Applications of Basic Principles of Mechanics, Electricity, Magnetism, Light, Sound, Heat and Nuclear Physics",
+      "question": "Which device converts electrical energy into mechanical energy?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Electric motor"
+        },
+        {
+          "key": "B",
+          "text": "Generator"
+        },
+        {
+          "key": "C",
+          "text": "Solar cell"
+        },
+        {
+          "key": "D",
+          "text": "Fuse"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "An electric motor uses electrical energy to produce mechanical motion.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-021",
+      "topic": "Everyday Applications of Basic Principles of Mechanics, Electricity, Magnetism, Light, Sound, Heat and Nuclear Physics",
+      "question": "The pitch of a sound mainly depends on its:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amplitude"
+        },
+        {
+          "key": "B",
+          "text": "Frequency"
+        },
+        {
+          "key": "C",
+          "text": "Speed"
+        },
+        {
+          "key": "D",
+          "text": "Loudness"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Higher frequency is perceived as higher pitch.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-022",
+      "topic": "Everyday Applications of Basic Principles of Mechanics, Electricity, Magnetism, Light, Sound, Heat and Nuclear Physics",
+      "question": "In a parallel household circuit, appliances are connected so that they:",
+      "options": [
+        {
+          "key": "A",
+          "text": "All receive the same current only"
+        },
+        {
+          "key": "B",
+          "text": "Can operate independently"
+        },
+        {
+          "key": "C",
+          "text": "Must all be switched on together"
+        },
+        {
+          "key": "D",
+          "text": "Share one path only"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Parallel branches provide separate paths, allowing appliances to work independently.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-023",
+      "topic": "Elements and Compounds",
+      "question": "Which of the following is an element?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Water"
+        },
+        {
+          "key": "B",
+          "text": "Common salt"
+        },
+        {
+          "key": "C",
+          "text": "Oxygen"
+        },
+        {
+          "key": "D",
+          "text": "Carbon dioxide"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "Oxygen contains only one kind of atom and is therefore an element.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-024",
+      "topic": "Elements and Compounds",
+      "question": "Water is classified as a compound because it:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Contains only one type of atom"
+        },
+        {
+          "key": "B",
+          "text": "Has hydrogen and oxygen chemically combined"
+        },
+        {
+          "key": "C",
+          "text": "Can be separated by filtration"
+        },
+        {
+          "key": "D",
+          "text": "Is always a gas"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Water has hydrogen and oxygen chemically combined in a fixed proportion.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-025",
+      "topic": "Elements and Compounds",
+      "question": "What is the chemical formula of common salt?",
+      "options": [
+        {
+          "key": "A",
+          "text": "NaCl"
+        },
+        {
+          "key": "B",
+          "text": "HCl"
+        },
+        {
+          "key": "C",
+          "text": "NaOH"
+        },
+        {
+          "key": "D",
+          "text": "CaCO3"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Common salt is sodium chloride, with formula NaCl.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-026",
+      "topic": "Elements and Compounds",
+      "question": "Which method is suitable for separating an insoluble solid from a liquid?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Filtration"
+        },
+        {
+          "key": "B",
+          "text": "Magnetic separation only"
+        },
+        {
+          "key": "C",
+          "text": "Sublimation"
+        },
+        {
+          "key": "D",
+          "text": "Chromatography only"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Filtration retains an insoluble solid while the liquid passes through the filter.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-027",
+      "topic": "Acids, Bases and Salts",
+      "question": "Blue litmus paper turns red in:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A basic solution"
+        },
+        {
+          "key": "B",
+          "text": "An acidic solution"
+        },
+        {
+          "key": "C",
+          "text": "A neutral solution"
+        },
+        {
+          "key": "D",
+          "text": "Distilled water only"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Acids turn blue litmus red.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-028",
+      "topic": "Acids, Bases and Salts",
+      "question": "A solution with pH 7 at room temperature is generally:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Acidic"
+        },
+        {
+          "key": "B",
+          "text": "Neutral"
+        },
+        {
+          "key": "C",
+          "text": "Basic"
+        },
+        {
+          "key": "D",
+          "text": "Strongly alkaline"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "A pH of 7 is neutral at room temperature.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-029",
+      "topic": "Acids, Bases and Salts",
+      "question": "The reaction between an acid and a base is called:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Combustion"
+        },
+        {
+          "key": "B",
+          "text": "Neutralisation"
+        },
+        {
+          "key": "C",
+          "text": "Oxidation only"
+        },
+        {
+          "key": "D",
+          "text": "Crystallisation"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Neutralisation produces salt and water in a typical acid-base reaction.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-030",
+      "topic": "Acids, Bases and Salts",
+      "question": "Which substance is commonly used as an antacid?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Magnesium hydroxide"
+        },
+        {
+          "key": "B",
+          "text": "Sodium chloride"
+        },
+        {
+          "key": "C",
+          "text": "Copper sulphate"
+        },
+        {
+          "key": "D",
+          "text": "Ethanol"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Magnesium hydroxide is a base that neutralises excess stomach acid.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-031",
+      "topic": "Petroleum Products",
+      "question": "Petroleum is separated into useful fractions mainly by:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Filtration"
+        },
+        {
+          "key": "B",
+          "text": "Fractional distillation"
+        },
+        {
+          "key": "C",
+          "text": "Crystallisation"
+        },
+        {
+          "key": "D",
+          "text": "Hand picking"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Fractional distillation separates petroleum components according to their boiling ranges.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-032",
+      "topic": "Petroleum Products",
+      "question": "Which petroleum fraction is commonly used as road surfacing material?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Petroleum gas"
+        },
+        {
+          "key": "B",
+          "text": "Petrol"
+        },
+        {
+          "key": "C",
+          "text": "Bitumen"
+        },
+        {
+          "key": "D",
+          "text": "Kerosene"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "Bitumen is a heavy petroleum fraction used in road construction.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-033",
+      "topic": "Petroleum Products",
+      "question": "LPG used for domestic cooking mainly contains:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Methane only"
+        },
+        {
+          "key": "B",
+          "text": "Propane and butane"
+        },
+        {
+          "key": "C",
+          "text": "Hydrogen and oxygen"
+        },
+        {
+          "key": "D",
+          "text": "Carbon monoxide"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Liquefied petroleum gas commonly consists mainly of propane and butane.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-034",
+      "topic": "Petroleum Products",
+      "question": "Petroleum and natural gas are described as non-renewable because they:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Are produced daily by plants"
+        },
+        {
+          "key": "B",
+          "text": "Take millions of years to form"
+        },
+        {
+          "key": "C",
+          "text": "Cannot release energy"
+        },
+        {
+          "key": "D",
+          "text": "Are found only in oceans"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Their formation takes geological timescales, so they cannot be replenished quickly.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-035",
+      "topic": "Fertilizers",
+      "question": "Which three elements are represented by NPK in fertilizers?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nitrogen, phosphorus, potassium"
+        },
+        {
+          "key": "B",
+          "text": "Nickel, phosphorus, krypton"
+        },
+        {
+          "key": "C",
+          "text": "Nitrogen, potassium, calcium"
+        },
+        {
+          "key": "D",
+          "text": "Sodium, phosphorus, potassium"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "NPK stands for nitrogen, phosphorus and potassium, essential plant nutrients.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-036",
+      "topic": "Fertilizers",
+      "question": "Urea is an important source of:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nitrogen"
+        },
+        {
+          "key": "B",
+          "text": "Phosphorus"
+        },
+        {
+          "key": "C",
+          "text": "Potassium"
+        },
+        {
+          "key": "D",
+          "text": "Calcium"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Urea is a nitrogen-rich chemical fertilizer.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-037",
+      "topic": "Fertilizers",
+      "question": "Which practice helps reduce excessive fertilizer runoff?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Applying more fertilizer before rain"
+        },
+        {
+          "key": "B",
+          "text": "Applying fertilizer based on soil testing"
+        },
+        {
+          "key": "C",
+          "text": "Applying fertilizer directly into streams"
+        },
+        {
+          "key": "D",
+          "text": "Avoiding all soil assessment"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Soil testing helps determine crop nutrient needs and supports balanced application.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-038",
+      "topic": "Fertilizers",
+      "question": "Organic manure generally differs from chemical fertilizer because it:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Adds organic matter to soil"
+        },
+        {
+          "key": "B",
+          "text": "Contains no nutrients"
+        },
+        {
+          "key": "C",
+          "text": "Always acts instantly"
+        },
+        {
+          "key": "D",
+          "text": "Cannot improve soil structure"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Organic manure contributes organic matter and can improve soil structure as well as supply nutrients.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-039",
+      "topic": "Pesticides",
+      "question": "A herbicide is used to control:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Weeds"
+        },
+        {
+          "key": "B",
+          "text": "Fungi"
+        },
+        {
+          "key": "C",
+          "text": "Rodents"
+        },
+        {
+          "key": "D",
+          "text": "Viruses"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Herbicides are pesticides designed to control unwanted plants or weeds.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-040",
+      "topic": "Pesticides",
+      "question": "Which is an example of biological pest control?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Releasing a natural predator of a pest"
+        },
+        {
+          "key": "B",
+          "text": "Spraying excess insecticide"
+        },
+        {
+          "key": "C",
+          "text": "Burning all crop residues"
+        },
+        {
+          "key": "D",
+          "text": "Increasing chemical dosage"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Biological control uses natural enemies such as predators or parasites to reduce pest populations.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-041",
+      "topic": "Pesticides",
+      "question": "Why should pesticide labels be followed carefully?",
+      "options": [
+        {
+          "key": "A",
+          "text": "To increase residue levels"
+        },
+        {
+          "key": "B",
+          "text": "To ensure safe and correct use"
+        },
+        {
+          "key": "C",
+          "text": "To make pesticides edible"
+        },
+        {
+          "key": "D",
+          "text": "To avoid wearing protection"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Labels provide directions on dosage, protective measures, storage and safe application.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-042",
+      "topic": "Pesticides",
+      "question": "The unintended harmful effect of a pesticide on organisms other than the target pest is called:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Target control"
+        },
+        {
+          "key": "B",
+          "text": "Non-target effect"
+        },
+        {
+          "key": "C",
+          "text": "Photosynthesis"
+        },
+        {
+          "key": "D",
+          "text": "Pollination"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Pesticides can affect beneficial insects, wildlife and other non-target organisms.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-043",
+      "topic": "Metallurgy",
+      "question": "An ore is best described as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Any piece of pure metal"
+        },
+        {
+          "key": "B",
+          "text": "A mineral from which a metal can be extracted economically"
+        },
+        {
+          "key": "C",
+          "text": "A manufactured alloy"
+        },
+        {
+          "key": "D",
+          "text": "A non-metallic fuel"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "An ore is a naturally occurring material from which a metal can be extracted profitably.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-044",
+      "topic": "Metallurgy",
+      "question": "Rusting of iron requires the presence of:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Only nitrogen"
+        },
+        {
+          "key": "B",
+          "text": "Oxygen and moisture"
+        },
+        {
+          "key": "C",
+          "text": "Only carbon dioxide"
+        },
+        {
+          "key": "D",
+          "text": "Only sunlight"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Iron rusts in the presence of oxygen and water/moisture.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-045",
+      "topic": "Metallurgy",
+      "question": "Brass is an alloy mainly of:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Copper and zinc"
+        },
+        {
+          "key": "B",
+          "text": "Copper and tin"
+        },
+        {
+          "key": "C",
+          "text": "Iron and carbon"
+        },
+        {
+          "key": "D",
+          "text": "Lead and mercury"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Brass is primarily made from copper and zinc.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-046",
+      "topic": "Metallurgy",
+      "question": "Galvanisation protects iron by coating it with:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Copper"
+        },
+        {
+          "key": "B",
+          "text": "Zinc"
+        },
+        {
+          "key": "C",
+          "text": "Silver"
+        },
+        {
+          "key": "D",
+          "text": "Tin"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "A zinc coating protects iron from corrosion.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-047",
+      "topic": "Food Adulterants",
+      "question": "Adding water to milk is an example of:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A possible form of food adulteration"
+        },
+        {
+          "key": "B",
+          "text": "Food fortification"
+        },
+        {
+          "key": "C",
+          "text": "Pasteurisation"
+        },
+        {
+          "key": "D",
+          "text": "Fermentation"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Adding water can reduce the quality and composition of milk and is a form of adulteration.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-048",
+      "topic": "Food Adulterants",
+      "question": "Which is the safest response if a suspected food sample requires chemical testing?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Taste it"
+        },
+        {
+          "key": "B",
+          "text": "Smell it closely"
+        },
+        {
+          "key": "C",
+          "text": "Use a recognised laboratory or food-safety authority"
+        },
+        {
+          "key": "D",
+          "text": "Mix it with household cleaners"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "Suspected adulterants should not be tasted or handled casually; testing should be done safely by appropriate facilities.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-049",
+      "topic": "Food Adulterants",
+      "question": "Food adulteration can primarily result in:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Improved nutritional value in every case"
+        },
+        {
+          "key": "B",
+          "text": "Health risks and reduced food quality"
+        },
+        {
+          "key": "C",
+          "text": "Guaranteed longer life"
+        },
+        {
+          "key": "D",
+          "text": "Complete removal of microbes"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Adulteration may reduce nutritional quality and introduce harmful substances.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-050",
+      "topic": "Food Adulterants",
+      "question": "Which information is especially useful when checking a packaged food product?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Expiry/best-before date and ingredient label"
+        },
+        {
+          "key": "B",
+          "text": "Colour of the shop wall"
+        },
+        {
+          "key": "C",
+          "text": "Shape of the shopping bag"
+        },
+        {
+          "key": "D",
+          "text": "The seller's favourite food"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Date marking and ingredient details help consumers assess packaged food safety and suitability.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-051",
+      "topic": "Main Concepts of Life Science",
+      "question": "The basic structural and functional unit of life is the:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tissue"
+        },
+        {
+          "key": "B",
+          "text": "Cell"
+        },
+        {
+          "key": "C",
+          "text": "Organ"
+        },
+        {
+          "key": "D",
+          "text": "Organ system"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "The cell is the smallest unit capable of carrying out basic life processes.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-052",
+      "topic": "Main Concepts of Life Science",
+      "question": "Which cell organelle is commonly called the powerhouse of the cell?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nucleus"
+        },
+        {
+          "key": "B",
+          "text": "Mitochondrion"
+        },
+        {
+          "key": "C",
+          "text": "Ribosome"
+        },
+        {
+          "key": "D",
+          "text": "Vacuole"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Mitochondria release usable energy through cellular respiration.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-053",
+      "topic": "Main Concepts of Life Science",
+      "question": "Which structure controls many activities of a typical cell and contains genetic material?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nucleus"
+        },
+        {
+          "key": "B",
+          "text": "Cell wall"
+        },
+        {
+          "key": "C",
+          "text": "Cytoplasm only"
+        },
+        {
+          "key": "D",
+          "text": "Cell membrane only"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "The nucleus contains chromosomes and regulates many cell activities.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-054",
+      "topic": "Main Concepts of Life Science",
+      "question": "Which feature is generally present in plant cells but absent in animal cells?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cell membrane"
+        },
+        {
+          "key": "B",
+          "text": "Cytoplasm"
+        },
+        {
+          "key": "C",
+          "text": "Cell wall"
+        },
+        {
+          "key": "D",
+          "text": "Nucleus"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "Plant cells usually have a rigid cell wall; animal cells do not.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-055",
+      "topic": "Classification of Living Organisms",
+      "question": "The basic unit of biological classification is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Family"
+        },
+        {
+          "key": "B",
+          "text": "Order"
+        },
+        {
+          "key": "C",
+          "text": "Species"
+        },
+        {
+          "key": "D",
+          "text": "Class"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "Species is the basic unit of classification.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-056",
+      "topic": "Classification of Living Organisms",
+      "question": "Who introduced the system of binomial nomenclature?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Charles Darwin"
+        },
+        {
+          "key": "B",
+          "text": "Carolus Linnaeus"
+        },
+        {
+          "key": "C",
+          "text": "Gregor Mendel"
+        },
+        {
+          "key": "D",
+          "text": "Louis Pasteur"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Carolus Linnaeus is associated with the formal system of binomial nomenclature.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-057",
+      "topic": "Classification of Living Organisms",
+      "question": "Which group contains organisms that make their own food by photosynthesis?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Green plants"
+        },
+        {
+          "key": "B",
+          "text": "Most fungi"
+        },
+        {
+          "key": "C",
+          "text": "All animals"
+        },
+        {
+          "key": "D",
+          "text": "All bacteria"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Green plants generally make food using light energy, carbon dioxide and water.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-058",
+      "topic": "Classification of Living Organisms",
+      "question": "Which of the following is an invertebrate?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Frog"
+        },
+        {
+          "key": "B",
+          "text": "Fish"
+        },
+        {
+          "key": "C",
+          "text": "Earthworm"
+        },
+        {
+          "key": "D",
+          "text": "Pigeon"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "An earthworm lacks a backbone and is therefore an invertebrate.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-059",
+      "topic": "Evolution",
+      "question": "The process by which organisms with favourable inherited variations tend to leave more offspring is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Natural selection"
+        },
+        {
+          "key": "B",
+          "text": "Evaporation"
+        },
+        {
+          "key": "C",
+          "text": "Fermentation"
+        },
+        {
+          "key": "D",
+          "text": "Neutralisation"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Natural selection changes the frequency of inherited traits over generations.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-060",
+      "topic": "Evolution",
+      "question": "Fossils are important because they provide evidence about:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Only present-day weather"
+        },
+        {
+          "key": "B",
+          "text": "Past life and changes in organisms"
+        },
+        {
+          "key": "C",
+          "text": "The exact age of every living person"
+        },
+        {
+          "key": "D",
+          "text": "The chemical composition of stars"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Fossils preserve evidence of organisms that lived in the past.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-061",
+      "topic": "Evolution",
+      "question": "An adaptation is a feature that helps an organism:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Survive and reproduce in its environment"
+        },
+        {
+          "key": "B",
+          "text": "Avoid all changes"
+        },
+        {
+          "key": "C",
+          "text": "Stop reproducing"
+        },
+        {
+          "key": "D",
+          "text": "Become a different species immediately"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Adaptations can improve survival and reproductive success in a particular environment.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-062",
+      "topic": "Evolution",
+      "question": "Evolution occurs across:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Generations in populations"
+        },
+        {
+          "key": "B",
+          "text": "A single person's daily routine"
+        },
+        {
+          "key": "C",
+          "text": "Only non-living objects"
+        },
+        {
+          "key": "D",
+          "text": "One organism's lifetime alone"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Evolution is change in inherited characteristics of populations over successive generations.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-063",
+      "topic": "Genetics",
+      "question": "A gene is a segment of:",
+      "options": [
+        {
+          "key": "A",
+          "text": "DNA"
+        },
+        {
+          "key": "B",
+          "text": "Starch"
+        },
+        {
+          "key": "C",
+          "text": "Fat"
+        },
+        {
+          "key": "D",
+          "text": "Water"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "A gene is a DNA sequence that carries hereditary information.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-064",
+      "topic": "Genetics",
+      "question": "The observable characteristics of an organism are called its:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Genotype"
+        },
+        {
+          "key": "B",
+          "text": "Phenotype"
+        },
+        {
+          "key": "C",
+          "text": "Chromosome number"
+        },
+        {
+          "key": "D",
+          "text": "Mutation rate"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Phenotype refers to observable traits resulting from genetic and environmental influences.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-065",
+      "topic": "Genetics",
+      "question": "In a simple Mendelian cross, a dominant allele is generally expressed in the:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Heterozygous condition"
+        },
+        {
+          "key": "B",
+          "text": "Only when absent"
+        },
+        {
+          "key": "C",
+          "text": "Only in dead cells"
+        },
+        {
+          "key": "D",
+          "text": "Only in acquired traits"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "A dominant allele can determine the phenotype when one copy is present in a heterozygote.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-066",
+      "topic": "Genetics",
+      "question": "Which structure carries genes in the cell nucleus?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chromosome"
+        },
+        {
+          "key": "B",
+          "text": "Ribosome"
+        },
+        {
+          "key": "C",
+          "text": "Vacuole"
+        },
+        {
+          "key": "D",
+          "text": "Cell wall"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Chromosomes are structures made of DNA and proteins and carry genes.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-067",
+      "topic": "Physiology",
+      "question": "Which organ pumps blood throughout the human body?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lung"
+        },
+        {
+          "key": "B",
+          "text": "Heart"
+        },
+        {
+          "key": "C",
+          "text": "Kidney"
+        },
+        {
+          "key": "D",
+          "text": "Stomach"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "The heart pumps blood through the circulatory system.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-068",
+      "topic": "Physiology",
+      "question": "Gas exchange in the human lungs takes place mainly in the:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Alveoli"
+        },
+        {
+          "key": "B",
+          "text": "Trachea"
+        },
+        {
+          "key": "C",
+          "text": "Diaphragm"
+        },
+        {
+          "key": "D",
+          "text": "Larynx"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Alveoli are tiny air sacs surrounded by capillaries where oxygen and carbon dioxide are exchanged.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-069",
+      "topic": "Physiology",
+      "question": "Which organ removes many dissolved wastes from the blood to form urine?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Kidney"
+        },
+        {
+          "key": "B",
+          "text": "Liver only"
+        },
+        {
+          "key": "C",
+          "text": "Pancreas"
+        },
+        {
+          "key": "D",
+          "text": "Spleen"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "The kidneys filter blood and help form urine.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-070",
+      "topic": "Physiology",
+      "question": "Photosynthesis in green plants mainly occurs in the:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chloroplasts"
+        },
+        {
+          "key": "B",
+          "text": "Mitochondria only"
+        },
+        {
+          "key": "C",
+          "text": "Nucleus"
+        },
+        {
+          "key": "D",
+          "text": "Cell membrane"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Chloroplasts contain chlorophyll and are the main sites of photosynthesis.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-071",
+      "topic": "Nutrition",
+      "question": "Which nutrient is the body's main immediate source of energy?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Carbohydrate"
+        },
+        {
+          "key": "B",
+          "text": "Vitamin"
+        },
+        {
+          "key": "C",
+          "text": "Mineral"
+        },
+        {
+          "key": "D",
+          "text": "Water"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Carbohydrates are a major energy source for the body.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-072",
+      "topic": "Nutrition",
+      "question": "Deficiency of vitamin C can cause:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Scurvy"
+        },
+        {
+          "key": "B",
+          "text": "Rickets"
+        },
+        {
+          "key": "C",
+          "text": "Night blindness"
+        },
+        {
+          "key": "D",
+          "text": "Goitre"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Vitamin C deficiency causes scurvy, which can include bleeding gums and poor wound healing.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-073",
+      "topic": "Nutrition",
+      "question": "Which mineral is essential for the formation of haemoglobin?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Iron"
+        },
+        {
+          "key": "B",
+          "text": "Iodine"
+        },
+        {
+          "key": "C",
+          "text": "Sodium"
+        },
+        {
+          "key": "D",
+          "text": "Fluorine"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Iron is needed to make haemoglobin, the oxygen-carrying pigment in red blood cells.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-074",
+      "topic": "Nutrition",
+      "question": "A balanced diet is one that:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Contains only proteins"
+        },
+        {
+          "key": "B",
+          "text": "Provides needed nutrients in suitable amounts"
+        },
+        {
+          "key": "C",
+          "text": "Excludes all fats"
+        },
+        {
+          "key": "D",
+          "text": "Contains only fruits"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "A balanced diet supplies energy and essential nutrients in appropriate proportions for health.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-075",
+      "topic": "Health and Hygiene",
+      "question": "The most effective routine measure to reduce the spread of many infections is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Regular handwashing with soap"
+        },
+        {
+          "key": "B",
+          "text": "Sharing drinking bottles"
+        },
+        {
+          "key": "C",
+          "text": "Ignoring sanitation"
+        },
+        {
+          "key": "D",
+          "text": "Taking antibiotics without advice"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Handwashing removes many disease-causing organisms and helps interrupt transmission.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-076",
+      "topic": "Health and Hygiene",
+      "question": "Vaccination helps protect a person by:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Training the immune system to recognise a pathogen"
+        },
+        {
+          "key": "B",
+          "text": "Replacing all white blood cells"
+        },
+        {
+          "key": "C",
+          "text": "Destroying every microbe in the environment"
+        },
+        {
+          "key": "D",
+          "text": "Increasing body temperature permanently"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Vaccines stimulate immune memory so the body can respond more effectively to a pathogen.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-077",
+      "topic": "Health and Hygiene",
+      "question": "Which practice helps prevent water-borne diseases?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Drinking untreated surface water"
+        },
+        {
+          "key": "B",
+          "text": "Using safe treated drinking water"
+        },
+        {
+          "key": "C",
+          "text": "Storing water in open dirty containers"
+        },
+        {
+          "key": "D",
+          "text": "Ignoring water contamination"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Safe water treatment and storage reduce exposure to pathogens that cause water-borne illness.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-078",
+      "topic": "Health and Hygiene",
+      "question": "Which is a non-communicable disease?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Diabetes"
+        },
+        {
+          "key": "B",
+          "text": "Cholera"
+        },
+        {
+          "key": "C",
+          "text": "Measles"
+        },
+        {
+          "key": "D",
+          "text": "Malaria"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Diabetes is a non-communicable condition and does not spread from person to person.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-079",
+      "topic": "Human Diseases",
+      "question": "Malaria is transmitted to humans by the bite of an infected:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Female Anopheles mosquito"
+        },
+        {
+          "key": "B",
+          "text": "Housefly"
+        },
+        {
+          "key": "C",
+          "text": "Male Aedes mosquito"
+        },
+        {
+          "key": "D",
+          "text": "Sand crab"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Female Anopheles mosquitoes transmit malaria parasites to humans.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-080",
+      "topic": "Human Diseases",
+      "question": "Dengue is commonly transmitted by:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Aedes mosquitoes"
+        },
+        {
+          "key": "B",
+          "text": "Houseflies"
+        },
+        {
+          "key": "C",
+          "text": "Ticks only"
+        },
+        {
+          "key": "D",
+          "text": "Snails"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Dengue virus is mainly transmitted by infected Aedes mosquitoes.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-081",
+      "topic": "Human Diseases",
+      "question": "Tuberculosis is caused by a:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bacterium"
+        },
+        {
+          "key": "B",
+          "text": "Protozoan"
+        },
+        {
+          "key": "C",
+          "text": "Fungus"
+        },
+        {
+          "key": "D",
+          "text": "Worm"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Tuberculosis is caused by the bacterium Mycobacterium tuberculosis.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-082",
+      "topic": "Human Diseases",
+      "question": "Which action is important in preventing the spread of cholera?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Safe water and sanitation"
+        },
+        {
+          "key": "B",
+          "text": "Leaving drinking water uncovered"
+        },
+        {
+          "key": "C",
+          "text": "Avoiding handwashing"
+        },
+        {
+          "key": "D",
+          "text": "Sharing contaminated food"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cholera spreads mainly through contaminated food and water; safe water and sanitation are key preventive measures.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-083",
+      "topic": "Environmental Science",
+      "question": "In a food chain, green plants are usually:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Producers"
+        },
+        {
+          "key": "B",
+          "text": "Primary consumers"
+        },
+        {
+          "key": "C",
+          "text": "Decomposers"
+        },
+        {
+          "key": "D",
+          "text": "Top carnivores"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Green plants produce organic food using sunlight and form the producer level.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-084",
+      "topic": "Environmental Science",
+      "question": "Which gas is a major contributor to the enhanced greenhouse effect from human activities?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Carbon dioxide"
+        },
+        {
+          "key": "B",
+          "text": "Argon"
+        },
+        {
+          "key": "C",
+          "text": "Neon"
+        },
+        {
+          "key": "D",
+          "text": "Helium"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Human emissions of carbon dioxide are a major driver of the enhanced greenhouse effect.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-085",
+      "topic": "Environmental Science",
+      "question": "The 3Rs in waste management stand for:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Reduce, Reuse, Recycle"
+        },
+        {
+          "key": "B",
+          "text": "Read, Record, Report"
+        },
+        {
+          "key": "C",
+          "text": "React, Remove, Replace"
+        },
+        {
+          "key": "D",
+          "text": "Run, Rest, Repeat"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "The 3Rs encourage reducing waste, reusing materials and recycling suitable materials.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-086",
+      "topic": "Environmental Science",
+      "question": "Excessive nutrients entering a lake can cause:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Eutrophication"
+        },
+        {
+          "key": "B",
+          "text": "Earthquake"
+        },
+        {
+          "key": "C",
+          "text": "Ozone formation"
+        },
+        {
+          "key": "D",
+          "text": "Metal corrosion"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Nutrient enrichment can cause algal blooms and oxygen depletion, a process called eutrophication.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-087",
+      "topic": "Latest Inventions in Science and Technology",
+      "question": "Which technology converts sunlight directly into electrical energy?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Photovoltaic solar cell"
+        },
+        {
+          "key": "B",
+          "text": "Steam locomotive"
+        },
+        {
+          "key": "C",
+          "text": "Diesel engine"
+        },
+        {
+          "key": "D",
+          "text": "Thermometer"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Photovoltaic cells convert light energy into electrical energy.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-088",
+      "topic": "Latest Inventions in Science and Technology",
+      "question": "A satellite used mainly to relay television and communication signals is a:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Communication satellite"
+        },
+        {
+          "key": "B",
+          "text": "Weather balloon"
+        },
+        {
+          "key": "C",
+          "text": "Seismograph"
+        },
+        {
+          "key": "D",
+          "text": "Microscope"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Communication satellites relay signals over large geographic areas.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-089",
+      "topic": "Latest Inventions in Science and Technology",
+      "question": "Which field focuses on machines performing tasks with programmed control and sensors?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Robotics"
+        },
+        {
+          "key": "B",
+          "text": "Palaeontology"
+        },
+        {
+          "key": "C",
+          "text": "Metallurgy"
+        },
+        {
+          "key": "D",
+          "text": "Cartography"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Robotics combines mechanical systems, sensors and control/programming to perform tasks.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-090",
+      "topic": "Latest Inventions in Science and Technology",
+      "question": "Artificial intelligence systems are designed primarily to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Perform tasks associated with human-like learning or decision processes"
+        },
+        {
+          "key": "B",
+          "text": "Replace all physical laws"
+        },
+        {
+          "key": "C",
+          "text": "Generate energy from nothing"
+        },
+        {
+          "key": "D",
+          "text": "Stop data processing"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "AI refers to computer systems performing tasks such as pattern recognition, prediction or language processing.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-091",
+      "topic": "Current Affairs",
+      "question": "For a current-affairs science note, which combination is most useful to record?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Event, date, organisation and significance"
+        },
+        {
+          "key": "B",
+          "text": "Only a rumour and a photograph"
+        },
+        {
+          "key": "C",
+          "text": "Only an unverified headline"
+        },
+        {
+          "key": "D",
+          "text": "Personal opinion without a source"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Recording the event, date, responsible organisation and significance makes revision verifiable and useful.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-092",
+      "topic": "Current Affairs",
+      "question": "Which source is generally most appropriate for verifying an Indian space mission announcement?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Official ISRO release"
+        },
+        {
+          "key": "B",
+          "text": "An anonymous forwarded message"
+        },
+        {
+          "key": "C",
+          "text": "An uncredited social-media post"
+        },
+        {
+          "key": "D",
+          "text": "A fictional story"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "ISRO's official communications are a primary source for its mission announcements.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-093",
+      "topic": "Current Affairs",
+      "question": "When revising a recent scientific award, which detail should be checked carefully?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Recipient and award year"
+        },
+        {
+          "key": "B",
+          "text": "The colour of the award envelope"
+        },
+        {
+          "key": "C",
+          "text": "The recipient's favourite sport"
+        },
+        {
+          "key": "D",
+          "text": "The number of comments online"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Award recipient and year are key factual details and should be verified from a reliable source.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-094",
+      "topic": "Current Affairs",
+      "question": "Why should current-affairs notes include the date of an invention or announcement?",
+      "options": [
+        {
+          "key": "A",
+          "text": "To distinguish recent developments from older information"
+        },
+        {
+          "key": "B",
+          "text": "To make the notes longer"
+        },
+        {
+          "key": "C",
+          "text": "To avoid checking facts"
+        },
+        {
+          "key": "D",
+          "text": "Because dates are never changed"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Dates establish the time context and help distinguish new developments from older ones.",
+      "difficulty": "Easy",
+      "language": "en"
+    },
+    {
+      "id": "GS1-095",
+      "topic": "Everyday Applications of Basic Principles of Mechanics, Electricity, Magnetism, Light, Sound, Heat and Nuclear Physics",
+      "question": "Which type of mirror is commonly used as a rear-view mirror in vehicles?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Plane mirror"
+        },
+        {
+          "key": "B",
+          "text": "Convex mirror"
+        },
+        {
+          "key": "C",
+          "text": "Concave mirror"
+        },
+        {
+          "key": "D",
+          "text": "Cylindrical mirror"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "A convex mirror provides a wider field of view and forms an erect, diminished image.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-096",
+      "topic": "Elements and Compounds",
+      "question": "Which law states that mass is neither created nor destroyed in a chemical reaction?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Law of conservation of mass"
+        },
+        {
+          "key": "B",
+          "text": "Law of reflection"
+        },
+        {
+          "key": "C",
+          "text": "Newton's second law"
+        },
+        {
+          "key": "D",
+          "text": "Ohm's law"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "The law of conservation of mass states that total mass remains constant in a chemical reaction.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-097",
+      "topic": "Main Concepts of Life Science",
+      "question": "Which part of a cell controls the movement of substances into and out of the cell?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cell membrane"
+        },
+        {
+          "key": "B",
+          "text": "Nucleolus"
+        },
+        {
+          "key": "C",
+          "text": "Chromosome"
+        },
+        {
+          "key": "D",
+          "text": "Chloroplast"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "The cell membrane regulates the movement of substances into and out of the cell.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-098",
+      "topic": "Physiology",
+      "question": "Which blood component helps in clotting?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Platelets"
+        },
+        {
+          "key": "B",
+          "text": "Red blood cells"
+        },
+        {
+          "key": "C",
+          "text": "Plasma water only"
+        },
+        {
+          "key": "D",
+          "text": "Neurons"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Platelets help form clots and reduce blood loss after injury.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-099",
+      "topic": "Environmental Science",
+      "question": "Which layer of the atmosphere contains most of the ozone layer?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Troposphere"
+        },
+        {
+          "key": "B",
+          "text": "Stratosphere"
+        },
+        {
+          "key": "C",
+          "text": "Mesosphere"
+        },
+        {
+          "key": "D",
+          "text": "Thermosphere"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Most atmospheric ozone is concentrated in the stratosphere, where it absorbs much harmful ultraviolet radiation.",
+      "difficulty": "Medium",
+      "language": "en"
+    },
+    {
+      "id": "GS1-100",
+      "topic": "Latest Inventions in Science and Technology",
+      "question": "Which energy source is renewable?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Coal"
+        },
+        {
+          "key": "B",
+          "text": "Petroleum"
+        },
+        {
+          "key": "C",
+          "text": "Wind"
+        },
+        {
+          "key": "D",
+          "text": "Natural gas"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "Wind is replenished naturally and is a renewable energy source.",
+      "difficulty": "Easy",
+      "language": "en"
+    }
+  ]
+}

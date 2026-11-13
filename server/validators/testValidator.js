@@ -17,28 +17,52 @@ function validateTestSchema(data) {
 
   // 1. Schema version
   if (!data.schemaVersion) {
-    errors.push({ field: 'schemaVersion', message: 'Missing required "schemaVersion" field.' });
+    data.schemaVersion = '1.0';
   } else if (data.schemaVersion !== '1.0') {
-    errors.push({ 
-      field: 'schemaVersion', 
-      message: `Unsupported schema version "${data.schemaVersion}". Only version "1.0" is supported.` 
-    });
+    if (String(data.schemaVersion).startsWith('1')) {
+      data.schemaVersion = '1.0';
+    } else {
+      errors.push({ 
+        field: 'schemaVersion', 
+        message: `Unsupported schema version "${data.schemaVersion}". Only version "1.0" is supported.` 
+      });
+    }
   }
 
-  // 2. Metadata
+  // 2. Metadata & Auto-Resolutions
   if (!data.title || typeof data.title !== 'string' || !data.title.trim()) {
     errors.push({ field: 'title', message: 'Test "title" is required and cannot be empty.' });
   }
 
+  // Auto-resolve questionCount from practiceQuestionCount / totalQuestions / questions.length
   if (!data.questionCount || typeof data.questionCount !== 'number' || data.questionCount <= 0) {
-    errors.push({ field: 'questionCount', message: '"questionCount" must be a positive integer.' });
+    if (typeof data.practiceQuestionCount === 'number' && data.practiceQuestionCount > 0) {
+      data.questionCount = data.practiceQuestionCount;
+    } else if (typeof data.totalQuestions === 'number' && data.totalQuestions > 0) {
+      data.questionCount = data.totalQuestions;
+    } else if (Array.isArray(data.questions) && data.questions.length > 0) {
+      data.questionCount = data.questions.length;
+    } else {
+      errors.push({ field: 'questionCount', message: '"questionCount" must be a positive integer.' });
+    }
   }
 
+  // Auto-resolve durationMinutes from duration / timeMinutes / questions.length
   if (!data.durationMinutes || typeof data.durationMinutes !== 'number' || data.durationMinutes <= 0) {
-    errors.push({ field: 'durationMinutes', message: '"durationMinutes" must be a positive integer.' });
+    if (typeof data.duration === 'number' && data.duration > 0) {
+      data.durationMinutes = data.duration;
+    } else if (typeof data.timeMinutes === 'number' && data.timeMinutes > 0) {
+      data.durationMinutes = data.timeMinutes;
+    } else if (Array.isArray(data.questions) && data.questions.length > 0) {
+      // Standard TNPSC exam pacing: 1 min per question, minimum 10 mins
+      data.durationMinutes = Math.max(10, data.questions.length);
+    } else {
+      data.durationMinutes = 60;
+    }
   }
 
   if (!data.language || typeof data.language !== 'string') {
+    data.language = 'English';
     warnings.push({ field: 'language', message: 'Test "language" not specified. Defaulting to English.' });
   }
 

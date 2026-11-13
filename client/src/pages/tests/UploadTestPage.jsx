@@ -134,6 +134,14 @@ export default function UploadTestPage() {
       return;
     }
 
+    // Auto-resolve questionCount and durationMinutes if omitted or named differently
+    if (!parsed.questionCount) {
+      parsed.questionCount = parsed.practiceQuestionCount || parsed.totalQuestions || (Array.isArray(parsed.questions) ? parsed.questions.length : 0);
+    }
+    if (!parsed.durationMinutes) {
+      parsed.durationMinutes = parsed.duration || parsed.timeMinutes || (Array.isArray(parsed.questions) ? Math.max(10, parsed.questions.length) : 60);
+    }
+
     try {
       setLoading(true);
       const res = await api.validateTestJson(parsed);
@@ -481,12 +489,23 @@ export default function UploadTestPage() {
             </div>
 
             <h2 style={{ fontSize: '20px', fontWeight: 800 }}>{parsedData.title}</h2>
-            <div style={{ display: 'flex', gap: '16px', fontSize: '13px', color: 'var(--color-muted)', marginTop: '8px' }}>
-              <span>{parsedData.questions?.length} Questions</span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '16px', fontSize: '13px', color: 'var(--color-muted)', marginTop: '8px', flexWrap: 'wrap' }}>
+              <span><strong>{parsedData.questions?.length}</strong> Questions</span>
               <span>•</span>
-              <span>Suggested: {parsedData.durationMinutes} Minutes</span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                Duration:
+                <input
+                  type="number"
+                  min="5"
+                  max="300"
+                  value={parsedData.durationMinutes || 60}
+                  onChange={(e) => setParsedData({ ...parsedData, durationMinutes: Math.max(5, Number(e.target.value) || 60) })}
+                  style={{ width: '60px', padding: '2px 6px', fontSize: '13px', fontWeight: 700, borderRadius: '4px', border: '1px solid var(--color-line)', textAlign: 'center' }}
+                />
+                Minutes
+              </span>
               <span>•</span>
-              <span>Medium: {parsedData.language || 'English'}</span>
+              <span>Medium: <strong>{parsedData.language || 'English'}</strong></span>
             </div>
 
             {/* Attached Portion Material Indicator in Preview */}

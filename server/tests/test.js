@@ -177,6 +177,24 @@ async function runTests() {
     assert(invalidVal.body.errors.length >= 2, 'Must report multiple specific errors');
     console.log('✔ Test JSON validation passed (valid and invalid detection)');
 
+    // 7b. Validate Real User Uploaded File: TNPSC_GS_Unit_I_General_Science_100_MCQ.json
+    console.log('[Test 7b] Validating user uploaded file: TNPSC_GS_Unit_I_General_Science_100_MCQ.json...');
+    const fs = require('fs');
+    const path = require('path');
+    const userJsonPath = path.join(__dirname, '..', '..', 'TNPSC_GS_Unit_I_General_Science_100_MCQ.json');
+    if (fs.existsSync(userJsonPath)) {
+      const userFileData = JSON.parse(fs.readFileSync(userJsonPath, 'utf8'));
+      const userValRes = await request(app)
+        .post('/api/tests/validate')
+        .set('Authorization', `Bearer ${token}`)
+        .send(userFileData);
+      assert.strictEqual(userValRes.status, 200);
+      assert.strictEqual(userValRes.body.isValid, true, 'User JSON file must pass validation with 0 errors');
+      assert.strictEqual(userValRes.body.summary.questionCount, 100);
+      assert(userValRes.body.summary.durationMinutes > 0);
+      console.log('✔ User General Science 100-MCQ file validated successfully with 0 errors');
+    }
+
     // 8. Create and Publish Test
     console.log('[Test 8] Create and Publish Test...');
     const createTestRes = await request(app)
