@@ -456,5 +456,67 @@
     "schemaVersion": "1.0",
     "createdBy": "6af60a91769c2489866b00ca",
     "__v": 0
+  },
+  {
+    "_id": "id_1794591453827_wijm2sgg7",
+    "createdAt": "2026-11-13T17:37:33.827Z",
+    "updatedAt": "2026-11-13T17:37:33.827Z",
+    "testId": "id_1794591453824_an893yclg",
+    "versionNumber": 1,
+    "questions": [
+      {
+        "id": "SCI-001",
+        "question": "What is the primary source of energy for the earth?",
+        "options": [
+          {
+            "key": "A",
+            "text": "The Moon"
+          },
+          {
+            "key": "B",
+            "text": "The Sun"
+          },
+          {
+            "key": "C",
+            "text": "Geothermal vents"
+          },
+          {
+            "key": "D",
+            "text": "Tides"
+          }
+        ],
+        "correctAnswer": "B",
+        "explanation": "The Sun is the star at the center of the Solar System and principal energy source.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "SCI-002",
+        "question": "Which of the following is a scalar quantity?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Velocity"
+          },
+          {
+            "key": "B",
+            "text": "Acceleration"
+          },
+          {
+            "key": "C",
+            "text": "Mass"
+          },
+          {
+            "key": "D",
+            "text": "Force"
+          }
+        ],
+        "correctAnswer": "C",
+        "explanation": "Mass has magnitude only and is therefore a scalar quantity.",
+        "difficulty": "easy"
+      }
+    ],
+    "schemaVersion": "1.0",
+    "createdBy": "6af60a91769c2489866b00ca",
+    "__v": 0
   }
 ]

@@ -36,6 +36,11 @@ export default function AppLayout({ children }) {
     { name: 'Study Materials', path: '/materials', icon: FolderDown }
   ];
 
+  // Determine which single nav item is active based on the most specific (longest) matching path
+  const activeNavItem = navItems
+    .filter(item => location.pathname === item.path || (item.path !== '/dashboard' && location.pathname.startsWith(item.path + '/')))
+    .sort((a, b) => b.path.length - a.path.length)[0];
+
   const handleLogout = () => {
     logout();
     navigate('/login');
@@ -85,7 +90,7 @@ export default function AppLayout({ children }) {
           </div>
           {navItems.map((item) => {
             const Icon = item.icon;
-            const isActive = location.pathname === item.path || (item.path !== '/dashboard' && location.pathname.startsWith(item.path));
+            const isActive = activeNavItem ? activeNavItem.path === item.path : location.pathname === item.path;
             return (
               <NavLink
                 key={item.path}
@@ -238,7 +243,7 @@ export default function AppLayout({ children }) {
             <nav style={{ flex: 1, overflowY: 'auto' }}>
               {navItems.map((item) => {
                 const Icon = item.icon;
-                const isActive = location.pathname === item.path;
+                const isActive = activeNavItem ? activeNavItem.path === item.path : location.pathname === item.path;
                 return (
                   <NavLink
                     key={item.path}

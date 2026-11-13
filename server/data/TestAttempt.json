@@ -97,5 +97,38 @@
       }
     ],
     "__v": 0
+  },
+  {
+    "_id": "id_1794591453833_vhz3itc0k",
+    "createdAt": "2026-11-13T17:37:33.833Z",
+    "updatedAt": "2026-11-13T17:37:33.847Z",
+    "testId": "id_1794591453824_an893yclg",
+    "testVersionId": "id_1794591453827_wijm2sgg7",
+    "userId": "6af60a91769c2489866b00d0",
+    "startedAt": "2026-11-13T17:37:33.833Z",
+    "submittedAt": "2026-11-13T17:37:33.846Z",
+    "expiresAt": "2026-11-13T17:42:33.833Z",
+    "status": "submitted",
+    "score": 1,
+    "correctCount": 1,
+    "incorrectCount": 1,
+    "unansweredCount": 0,
+    "answers": [
+      {
+        "questionId": "SCI-001",
+        "selectedOption": "B",
+        "isCorrect": true,
+        "markedForReview": false,
+        "answeredAt": "2026-11-13T17:37:33.840Z"
+      },
+      {
+        "questionId": "SCI-002",
+        "selectedOption": "A",
+        "isCorrect": false,
+        "markedForReview": true,
+        "answeredAt": "2026-11-13T17:37:33.843Z"
+      }
+    ],
+    "__v": 0
   }
 ]

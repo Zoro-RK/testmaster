@@ -45,5 +45,16 @@
     "membershipStatus": "approved",
     "joinedAt": "2026-11-13T17:27:29.065Z",
     "__v": 0
+  },
+  {
+    "_id": "id_1794591453670_oczabunmn",
+    "createdAt": "2026-11-13T17:37:33.671Z",
+    "updatedAt": "2026-11-13T17:37:33.671Z",
+    "groupId": "6af60a91769c2489866b00c1",
+    "userId": "id_1794591453664_sq148brgl",
+    "role": "member",
+    "membershipStatus": "approved",
+    "joinedAt": "2026-11-13T17:37:33.670Z",
+    "__v": 0
   }
 ]
