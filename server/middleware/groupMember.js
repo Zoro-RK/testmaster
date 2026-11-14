@@ -9,21 +9,36 @@ async function requireGroupMember(req, res, next) {
     }
 
     // Find the user's primary/active group membership
-    const membership = await GroupMember.findOne({
+    let membership = await GroupMember.findOne({
       userId: user._id,
       membershipStatus: 'approved'
     });
 
-    if (!membership) {
-      return res.status(403).json({ 
-        error: 'You do not belong to an approved private study group. Please join using an invitation code.',
-        requiresGroup: true 
-      });
+    let group = null;
+    if (membership) {
+      group = await Group.findById(membership.groupId);
     }
 
-    const group = await Group.findById(membership.groupId);
+    // Auto-connect user to the study circle if not yet linked
+    if (!membership || !group) {
+      const defaultGroup = await Group.findOne({ name: 'TNPSC Group IV Study Circle' }) || (await Group.findOne({})) || (await Group.find({}))[0];
+      if (defaultGroup) {
+        group = defaultGroup;
+        if (!membership) {
+          membership = await GroupMember.create({
+            groupId: defaultGroup._id,
+            userId: user._id,
+            role: 'member',
+            membershipStatus: 'approved'
+          });
+        } else {
+          await GroupMember.findByIdAndUpdate(membership._id, { groupId: defaultGroup._id });
+        }
+      }
+    }
+
     if (!group) {
-      return res.status(404).json({ error: 'Group not found.' });
+      return res.status(404).json({ error: 'Study circle group not found.' });
     }
 
     req.group = group;

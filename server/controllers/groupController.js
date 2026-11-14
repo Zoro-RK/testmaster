@@ -30,10 +30,31 @@ async function getMembers(req, res) {
     const group = req.group;
     const { search } = req.query;
 
-    const memberships = await GroupMember.find({ groupId: group._id, membershipStatus: 'approved' });
-    const userIds = memberships.map(m => m.userId);
+    // Ensure all active registered users are connected as members of the study circle
+    const allUsers = await User.find({ accountStatus: 'active' });
+    let memberships = await GroupMember.find({ groupId: group._id, membershipStatus: 'approved' });
+    const existingMemberUserIds = new Set(memberships.map(m => String(m.userId)));
 
-    const users = await User.find({ _id: { $in: userIds }, accountStatus: 'active' });
+    for (const u of allUsers) {
+      if (!existingMemberUserIds.has(String(u._id))) {
+        const newM = await GroupMember.create({
+          groupId: group._id,
+          userId: u._id,
+          role: 'member',
+          membershipStatus: 'approved'
+        });
+        memberships.push(newM);
+      }
+    }
+
+    let users = allUsers;
+    if (search && search.trim()) {
+      const s = search.toLowerCase();
+      users = users.filter(u => 
+        (u.displayName && u.displayName.toLowerCase().includes(s)) ||
+        (u.email && u.email.toLowerCase().includes(s))
+      );
+    }
 
     // Compute shared portion stats for each member without exposing private scores
     const allPortions = await PortionProgress.find({ groupId: group._id });

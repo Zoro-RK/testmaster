@@ -444,5 +444,47 @@
     "resourceTitle": "Science Basics Quick Test",
     "details": "Published a 2-question practice test: \"Science Basics Quick Test\"",
     "__v": 0
+  },
+  {
+    "_id": "id_1794680140319_fzx9xeax5",
+    "createdAt": "2026-11-14T18:15:40.321Z",
+    "updatedAt": "2026-11-14T18:15:40.321Z",
+    "groupId": "id_1794596103325_p9nqfrzvy",
+    "userId": "id_1794680139980_asxfccb0d",
+    "userDisplayName": "Murugan_1794680139835",
+    "eventType": "member_joined",
+    "resourceType": "member",
+    "resourceId": "id_1794680139980_asxfccb0d",
+    "resourceTitle": "Murugan_1794680139835",
+    "details": "Joined the study circle",
+    "__v": 0
+  },
+  {
+    "_id": "id_1794680143473_9de99fxy3",
+    "createdAt": "2026-11-14T18:15:43.474Z",
+    "updatedAt": "2026-11-14T18:15:43.474Z",
+    "groupId": "id_1794596103325_p9nqfrzvy",
+    "userId": "id_1794596103928_w4ntivqn7",
+    "userDisplayName": "Kavitha Rajan",
+    "eventType": "portion_updated",
+    "resourceType": "topic",
+    "resourceId": "id_1794596071955_0kxljy5zb",
+    "resourceTitle": "Nature of Universe",
+    "details": "marked \"Nature of Universe\" as completed",
+    "__v": 0
+  },
+  {
+    "_id": "id_1794680144841_gye0h6zxk",
+    "createdAt": "2026-11-14T18:15:44.842Z",
+    "updatedAt": "2026-11-14T18:15:44.842Z",
+    "groupId": "id_1794596103325_p9nqfrzvy",
+    "userId": "id_1794596103928_w4ntivqn7",
+    "userDisplayName": "Kavitha Rajan",
+    "eventType": "test_published",
+    "resourceType": "test",
+    "resourceId": "id_1794680144626_i4vo2morp",
+    "resourceTitle": "Science Basics Quick Test",
+    "details": "Published a 2-question practice test: \"Science Basics Quick Test\"",
+    "__v": 0
   }
 ]

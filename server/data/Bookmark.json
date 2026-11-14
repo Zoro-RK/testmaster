@@ -97,5 +97,16 @@
     "testVersionId": "default",
     "questionSnapshot": null,
     "__v": 0
+  },
+  {
+    "_id": "id_1794680148697_sr44ase10",
+    "createdAt": "2026-11-14T18:15:48.699Z",
+    "updatedAt": "2026-11-14T18:15:48.699Z",
+    "userId": "id_1794596104153_pgi65nyhw",
+    "questionId": "SCI-1794680148390",
+    "testId": "id_1794680144626_i4vo2morp",
+    "testVersionId": "default",
+    "questionSnapshot": null,
+    "__v": 0
   }
 ]

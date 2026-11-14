@@ -166,5 +166,16 @@
     "profileImage": "",
     "accountStatus": "active",
     "__v": 0
+  },
+  {
+    "_id": "id_1794680139980_asxfccb0d",
+    "createdAt": "2026-11-14T18:15:39.982Z",
+    "updatedAt": "2026-11-14T18:15:39.982Z",
+    "displayName": "Murugan_1794680139835",
+    "email": "murugan1794680139835_8bdob@studycircle.tnpsc",
+    "passwordHash": "$2b$10$0zUaaGpPxZ9FlDX3rMSKtuemDLY1HbBMfONDXMU6ZsInDuuzk5H.m",
+    "profileImage": "",
+    "accountStatus": "active",
+    "__v": 0
   }
 ]

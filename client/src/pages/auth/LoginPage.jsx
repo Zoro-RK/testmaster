@@ -141,10 +141,6 @@ export default function LoginPage() {
           Create Account / Join
         </Link>
       </div>
-
-      <div style={{ marginTop: '16px', padding: '10px 12px', backgroundColor: 'var(--color-paper-100)', borderRadius: 'var(--radius-sm)', fontSize: '11px', color: 'var(--color-ink-700)', textAlign: 'center' }}>
-        <strong>Demo Accounts:</strong> <code>kavitha@studycircle.tnpsc</code> or <code>senthil@studycircle.tnpsc</code><br/>Password: <code>TNPSCUser#2025</code>
-      </div>
     </div>
   );
 }

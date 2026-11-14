@@ -42,37 +42,37 @@ async function register(req, res) {
       accountStatus: 'active'
     });
 
-    // Handle group joining - connect user to study circle as a peer member
-    let group = null;
-    let membership = null;
-
-    if (invitationCode) {
-      group = await Group.findOne({ invitationCode: invitationCode.trim() });
-    }
+    // Handle group joining - automatically connect every new user as a study circle friend
+    let group = await Group.findOne({ name: 'TNPSC Group IV Study Circle' }) || (await Group.findOne({})) || (await Group.find({}))[0];
     if (!group) {
-      const allGroups = await Group.find({});
-      group = allGroups[0];
+      group = await Group.create({
+        name: 'TNPSC Group IV Study Circle',
+        description: 'Collaborative private circle for preparing for TNPSC Group IV examination.',
+        createdBy: 'system',
+        joinMode: 'open'
+      });
     }
 
-    if (group) {
+    let membership = await GroupMember.findOne({ groupId: group._id, userId: user._id });
+    if (!membership) {
       membership = await GroupMember.create({
         groupId: group._id,
         userId: user._id,
         role: 'member',
         membershipStatus: 'approved'
       });
-
-      await ActivityEvent.create({
-        groupId: group._id,
-        userId: user._id,
-        userDisplayName: user.displayName,
-        eventType: 'member_joined',
-        resourceType: 'member',
-        resourceId: user._id,
-        resourceTitle: user.displayName,
-        details: 'Joined the study circle'
-      });
     }
+
+    await ActivityEvent.create({
+      groupId: group._id,
+      userId: user._id,
+      userDisplayName: user.displayName,
+      eventType: 'member_joined',
+      resourceType: 'member',
+      resourceId: user._id,
+      resourceTitle: user.displayName,
+      details: 'Joined the study circle'
+    });
 
     const token = jwt.sign({ userId: user._id }, JWT_SECRET, { expiresIn: '7d' });
 
@@ -133,11 +133,28 @@ async function login(req, res) {
 
     const token = jwt.sign({ userId: user._id }, JWT_SECRET, { expiresIn: '7d' });
 
-    // Fetch group membership
-    const membership = await GroupMember.findOne({ userId: user._id, membershipStatus: 'approved' });
+    // Fetch group membership - automatically attach user to study circle if not linked
+    let membership = await GroupMember.findOne({ userId: user._id, membershipStatus: 'approved' });
     let group = null;
     if (membership) {
       group = await Group.findById(membership.groupId);
+    }
+
+    if (!membership || !group) {
+      const defaultGroup = await Group.findOne({ name: 'TNPSC Group IV Study Circle' }) || (await Group.findOne({})) || (await Group.find({}))[0];
+      if (defaultGroup) {
+        group = defaultGroup;
+        if (!membership) {
+          membership = await GroupMember.create({
+            groupId: defaultGroup._id,
+            userId: user._id,
+            role: 'member',
+            membershipStatus: 'approved'
+          });
+        } else {
+          await GroupMember.findByIdAndUpdate(membership._id, { groupId: defaultGroup._id });
+        }
+      }
     }
 
     res.json({
@@ -164,10 +181,27 @@ async function login(req, res) {
 async function getMe(req, res) {
   try {
     const user = req.user;
-    const membership = await GroupMember.findOne({ userId: user._id, membershipStatus: 'approved' });
+    let membership = await GroupMember.findOne({ userId: user._id, membershipStatus: 'approved' });
     let group = null;
     if (membership) {
       group = await Group.findById(membership.groupId);
+    }
+
+    if (!membership || !group) {
+      const defaultGroup = await Group.findOne({ name: 'TNPSC Group IV Study Circle' }) || (await Group.findOne({})) || (await Group.find({}))[0];
+      if (defaultGroup) {
+        group = defaultGroup;
+        if (!membership) {
+          membership = await GroupMember.create({
+            groupId: defaultGroup._id,
+            userId: user._id,
+            role: 'member',
+            membershipStatus: 'approved'
+          });
+        } else {
+          await GroupMember.findByIdAndUpdate(membership._id, { groupId: defaultGroup._id });
+        }
+      }
     }
 
     res.json({
@@ -180,8 +214,7 @@ async function getMe(req, res) {
       group: group ? {
         id: group._id,
         name: group.name,
-        role: 'member',
-        invitationCode: group.invitationCode
+        role: 'member'
       } : null
     });
   } catch (err) {

@@ -104,8 +104,8 @@
   {
     "_id": "id_1794595268580_hha9a57zv",
     "createdAt": "2026-11-13T18:41:08.581Z",
-    "updatedAt": "2026-11-13T18:41:08.581Z",
-    "groupId": "id_1794508782121_u36brs5sc",
+    "updatedAt": "2026-11-14T18:15:07.886Z",
+    "groupId": "id_1794596103325_p9nqfrzvy",
     "userId": "id_1794595268456_qyx0pxgwh",
     "role": "member",
     "membershipStatus": "approved",
@@ -165,6 +165,17 @@
     "role": "member",
     "membershipStatus": "approved",
     "joinedAt": "2026-11-13T18:59:42.637Z",
+    "__v": 0
+  },
+  {
+    "_id": "id_1794680140239_byamsvun7",
+    "createdAt": "2026-11-14T18:15:40.243Z",
+    "updatedAt": "2026-11-14T18:15:40.243Z",
+    "groupId": "id_1794596103325_p9nqfrzvy",
+    "userId": "id_1794680139980_asxfccb0d",
+    "role": "member",
+    "membershipStatus": "approved",
+    "joinedAt": "2026-11-14T18:15:40.242Z",
     "__v": 0
   }
 ]

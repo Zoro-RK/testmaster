@@ -170,9 +170,12 @@ async function getTests(req, res) {
     const userId = req.user._id;
     const { search, partId, creatorId, attemptState } = req.query;
 
-    const query = { groupId, status: 'published' };
+    const query = { status: 'published' };
 
     let tests = await Test.find(query);
+    if (groupId) {
+      tests = tests.filter(t => !t.groupId || String(t.groupId) === String(groupId));
+    }
 
     // Fetch user attempts to compute attempt state for current user
     const userAttempts = await TestAttempt.find({ userId });

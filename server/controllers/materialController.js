@@ -9,12 +9,13 @@ async function getMaterials(req, res) {
     const groupId = req.group._id;
     const { topicId } = req.query;
 
-    const query = { groupId };
-    if (topicId) {
-      query.topicIds = { $in: [topicId] };
+    let materials = await Material.find({});
+    if (groupId) {
+      materials = materials.filter(m => !m.groupId || String(m.groupId) === String(groupId));
     }
-
-    const materials = await Material.find(query);
+    if (topicId) {
+      materials = materials.filter(m => m.topicIds && m.topicIds.includes(topicId));
+    }
     materials.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
     const userIds = [...new Set(materials.map(m => m.uploadedBy))];

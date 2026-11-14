@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Users, Copy, Check, ShieldCheck } from 'lucide-react';
+import { Search, Users, ShieldCheck } from 'lucide-react';
 import { api } from '../../services/api';
 import { useAuth } from '../../context/AuthContext';
 import FriendCard from '../../components/common/FriendCard';
@@ -10,7 +10,6 @@ export default function FriendsPage() {
   const [members, setMembers] = useState([]);
   const [search, setSearch] = useState('');
   const [loading, setLoading] = useState(true);
-  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     async function loadMembers() {
@@ -28,14 +27,6 @@ export default function FriendsPage() {
     return () => clearTimeout(timer);
   }, [search]);
 
-  const handleCopyCode = () => {
-    if (group?.invitationCode) {
-      navigator.clipboard.writeText(group.invitationCode);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    }
-  };
-
   return (
     <div className="page-container">
       {/* Page Header */}
@@ -47,29 +38,21 @@ export default function FriendsPage() {
           </p>
         </div>
 
-        {/* Group Invitation Code Pill */}
-        {group?.invitationCode && (
-          <div style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '10px',
-            padding: '8px 14px',
-            backgroundColor: 'var(--color-white)',
-            border: '1px solid var(--color-line)',
-            borderRadius: 'var(--radius-sm)',
-            fontSize: '13px'
-          }}>
-            <span style={{ color: 'var(--color-muted)' }}>Invitation Code:</span>
-            <strong style={{ color: 'var(--color-teal-700)', letterSpacing: '0.05em' }}>{group.invitationCode}</strong>
-            <button
-              onClick={handleCopyCode}
-              title="Copy invitation code"
-              style={{ color: copied ? 'var(--color-success)' : 'var(--color-teal-700)' }}
-            >
-              {copied ? <Check size={16} /> : <Copy size={16} />}
-            </button>
-          </div>
-        )}
+        {/* Friends Count Pill */}
+        <div style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '8px',
+          padding: '8px 14px',
+          backgroundColor: 'var(--color-white)',
+          border: '1px solid var(--color-line)',
+          borderRadius: 'var(--radius-sm)',
+          fontSize: '13px',
+          color: 'var(--color-teal-700)',
+          fontWeight: 600
+        }}>
+          <Users size={16} /> {members.length} Connected Friends
+        </div>
       </div>
 
       {/* Privacy Guarantee Note */}

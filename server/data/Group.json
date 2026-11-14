@@ -12,11 +12,11 @@
   {
     "_id": "id_1794596103325_p9nqfrzvy",
     "createdAt": "2026-11-13T18:55:03.326Z",
-    "updatedAt": "2026-11-13T18:55:03.326Z",
+    "updatedAt": "2026-11-14T18:15:07.617Z",
     "name": "TNPSC Group IV Study Circle",
     "description": "Collaborative private circle for preparing for TNPSC Group IV examination.",
     "createdBy": "system",
-    "joinMode": "invitationCode",
+    "joinMode": "open",
     "invitationCode": "TNPSC2025",
     "__v": 0
   }

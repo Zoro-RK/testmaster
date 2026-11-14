@@ -39,10 +39,10 @@ export function AuthProvider({ children }) {
     return res;
   };
 
-  const register = async (displayName, password, email = '', invitationCode = '') => {
+  const register = async (displayName, password, email = '') => {
     const payload = typeof displayName === 'object'
       ? displayName
-      : { displayName, password, email, invitationCode };
+      : { displayName, password, email };
     const res = await api.register(payload);
     localStorage.setItem('tnpsc_token', res.token);
     setUser(res.user);
