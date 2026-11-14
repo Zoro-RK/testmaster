@@ -305,23 +305,6 @@ async function seed() {
     console.log('[Seeding] Created Sample Test: பொதுத் தமிழ்');
   }
 
-  // 7. Seed Sample Material
-  let material = await Material.findOne({ title: 'Indian Constitution Quick Revision Notes' });
-  if (!material) {
-    await Material.create({
-      groupId: group._id,
-      uploadedBy: 'demo',
-      title: 'Indian Constitution Quick Revision Notes',
-      description: 'Handmade summary of Fundamental Rights articles 12-35 with landmark cases.',
-      fileStorageKey: 'sample_notes_polity.pdf',
-      fileName: 'polity_quick_revision.pdf',
-      fileType: 'application/pdf',
-      fileSize: 1024 * 350,
-      visibility: 'group'
-    });
-    console.log('[Seeding] Created Sample Study Material');
-  }
-
   console.log('[Seeding] Finished successfully!');
 }
 
