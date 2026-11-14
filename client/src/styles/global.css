@@ -378,6 +378,21 @@ input, textarea, select {
   }
 }
 
+.mobile-only {
+  display: none !important;
+}
+.desktop-only {
+  display: inline !important;
+}
+@media (max-width: 640px) {
+  .mobile-only {
+    display: inline !important;
+  }
+  .desktop-only {
+    display: none !important;
+  }
+}
+
 /* Respect user's motion preference */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

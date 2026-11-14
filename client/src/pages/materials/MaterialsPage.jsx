@@ -203,17 +203,20 @@ export default function MaterialsPage() {
                   type="button"
                   onClick={() => handleOpenMaterial(m)}
                   className="btn btn-secondary"
-                  style={{ flex: 1, minWidth: '120px', justifyContent: 'center', fontSize: '13px', padding: '8px 12px' }}
+                  style={{ flex: 1, minWidth: '90px', justifyContent: 'center', fontSize: '13px', padding: '8px 10px' }}
                 >
-                  <BookOpen size={14} /> View Material
+                  <BookOpen size={14} />
+                  <span className="desktop-only">View Material</span>
+                  <span className="mobile-only">View</span>
                 </button>
 
                 <Link
                   to={m.testId ? `/tests/${m.testId}` : '/tests'}
                   className="btn btn-primary"
-                  style={{ flex: 1, minWidth: '120px', justifyContent: 'center', fontSize: '13px', padding: '8px 12px', backgroundColor: 'var(--color-teal-700)' }}
+                  style={{ flex: 1, minWidth: '100px', justifyContent: 'center', fontSize: '13px', padding: '8px 10px', backgroundColor: 'var(--color-teal-700)' }}
                 >
-                  <PlayCircle size={15} /> Attend Test
+                  <PlayCircle size={15} />
+                  <span>Attend Test</span>
                 </Link>
               </div>
             </div>

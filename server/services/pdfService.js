@@ -10,6 +10,10 @@ if (!fs.existsSync(uploadsDir)) {
   fs.mkdirSync(uploadsDir, { recursive: true });
 }
 
+const fontsDir = path.join(__dirname, '..', 'fonts');
+const fontMuktaRegular = path.join(fontsDir, 'MuktaMalar-Regular.ttf');
+const fontMuktaBold = path.join(fontsDir, 'MuktaMalar-Bold.ttf');
+
 // Comprehensive concept notes for standard portions
 const PORTION_NOTES = {
   'default': {
@@ -121,6 +125,16 @@ async function generatePortionPdf(test, destinationPath) {
       const writeStream = fs.createWriteStream(destinationPath);
       doc.pipe(writeStream);
 
+      // Register Tamil & Unicode font (Mukta Malar supports both Tamil script and full Latin)
+      const hasUnicodeFont = fs.existsSync(fontMuktaRegular) && fs.existsSync(fontMuktaBold);
+      if (hasUnicodeFont) {
+        doc.registerFont('Mukta-Regular', fontMuktaRegular);
+        doc.registerFont('Mukta-Bold', fontMuktaBold);
+      }
+
+      const fontReg = hasUnicodeFont ? 'Mukta-Regular' : 'Helvetica';
+      const fontBold = hasUnicodeFont ? 'Mukta-Bold' : 'Helvetica-Bold';
+
       // Colors matching ui&ux.md
       const colorTeal = '#176B67';
       const colorInk = '#172633';
@@ -153,40 +167,40 @@ async function generatePortionPdf(test, destinationPath) {
       // --- HEADER BAR ---
       doc.rect(45, 40, 505, 75).fill(colorInk);
 
-      doc.fillColor(colorSaffron).fontSize(10).font('Helvetica-Bold')
+      doc.fillColor(colorSaffron).fontSize(10).font(fontBold)
          .text('TNPSC COMBINED CIVIL SERVICES EXAMINATION – IV (GROUP IV)', 60, 52);
 
-      doc.fillColor('#FFFFFF').fontSize(16).font('Helvetica-Bold')
+      doc.fillColor('#FFFFFF').fontSize(16).font(fontBold)
          .text(test.title || 'Portion Study Guide', 60, 68, { width: 475, ellipsis: true });
 
-      doc.fillColor('#B0C0CC').fontSize(9).font('Helvetica')
+      doc.fillColor('#B0C0CC').fontSize(9).font(fontReg)
          .text(`Syllabus Portion: ${partName}  •  Recommended Study Material  •  Question Weightage: ${test.questionCount} MCQs`, 60, 92);
 
       // --- METADATA STRIP ---
       doc.rect(45, 125, 505, 32).fill('#F0EEE6');
       doc.strokeColor(colorLine).lineWidth(1).rect(45, 125, 505, 32).stroke();
 
-      doc.fillColor(colorTeal).fontSize(9).font('Helvetica-Bold')
+      doc.fillColor(colorTeal).fontSize(9).font(fontBold)
          .text('Duration: ', 60, 136, { continued: true })
-         .fillColor(colorInk).font('Helvetica').text(`${test.durationMinutes || 15} Mins  |  `, { continued: true })
-         .fillColor(colorTeal).font('Helvetica-Bold').text('Language: ', { continued: true })
-         .fillColor(colorInk).font('Helvetica').text(`${test.language || 'English'}  |  `, { continued: true })
-         .fillColor(colorTeal).font('Helvetica-Bold').text('Status: ', { continued: true })
+         .fillColor(colorInk).font(fontReg).text(`${test.durationMinutes || 15} Mins  |  `, { continued: true })
+         .fillColor(colorTeal).font(fontBold).text('Language: ', { continued: true })
+         .fillColor(colorInk).font(fontReg).text(`${test.language || 'English'}  |  `, { continued: true })
+         .fillColor(colorTeal).font(fontBold).text('Status: ', { continued: true })
          .fillColor('#287A58').text('Study Portion (Pre-Exam Preparation)');
 
       let yPos = 175;
 
       // --- SECTION 1: PORTION OVERVIEW ---
-      doc.fillColor(colorTeal).fontSize(13).font('Helvetica-Bold')
+      doc.fillColor(colorTeal).fontSize(13).font(fontBold)
          .text('1. Portion Overview & Objective', 45, yPos);
       yPos += 18;
 
-      doc.fillColor(colorInk).fontSize(10).font('Helvetica').lineGap(4)
+      doc.fillColor(colorInk).fontSize(10).font(fontReg).lineGap(4)
          .text(notes.overview, 45, yPos, { width: 505, align: 'justify' });
       yPos = doc.y + 16;
 
       // --- SECTION 2: TOPICS COVERED IN THIS PORTION ---
-      doc.fillColor(colorTeal).fontSize(13).font('Helvetica-Bold')
+      doc.fillColor(colorTeal).fontSize(13).font(fontBold)
          .text('2. Syllabus Topics Covered in this Test', 45, yPos);
       yPos += 18;
 
@@ -197,16 +211,16 @@ async function generatePortionPdf(test, destinationPath) {
       ];
 
       topicsToDisplay.forEach((top, idx) => {
-        doc.fillColor(colorSaffron).fontSize(11).font('Helvetica-Bold')
+        doc.fillColor(colorSaffron).fontSize(11).font(fontBold)
            .text('•', 55, yPos, { continued: true })
-           .fillColor(colorInk).fontSize(10).font('Helvetica-Bold')
+           .fillColor(colorInk).fontSize(10).font(fontBold)
            .text(`  ${top}`);
         yPos += 16;
       });
       yPos += 10;
 
       // --- SECTION 3: CORE HIGH-YIELD POINTS TO STUDY ---
-      doc.fillColor(colorTeal).fontSize(13).font('Helvetica-Bold')
+      doc.fillColor(colorTeal).fontSize(13).font(fontBold)
          .text('3. Key Concept Summary & High-Yield Revision Points', 45, yPos);
       yPos += 18;
 
@@ -216,10 +230,10 @@ async function generatePortionPdf(test, destinationPath) {
           yPos = 45;
         }
 
-        doc.fillColor(colorTeal).fontSize(10).font('Helvetica-Bold')
+        doc.fillColor(colorTeal).fontSize(10).font(fontBold)
            .text(`${idx + 1}.`, 55, yPos);
 
-        doc.fillColor(colorInk).fontSize(9.5).font('Helvetica').lineGap(3)
+        doc.fillColor(colorInk).fontSize(9.5).font(fontReg).lineGap(3)
            .text(point, 75, yPos, { width: 475, align: 'justify' });
 
         yPos = doc.y + 8;
@@ -234,11 +248,11 @@ async function generatePortionPdf(test, destinationPath) {
         }
 
         doc.rect(45, yPos, 505, 24).fill('#EBF5F3');
-        doc.fillColor(colorTeal).fontSize(11).font('Helvetica-Bold')
+        doc.fillColor(colorTeal).fontSize(11).font(fontBold)
            .text(sec.title, 55, yPos + 6);
         yPos += 30;
 
-        doc.fillColor(colorInk).fontSize(9.5).font('Helvetica').lineGap(3)
+        doc.fillColor(colorInk).fontSize(9.5).font(fontReg).lineGap(3)
            .text(sec.content, 55, yPos, { width: 490 });
         yPos = doc.y + 16;
       });
@@ -252,16 +266,16 @@ async function generatePortionPdf(test, destinationPath) {
       doc.rect(45, yPos, 505, 42).fill('#FAF8F2');
       doc.strokeColor(colorLine).lineWidth(1).rect(45, yPos, 505, 42).stroke();
 
-      doc.fillColor(colorTeal).fontSize(9).font('Helvetica-Bold')
+      doc.fillColor(colorTeal).fontSize(9).font(fontBold)
          .text('Exam Instruction Note:', 55, yPos + 8);
-      doc.fillColor(colorMuted).fontSize(8.5).font('Helvetica')
+      doc.fillColor(colorMuted).fontSize(8.5).font(fontReg)
          .text('After reading and revising this portion, return to the test detail page and click "Start Examination". The timer will begin, and question options will be presented.', 55, yPos + 22, { width: 485 });
 
       // Add page numbers
       const range = doc.bufferedPageRange();
       for (let i = range.start; i < range.start + range.count; i++) {
         doc.switchToPage(i);
-        doc.fillColor(colorMuted).fontSize(8).font('Helvetica')
+        doc.fillColor(colorMuted).fontSize(8).font(fontReg)
            .text(`TNPSC Study Circle  •  Portion Study Guide  •  Page ${i + 1} of ${range.count}`, 45, 800, { align: 'center', width: 505 });
       }
 
@@ -282,10 +296,12 @@ async function getOrGeneratePortionPdf(test) {
   const filename = `portion_guide_${test._id}_${safeTitle}.pdf`;
   const fullPath = path.join(uploadsDir, filename);
 
-  // If already exists and size > 0, return existing
+  const isTamil = /[\u0B80-\u0BFF]/.test(test.title || '') || (test.language && test.language.toLowerCase().includes('tamil'));
+
+  // If already exists and size > 0, return existing (regenerate if previously generated without unicode font)
   if (fs.existsSync(fullPath)) {
     const stats = fs.statSync(fullPath);
-    if (stats.size > 100) {
+    if (stats.size > 100 && (!isTamil || stats.size > 15000)) {
       return { filename, fullPath, url: `/uploads/${filename}` };
     }
   }
