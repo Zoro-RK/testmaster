@@ -34,7 +34,7 @@ async function getMaterials(req, res) {
         fileUrl: `/uploads/${m.fileStorageKey}`,
         uploadedBy: {
           id: m.uploadedBy,
-          displayName: uploader ? uploader.displayName : 'Group Member'
+          displayName: (!uploader || String(m.uploadedBy) === 'demo') ? 'Demo' : uploader.displayName
         },
         createdAt: m.createdAt,
         isOwner: String(m.uploadedBy) === String(req.user._id)

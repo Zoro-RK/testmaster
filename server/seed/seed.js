@@ -91,122 +91,12 @@ async function seed() {
       name: 'TNPSC Group IV Study Circle',
       description: 'Collaborative private circle for preparing for TNPSC Group IV examination.',
       createdBy: 'system',
-      joinMode: 'invitationCode',
-      invitationCode: 'TNPSC2025'
+      joinMode: 'open'
     });
-    console.log('[Seeding] Created Default Group with Invitation Code: TNPSC2025');
+    console.log('[Seeding] Created Default Group: TNPSC Group IV Study Circle');
   }
 
-  // 4. Seed Users (all peer members, no admin role)
-  const passwordHash = await bcrypt.hash('TNPSCUser#2025', 10);
-
-  const usersToSeed = [
-    { displayName: 'Senthil Kumar', email: 'senthil@studycircle.tnpsc', passwordHash, role: 'member' },
-    { displayName: 'Kavitha Rajan', email: 'kavitha@studycircle.tnpsc', passwordHash, role: 'member' },
-    { displayName: 'Manojkumar S.', email: 'manoj@studycircle.tnpsc', passwordHash, role: 'member' },
-    { displayName: 'Deepa Sundaram', email: 'deepa@studycircle.tnpsc', passwordHash, role: 'member' }
-  ];
-
-  const seededUsers = [];
-  for (const u of usersToSeed) {
-    let user = await User.findOne({ email: u.email });
-    if (!user && u.email === 'senthil@studycircle.tnpsc') {
-      // Check legacy admin user and migrate to peer member
-      user = await User.findOne({ email: 'admin@studycircle.tnpsc' });
-      if (user) {
-        user = await User.findByIdAndUpdate(user._id, {
-          displayName: 'Senthil Kumar',
-          email: 'senthil@studycircle.tnpsc',
-          passwordHash
-        });
-      }
-    }
-
-    if (!user) {
-      user = await User.create({
-        displayName: u.displayName,
-        email: u.email,
-        passwordHash: u.passwordHash,
-        accountStatus: 'active'
-      });
-      console.log(`[Seeding] Created user: ${user.displayName} (${user.email})`);
-    } else if (user.displayName.includes('(Admin)')) {
-      user = await User.findByIdAndUpdate(user._id, { displayName: 'Senthil Kumar' });
-    }
-    seededUsers.push(user);
-
-    // Ensure group membership as equal peer member
-    let membership = await GroupMember.findOne({ groupId: group._id, userId: user._id });
-    if (!membership) {
-      await GroupMember.create({
-        groupId: group._id,
-        userId: user._id,
-        role: 'member',
-        membershipStatus: 'approved'
-      });
-    } else if (membership.role === 'groupAdmin') {
-      await GroupMember.findByIdAndUpdate(membership._id, { role: 'member' });
-    }
-  }
-
-  // 5. Seed Portion Progress for friends to demonstrate the Portion Path & Friends Directory
-  const allTopics = await SyllabusTopic.find({});
-  if (allTopics.length > 0) {
-    const friendKavitha = seededUsers[1];
-    const friendManoj = seededUsers[2];
-    const friendDeepa = seededUsers[3];
-
-    // Give Kavitha some completed & in progress topics
-    for (let i = 0; i < Math.min(8, allTopics.length); i++) {
-      const topic = allTopics[i];
-      const existing = await PortionProgress.findOne({ groupId: group._id, userId: friendKavitha._id, topicId: topic._id });
-      if (!existing) {
-        await PortionProgress.create({
-          groupId: group._id,
-          userId: friendKavitha._id,
-          topicId: topic._id,
-          status: i < 5 ? 'completed' : 'inProgress',
-          startedAt: new Date(Date.now() - 86400000 * (10 - i)),
-          completedAt: i < 5 ? new Date(Date.now() - 86400000 * (8 - i)) : null,
-          privateNotes: 'Self notes - revision done on formulas.'
-        });
-      }
-    }
-
-    // Give Manoj some topics
-    for (let i = 5; i < Math.min(12, allTopics.length); i++) {
-      const topic = allTopics[i];
-      const existing = await PortionProgress.findOne({ groupId: group._id, userId: friendManoj._id, topicId: topic._id });
-      if (!existing) {
-        await PortionProgress.create({
-          groupId: group._id,
-          userId: friendManoj._id,
-          topicId: topic._id,
-          status: i < 9 ? 'completed' : 'revisionNeeded',
-          startedAt: new Date(Date.now() - 86400000 * 7),
-          completedAt: i < 9 ? new Date() : null
-        });
-      }
-    }
-
-    // Give Deepa some topics
-    for (let i = 10; i < Math.min(16, allTopics.length); i++) {
-      const topic = allTopics[i];
-      const existing = await PortionProgress.findOne({ groupId: group._id, userId: friendDeepa._id, topicId: topic._id });
-      if (!existing) {
-        await PortionProgress.create({
-          groupId: group._id,
-          userId: friendDeepa._id,
-          topicId: topic._id,
-          status: 'completed',
-          startedAt: new Date(Date.now() - 86400000 * 14),
-          completedAt: new Date(Date.now() - 86400000 * 2)
-        });
-      }
-    }
-  }
-
-  // 6. Seed Sample Tests
+  // 4. Seed Demo Sample Tests (createdBy: 'demo')
   const polityPart = await SyllabusPart.findOne({ code: 'A' });
   const tamilPart = await SyllabusPart.findOne({ code: 'C' });
   const aptitudePart = await SyllabusPart.findOne({ code: 'B' });
@@ -285,7 +175,7 @@ async function seed() {
 
     polityTest = await Test.create({
       groupId: group._id,
-      createdBy: seededUsers[1]._id, // Kavitha
+      createdBy: 'demo',
       title: polityTestTitle,
       description: 'Comprehensive practice test covering fundamental rights, writs, and preamble provisions.',
       examId: exam._id,
@@ -308,18 +198,7 @@ async function seed() {
       versionNumber: 1,
       questions: polityQuestions,
       schemaVersion: '1.0',
-      createdBy: seededUsers[1]._id
-    });
-
-    await ActivityEvent.create({
-      groupId: group._id,
-      userId: seededUsers[1]._id,
-      userDisplayName: seededUsers[1].displayName,
-      eventType: 'test_published',
-      resourceType: 'test',
-      resourceId: polityTest._id,
-      resourceTitle: polityTestTitle,
-      details: 'Published a 5-question test on Indian Polity'
+      createdBy: 'demo'
     });
     console.log('[Seeding] Created Sample Test: Indian Polity');
   }
@@ -398,7 +277,7 @@ async function seed() {
 
     tamilTest = await Test.create({
       groupId: group._id,
-      createdBy: seededUsers[2]._id, // Manoj
+      createdBy: 'demo',
       title: tamilTestTitle,
       description: 'TNPSC குரூப் 4 பொதுத் தமிழ் இலக்கணம், புணர்ச்சி மற்றும் திருக்குறள் வினாத்தாள்.',
       examId: exam._id,
@@ -421,18 +300,7 @@ async function seed() {
       versionNumber: 1,
       questions: tamilQuestions,
       schemaVersion: '1.0',
-      createdBy: seededUsers[2]._id
-    });
-
-    await ActivityEvent.create({
-      groupId: group._id,
-      userId: seededUsers[2]._id,
-      userDisplayName: seededUsers[2].displayName,
-      eventType: 'test_published',
-      resourceType: 'test',
-      resourceId: tamilTest._id,
-      resourceTitle: tamilTestTitle,
-      details: 'Published a Tamil test on Grammar and Thirukkural'
+      createdBy: 'demo'
     });
     console.log('[Seeding] Created Sample Test: பொதுத் தமிழ்');
   }
@@ -442,7 +310,7 @@ async function seed() {
   if (!material) {
     await Material.create({
       groupId: group._id,
-      uploadedBy: seededUsers[1]._id,
+      uploadedBy: 'demo',
       title: 'Indian Constitution Quick Revision Notes',
       description: 'Handmade summary of Fundamental Rights articles 12-35 with landmark cases.',
       fileStorageKey: 'sample_notes_polity.pdf',

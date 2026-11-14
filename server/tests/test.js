@@ -20,22 +20,9 @@ async function runTests() {
     assert.strictEqual(health.body.status, 'healthy');
     console.log('✔ Health check passed');
 
-    // 2. Authentication: Login with seeded user
-    console.log('[Test 2] Authentication login...');
-    const loginRes = await request(app)
-      .post('/api/auth/login')
-      .send({
-        email: 'kavitha@studycircle.tnpsc',
-        password: 'TNPSCUser#2025'
-      });
-    assert.strictEqual(loginRes.status, 200);
-    assert(loginRes.body.token, 'Token must be returned');
-    const token = loginRes.body.token;
-    console.log('✔ Login passed, token received');
-
-    // 2b. Registration with ONLY name and password (no email, no admin role)
-    console.log('[Test 2b] Register with ONLY Name and Password...');
-    const testUsername = `Murugan_${Date.now()}`;
+    // 2. Authentication: Register with ONLY name and password
+    console.log('[Test 2] Register with ONLY Name and Password...');
+    const testUsername = `Student_${Date.now()}`;
     const registerRes = await request(app)
       .post('/api/auth/register')
       .send({
@@ -46,8 +33,11 @@ async function runTests() {
     assert(registerRes.body.token, 'Token must be returned for new register');
     assert.strictEqual(registerRes.body.user.displayName, testUsername);
     assert.strictEqual(registerRes.body.group.role, 'member', 'New registrant must have standard member role');
+    const token = registerRes.body.token;
+    console.log('✔ Register with only name + password succeeded');
 
-    // Login using just the name and password
+    // 2b. Login using the registered name and password
+    console.log('[Test 2b] Authentication login with registered Name...');
     const loginWithNameRes = await request(app)
       .post('/api/auth/login')
       .send({
@@ -57,7 +47,7 @@ async function runTests() {
     assert.strictEqual(loginWithNameRes.status, 200);
     assert.strictEqual(loginWithNameRes.body.user.displayName, testUsername);
     assert.strictEqual(loginWithNameRes.body.group.role, 'member');
-    console.log('✔ Register with only name + password and login with name verified successfully');
+    console.log('✔ Login with name verified successfully');
 
     // 3. User profile check
     console.log('[Test 3] Profile /me check...');
@@ -65,7 +55,7 @@ async function runTests() {
       .get('/api/auth/me')
       .set('Authorization', `Bearer ${token}`);
     assert.strictEqual(meRes.status, 200);
-    assert.strictEqual(meRes.body.user.email, 'kavitha@studycircle.tnpsc');
+    assert.strictEqual(meRes.body.user.displayName, testUsername);
     assert.strictEqual(meRes.body.group.name, 'TNPSC Group IV Study Circle');
     console.log('✔ Profile /me passed');
 
@@ -98,13 +88,14 @@ async function runTests() {
 
     // 6. Privacy verification: Another member views portions
     console.log('[Test 6] Privacy check: Friend viewing portions must NOT see private notes...');
-    const friendLogin = await request(app)
-      .post('/api/auth/login')
+    const friendUsername = `Friend_${Date.now()}`;
+    const friendRegister = await request(app)
+      .post('/api/auth/register')
       .send({
-        email: 'manoj@studycircle.tnpsc',
-        password: 'TNPSCUser#2025'
+        displayName: friendUsername,
+        password: 'FriendPassword#2025'
       });
-    const friendToken = friendLogin.body.token;
+    const friendToken = friendRegister.body.token;
 
     const friendViewRes = await request(app)
       .get(`/api/portions/member/${meRes.body.user.id}`)

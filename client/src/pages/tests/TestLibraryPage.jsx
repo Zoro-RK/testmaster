@@ -203,7 +203,7 @@ export default function TestLibraryPage() {
                   </div>
 
                   <div style={{ fontSize: '11px', color: 'var(--color-muted)', marginTop: '6px' }}>
-                    Created by <strong>{test.creator?.displayName}</strong>
+                    Created by <strong>{test.creator?.displayName || 'Demo'}</strong>
                   </div>
                 </div>
 

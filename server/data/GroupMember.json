@@ -1,181 +1,24 @@
 [
   {
-    "_id": "id_1794508782247_h66qqaeab",
-    "createdAt": "2026-11-12T18:39:42.247Z",
-    "updatedAt": "2026-11-12T18:39:42.247Z",
-    "groupId": "id_1794508782121_u36brs5sc",
-    "userId": "id_1794508782246_58lxuinbi",
-    "role": "member",
-    "membershipStatus": "approved"
-  },
-  {
-    "_id": "id_1794508782247_kb236iqew",
-    "createdAt": "2026-11-12T18:39:42.247Z",
-    "updatedAt": "2026-11-12T18:39:42.247Z",
-    "groupId": "id_1794508782121_u36brs5sc",
-    "userId": "id_1794508782247_7rf3ilswk",
-    "role": "member",
-    "membershipStatus": "approved"
-  },
-  {
-    "_id": "id_1794508782247_lkd5gds0n",
-    "createdAt": "2026-11-12T18:39:42.247Z",
-    "updatedAt": "2026-11-12T18:39:42.247Z",
-    "groupId": "id_1794508782121_u36brs5sc",
-    "userId": "id_1794508782247_2apmufwc6",
-    "role": "member",
-    "membershipStatus": "approved"
-  },
-  {
-    "_id": "id_1794508782247_0gc4korgi",
-    "createdAt": "2026-11-12T18:39:42.247Z",
-    "updatedAt": "2026-11-12T18:39:42.247Z",
-    "groupId": "id_1794508782121_u36brs5sc",
-    "userId": "id_1794508782247_vzl87013n",
-    "role": "member",
-    "membershipStatus": "approved"
-  },
-  {
-    "_id": "id_1794590849065_gk5dhztlp",
-    "createdAt": "2026-11-13T17:27:29.065Z",
-    "updatedAt": "2026-11-13T17:27:29.065Z",
-    "groupId": "6af60a91769c2489866b00c1",
-    "userId": "id_1794590849059_pt7ujvoon",
-    "role": "member",
-    "membershipStatus": "approved",
-    "joinedAt": "2026-11-13T17:27:29.065Z",
-    "__v": 0
-  },
-  {
-    "_id": "id_1794591453670_oczabunmn",
-    "createdAt": "2026-11-13T17:37:33.671Z",
-    "updatedAt": "2026-11-13T17:37:33.671Z",
-    "groupId": "6af60a91769c2489866b00c1",
-    "userId": "id_1794591453664_sq148brgl",
-    "role": "member",
-    "membershipStatus": "approved",
-    "joinedAt": "2026-11-13T17:37:33.670Z",
-    "__v": 0
-  },
-  {
-    "_id": "id_1794592872556_2uac55x6x",
-    "createdAt": "2026-11-13T18:01:12.557Z",
-    "updatedAt": "2026-11-13T18:01:12.557Z",
-    "groupId": "6af60a91769c2489866b00c1",
-    "userId": "id_1794592872549_rij2a0gln",
-    "role": "member",
-    "membershipStatus": "approved",
-    "joinedAt": "2026-11-13T18:01:12.557Z",
-    "__v": 0
-  },
-  {
-    "_id": "id_1794593612982_kh06i6dgh",
-    "createdAt": "2026-11-13T18:13:32.982Z",
-    "updatedAt": "2026-11-13T18:13:32.982Z",
-    "groupId": "6af60a91769c2489866b00c1",
-    "userId": "id_1794593612976_mrcydemgi",
-    "role": "member",
-    "membershipStatus": "approved",
-    "joinedAt": "2026-11-13T18:13:32.982Z",
-    "__v": 0
-  },
-  {
-    "_id": "id_1794593776356_ur278xq18",
-    "createdAt": "2026-11-13T18:16:16.357Z",
-    "updatedAt": "2026-11-13T18:16:16.357Z",
-    "groupId": "6af60a91769c2489866b00c1",
-    "userId": "id_1794593776349_t7qnl3h8p",
-    "role": "member",
-    "membershipStatus": "approved",
-    "joinedAt": "2026-11-13T18:16:16.356Z",
-    "__v": 0
-  },
-  {
-    "_id": "id_1794594100286_h86jgef10",
-    "createdAt": "2026-11-13T18:21:40.287Z",
-    "updatedAt": "2026-11-13T18:21:40.287Z",
-    "groupId": "6af60a91769c2489866b00c1",
-    "userId": "id_1794594100280_jykudhwnb",
-    "role": "member",
-    "membershipStatus": "approved",
-    "joinedAt": "2026-11-13T18:21:40.286Z",
-    "__v": 0
-  },
-  {
-    "_id": "id_1794595268580_hha9a57zv",
-    "createdAt": "2026-11-13T18:41:08.581Z",
-    "updatedAt": "2026-11-14T18:15:07.886Z",
+    "_id": "id_1794681128733_972g67aaw",
+    "createdAt": "2026-11-14T18:32:08.737Z",
+    "updatedAt": "2026-11-14T18:32:08.737Z",
     "groupId": "id_1794596103325_p9nqfrzvy",
-    "userId": "id_1794595268456_qyx0pxgwh",
+    "userId": "id_1794681128474_1cup3vjue",
     "role": "member",
     "membershipStatus": "approved",
-    "joinedAt": "2026-11-13T18:41:08.581Z",
+    "joinedAt": "2026-11-14T18:32:08.736Z",
     "__v": 0
   },
   {
-    "_id": "id_1794596103807_p6nu84kbn",
-    "createdAt": "2026-11-13T18:55:03.808Z",
-    "updatedAt": "2026-11-13T18:55:03.808Z",
+    "_id": "id_1794681132623_9bjy0fkuu",
+    "createdAt": "2026-11-14T18:32:12.625Z",
+    "updatedAt": "2026-11-14T18:32:12.625Z",
     "groupId": "id_1794596103325_p9nqfrzvy",
-    "userId": "id_1794596103603_noszujhcs",
+    "userId": "id_1794681132410_51j73rze9",
     "role": "member",
     "membershipStatus": "approved",
-    "joinedAt": "2026-11-13T18:55:03.808Z",
-    "__v": 0
-  },
-  {
-    "_id": "id_1794596104043_6v1gl51il",
-    "createdAt": "2026-11-13T18:55:04.043Z",
-    "updatedAt": "2026-11-13T18:55:04.043Z",
-    "groupId": "id_1794596103325_p9nqfrzvy",
-    "userId": "id_1794596103928_w4ntivqn7",
-    "role": "member",
-    "membershipStatus": "approved",
-    "joinedAt": "2026-11-13T18:55:04.043Z",
-    "__v": 0
-  },
-  {
-    "_id": "id_1794596104299_7xx3hg5cx",
-    "createdAt": "2026-11-13T18:55:04.299Z",
-    "updatedAt": "2026-11-13T18:55:04.299Z",
-    "groupId": "id_1794596103325_p9nqfrzvy",
-    "userId": "id_1794596104153_pgi65nyhw",
-    "role": "member",
-    "membershipStatus": "approved",
-    "joinedAt": "2026-11-13T18:55:04.299Z",
-    "__v": 0
-  },
-  {
-    "_id": "id_1794596104539_shrow1iks",
-    "createdAt": "2026-11-13T18:55:04.540Z",
-    "updatedAt": "2026-11-13T18:55:04.540Z",
-    "groupId": "id_1794596103325_p9nqfrzvy",
-    "userId": "id_1794596104413_jhcbz8971",
-    "role": "member",
-    "membershipStatus": "approved",
-    "joinedAt": "2026-11-13T18:55:04.539Z",
-    "__v": 0
-  },
-  {
-    "_id": "id_1794596382636_0um2ragtm",
-    "createdAt": "2026-11-13T18:59:42.637Z",
-    "updatedAt": "2026-11-13T18:59:42.637Z",
-    "groupId": "id_1794596103325_p9nqfrzvy",
-    "userId": "id_1794596382516_vz6hngc38",
-    "role": "member",
-    "membershipStatus": "approved",
-    "joinedAt": "2026-11-13T18:59:42.637Z",
-    "__v": 0
-  },
-  {
-    "_id": "id_1794680140239_byamsvun7",
-    "createdAt": "2026-11-14T18:15:40.243Z",
-    "updatedAt": "2026-11-14T18:15:40.243Z",
-    "groupId": "id_1794596103325_p9nqfrzvy",
-    "userId": "id_1794680139980_asxfccb0d",
-    "role": "member",
-    "membershipStatus": "approved",
-    "joinedAt": "2026-11-14T18:15:40.242Z",
+    "joinedAt": "2026-11-14T18:32:12.624Z",
     "__v": 0
   }
 ]

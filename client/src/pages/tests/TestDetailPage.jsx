@@ -168,7 +168,7 @@ export default function TestDetailPage() {
             {testData.partName || 'TNPSC Practice Test'}
           </span>
           <span style={{ fontSize: '12px', color: 'var(--color-muted)' }}>
-            Contributed by {testData.creator?.displayName}
+            Contributed by {testData.creator?.displayName || 'Demo'}
           </span>
         </div>
 

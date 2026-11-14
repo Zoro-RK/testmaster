@@ -139,7 +139,7 @@ export default function MaterialsPage() {
                 <div style={{ fontSize: '12px', color: 'var(--color-muted)', marginTop: '14px', paddingTop: '10px', borderTop: '1px solid var(--color-line)' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <span>Uploaded by:</span>
-                    <strong>{m.uploadedBy?.displayName}</strong>
+                    <strong>{m.uploadedBy?.displayName || 'Demo'}</strong>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '4px' }}>
                     <span>Date:</span>

@@ -154,7 +154,9 @@ function createModel(modelName, schemaDefinition) {
     async deleteMany(query = {}) {
       if (isConnectedToMongo()) {
         try {
-          await MongooseModel.deleteMany(query);
+          const res = await MongooseModel.deleteMany(query);
+          try { getStore(modelName).deleteMany(query); } catch(e){}
+          return res;
         } catch (e) {}
       }
       return getStore(modelName).deleteMany(query);

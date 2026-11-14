@@ -239,7 +239,7 @@ export default function DashboardPage() {
                         {t.partName || t.partCode || 'Part A'}
                       </span>
                       <span style={{ fontSize: '12px', color: 'var(--color-muted)' }}>
-                        By {t.creator?.displayName || 'Friend'}
+                        By {t.creator?.displayName || 'Demo'}
                       </span>
                     </div>
                     <h4 style={{ fontSize: '16px', fontWeight: 700, color: 'var(--color-ink-900)' }}>

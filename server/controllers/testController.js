@@ -208,7 +208,7 @@ async function getTests(req, res) {
         partCode: part ? part.code : t.partId,
         creator: {
           id: t.createdBy,
-          displayName: creator ? creator.displayName : 'Group Member'
+          displayName: (!creator || String(t.createdBy) === 'demo') ? 'Demo' : creator.displayName
         },
         status: t.status,
         attemptState: state,
@@ -313,7 +313,7 @@ async function getTestById(req, res) {
         portionSummarySections: portionNotes.summarySections,
         creator: {
           id: test.createdBy,
-          displayName: creator ? creator.displayName : 'Group Member'
+          displayName: (!creator || String(test.createdBy) === 'demo') ? 'Demo' : creator.displayName
         },
         publishedAt: test.publishedAt,
         isOwner,
