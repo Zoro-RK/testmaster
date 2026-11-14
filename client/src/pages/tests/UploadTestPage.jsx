@@ -73,6 +73,95 @@ const SAMPLE_JSON = {
   ]
 };
 
+const CHATGPT_GENERATION_PROMPT = `# TNPSC Study Material & MCQ Generator
+
+I have completed studying a TNPSC syllabus portion with you in this conversation.
+
+Based on the syllabus portion and study content we discussed, generate the following two downloadable files:
+
+## 1. Detailed Portion PDF
+Create a well-structured PDF containing:
+- TNPSC exam name, subject, unit and portion title.
+- Complete topic and subtopic breakdown.
+- Clear, detailed explanations for every topic.
+- Important facts, definitions, dates, constitutional articles, people and concepts wherever relevant.
+- Key points for quick revision.
+- Important exam-focused notes.
+
+Keep the content aligned with the studied syllabus. Do not skip any listed topic or introduce unrelated topics.
+
+## 2. Exactly 100 MCQs in JSON
+
+Generate exactly 100 unique TNPSC-standard multiple-choice questions based only on the studied portion.
+
+Use this exact JSON structure:
+
+\`\`\`json
+{
+  "schemaVersion": "1.0",
+  "title": "TNPSC - Subject - Unit",
+  "exam": "TNPSC Group IV",
+  "subject": "Subject Name",
+  "unit": "Unit Name",
+  "language": "English",
+  "questionCount": 100,
+  "durationMinutes": 90,
+  "topics": [
+    {
+      "topicId": "TOPIC_001",
+      "topicName": "Topic Name",
+      "subtopics": ["Subtopic 1", "Subtopic 2"]
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q001",
+      "question": "Question text?",
+      "options": [
+        {"key": "A", "text": "Option A"},
+        {"key": "B", "text": "Option B"},
+        {"key": "C", "text": "Option C"},
+        {"key": "D", "text": "Option D"}
+      ],
+      "correctAnswer": "B",
+      "explanation": "Explanation of the correct answer.",
+      "topicId": "TOPIC_001",
+      "difficulty": "easy"
+    }
+  ]
+}
+\`\`\`
+
+### MCQ Rules
+- Generate exactly 100 questions, numbered Q001 to Q100.
+- Every question must have exactly four options: A, B, C and D.
+- \`correctAnswer\` must contain only A, B, C or D.
+- Difficulty must be \`easy\`, \`medium\` or \`hard\`.
+- Every question must have a clear explanation.
+- Every \`topicId\` must match an ID in the \`topics\` array.
+- Cover all studied topics with a balanced distribution.
+- Avoid duplicate or repeated questions.
+- Questions must be factually accurate and suitable for TNPSC examination practice.
+- Output must be valid JSON, without comments or trailing commas.
+
+## Final Output Requirements
+
+Create and attach these two downloadable files:
+
+1. \`TNPSC_Portion_<PortionName>.pdf\`
+2. \`TNPSC_Portion_<PortionName>_100_MCQ.json\`
+
+Before providing the files, verify:
+- The PDF covers the complete studied portion.
+- The JSON contains exactly 100 questions.
+- All questions have four options and valid answers.
+- All topic IDs are valid.
+- The JSON can be parsed without errors.
+
+Do not just display the content in the chat. Generate the actual downloadable PDF and JSON files.
+
+If any syllabus details are missing from our conversation, ask me for the required source instead of inventing them.`;
+
 export default function UploadTestPage() {
   const navigate = useNavigate();
 
@@ -86,6 +175,7 @@ export default function UploadTestPage() {
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
   const [copiedSample, setCopiedSample] = useState(false);
+  const [copiedPrompt, setCopiedPrompt] = useState(false);
 
   const handleFileUpload = (e) => {
     const file = e.target.files[0];
@@ -117,6 +207,27 @@ export default function UploadTestPage() {
   const loadSample = () => {
     setJsonText(JSON.stringify(SAMPLE_JSON, null, 2));
     setFileName('sample_polity_test.json');
+  };
+
+  const handleCopyPrompt = async () => {
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(CHATGPT_GENERATION_PROMPT);
+      } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = CHATGPT_GENERATION_PROMPT;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+      }
+      setCopiedPrompt(true);
+      setTimeout(() => setCopiedPrompt(false), 3000);
+    } catch (err) {
+      console.error('Failed to copy prompt:', err);
+    }
   };
 
   const handleValidate = async () => {
@@ -259,7 +370,123 @@ export default function UploadTestPage() {
 
       {/* STEP 1: Select JSON File */}
       {step === 1 && (
-        <div className="card">
+        <>
+          {/* How It Works Reference Card */}
+          <div style={{
+            backgroundColor: '#0F172A',
+            color: '#FFFFFF',
+            borderRadius: 'var(--radius-md)',
+            padding: '24px 22px',
+            marginBottom: '24px',
+            boxShadow: '0 8px 24px rgba(15, 23, 42, 0.25)',
+            border: '1px solid rgba(255, 255, 255, 0.08)'
+          }}>
+            <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#FFFFFF', marginBottom: '16px' }}>
+              How it works
+            </h3>
+
+            <ol style={{
+              listStyle: 'none',
+              padding: 0,
+              margin: '0 0 20px 0',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '10px',
+              fontSize: '14px',
+              lineHeight: 1.5,
+              color: '#CBD5E1'
+            }}>
+              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                <strong style={{ color: '#FFFFFF', minWidth: '16px' }}>1.</strong>
+                <span>Study your selected portion with ChatGPT.</span>
+              </li>
+              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                <strong style={{ color: '#FFFFFF', minWidth: '16px' }}>2.</strong>
+                <span>Copy the prompt below and paste it into ChatGPT.</span>
+              </li>
+              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                <strong style={{ color: '#FFFFFF', minWidth: '16px' }}>3.</strong>
+                <span>Download the PDF and JSON files generated by ChatGPT.</span>
+              </li>
+              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                <strong style={{ color: '#FFFFFF', minWidth: '16px' }}>4.</strong>
+                <span>Return here and import the JSON file.</span>
+              </li>
+            </ol>
+
+            {/* Ready-to-copy prompt badge */}
+            <div style={{ marginBottom: '12px' }}>
+              <span style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                padding: '4px 10px',
+                borderRadius: 'var(--radius-pill)',
+                backgroundColor: 'rgba(34, 197, 94, 0.18)',
+                color: '#4ADE80',
+                fontSize: '12px',
+                fontWeight: 700
+              }}>
+                Ready-to-copy prompt
+              </span>
+            </div>
+
+            {/* ChatGPT Generation Prompt Box */}
+            <div style={{
+              backgroundColor: '#020617',
+              border: '1px solid rgba(255, 255, 255, 0.12)',
+              borderRadius: 'var(--radius-sm)',
+              padding: '16px 18px'
+            }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px', flexWrap: 'wrap', gap: '8px' }}>
+                <h4 style={{ fontSize: '15px', fontWeight: 800, color: '#FFFFFF', margin: 0 }}>
+                  ChatGPT generation prompt
+                </h4>
+                <span style={{ fontSize: '12px', color: '#94A3B8' }}>
+                  Copy and paste
+                </span>
+              </div>
+
+              <p style={{ fontSize: '13px', color: '#94A3B8', margin: '0 0 16px 0', lineHeight: 1.4 }}>
+                The prompt uses your current conversation's studied portion as its source.
+              </p>
+
+              <button
+                type="button"
+                onClick={handleCopyPrompt}
+                style={{
+                  width: '100%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '8px',
+                  padding: '12px 18px',
+                  backgroundColor: copiedPrompt ? '#10B981' : '#F8FAFC',
+                  color: copiedPrompt ? '#FFFFFF' : '#0F172A',
+                  borderRadius: 'var(--radius-pill)',
+                  fontSize: '14px',
+                  fontWeight: 700,
+                  border: 'none',
+                  cursor: 'pointer',
+                  transition: 'all 0.15s ease'
+                }}
+              >
+                {copiedPrompt ? (
+                  <>
+                    <Check size={16} strokeWidth={2.8} />
+                    <span>Prompt copied to clipboard!</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy size={16} />
+                    <span>Copy prompt</span>
+                  </>
+                )}
+              </button>
+            </div>
+          </div>
+
+          <div className="card">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '10px' }}>
             <h3 style={{ fontSize: '18px', fontWeight: 800 }}>Choose JSON Question File</h3>
             <button
@@ -444,6 +671,7 @@ export default function UploadTestPage() {
             </button>
           </div>
         </div>
+        </>
       )}
 
       {/* STEP 2: Validation Errors View */}
