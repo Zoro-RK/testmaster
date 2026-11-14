@@ -295,7 +295,7 @@ export default function UploadTestPage() {
   };
 
   return (
-    <div className="page-container" style={{ maxWidth: '960px' }}>
+    <div className="page-container" style={{ maxWidth: '960px', width: '100%', boxSizing: 'border-box' }}>
       {/* Header */}
       <div className="page-header">
         <div>
@@ -321,7 +321,10 @@ export default function UploadTestPage() {
         padding: '14px 18px',
         marginBottom: '24px',
         overflowX: 'auto',
-        gap: '12px'
+        gap: '12px',
+        width: '100%',
+        maxWidth: '100%',
+        boxSizing: 'border-box'
       }}>
         {[
           { num: 1, label: '1. Select JSON' },
@@ -371,89 +374,173 @@ export default function UploadTestPage() {
       {/* STEP 1: Select JSON File */}
       {step === 1 && (
         <>
-          {/* How It Works Reference Card */}
-          <div style={{
-            backgroundColor: '#0F172A',
-            color: '#FFFFFF',
+          {/* How It Works Reference Card - Styled in Study Circle App Theme */}
+          <div className="upload-how-it-works" style={{
+            backgroundColor: 'var(--color-paper-100)',
+            border: '1.5px solid var(--color-teal-700)',
             borderRadius: 'var(--radius-md)',
-            padding: '24px 22px',
+            padding: '22px 24px',
             marginBottom: '24px',
-            boxShadow: '0 8px 24px rgba(15, 23, 42, 0.25)',
-            border: '1px solid rgba(255, 255, 255, 0.08)'
+            boxShadow: '0 4px 14px rgba(23, 107, 103, 0.08)',
+            width: '100%',
+            maxWidth: '100%',
+            boxSizing: 'border-box'
           }}>
-            <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#FFFFFF', marginBottom: '16px' }}>
-              How it works
-            </h3>
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', marginBottom: '16px' }}>
+              <div style={{
+                width: '38px',
+                height: '38px',
+                borderRadius: '8px',
+                backgroundColor: 'var(--color-teal-700)',
+                color: 'var(--color-white)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexShrink: 0
+              }}>
+                <Sparkles size={20} />
+              </div>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  fontSize: '11px',
+                  fontWeight: 800,
+                  color: 'var(--color-teal-700)',
+                  backgroundColor: 'var(--color-teal-100)',
+                  padding: '2px 8px',
+                  borderRadius: 'var(--radius-pill)',
+                  marginBottom: '4px',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.04em'
+                }}>
+                  Preparation Workflow
+                </div>
+                <h3 style={{ fontSize: '18px', fontWeight: 800, color: 'var(--color-ink-900)', margin: 0 }}>
+                  How it works
+                </h3>
+              </div>
+            </div>
 
             <ol style={{
               listStyle: 'none',
               padding: 0,
-              margin: '0 0 20px 0',
+              margin: '0 0 18px 0',
               display: 'flex',
               flexDirection: 'column',
               gap: '10px',
               fontSize: '14px',
               lineHeight: 1.5,
-              color: '#CBD5E1'
+              color: 'var(--color-ink-900)'
             }}>
-              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                <strong style={{ color: '#FFFFFF', minWidth: '16px' }}>1.</strong>
-                <span>Study your selected portion with ChatGPT.</span>
+              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                <span style={{
+                  width: '22px',
+                  height: '22px',
+                  borderRadius: '50%',
+                  backgroundColor: 'var(--color-teal-100)',
+                  color: 'var(--color-teal-700)',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontWeight: 800,
+                  fontSize: '12px',
+                  flexShrink: 0,
+                  marginTop: '1px'
+                }}>1</span>
+                <span style={{ fontWeight: 600 }}>Study your selected portion with ChatGPT.</span>
               </li>
-              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                <strong style={{ color: '#FFFFFF', minWidth: '16px' }}>2.</strong>
-                <span>Copy the prompt below and paste it into ChatGPT.</span>
+              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                <span style={{
+                  width: '22px',
+                  height: '22px',
+                  borderRadius: '50%',
+                  backgroundColor: 'var(--color-teal-100)',
+                  color: 'var(--color-teal-700)',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontWeight: 800,
+                  fontSize: '12px',
+                  flexShrink: 0,
+                  marginTop: '1px'
+                }}>2</span>
+                <span style={{ fontWeight: 600 }}>Copy the prompt below and paste it into ChatGPT.</span>
               </li>
-              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                <strong style={{ color: '#FFFFFF', minWidth: '16px' }}>3.</strong>
-                <span>Download the PDF and JSON files generated by ChatGPT.</span>
+              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                <span style={{
+                  width: '22px',
+                  height: '22px',
+                  borderRadius: '50%',
+                  backgroundColor: 'var(--color-teal-100)',
+                  color: 'var(--color-teal-700)',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontWeight: 800,
+                  fontSize: '12px',
+                  flexShrink: 0,
+                  marginTop: '1px'
+                }}>3</span>
+                <span style={{ fontWeight: 600 }}>Download the PDF and JSON files generated by ChatGPT.</span>
               </li>
-              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                <strong style={{ color: '#FFFFFF', minWidth: '16px' }}>4.</strong>
-                <span>Return here and import the JSON file.</span>
+              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                <span style={{
+                  width: '22px',
+                  height: '22px',
+                  borderRadius: '50%',
+                  backgroundColor: 'var(--color-teal-100)',
+                  color: 'var(--color-teal-700)',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontWeight: 800,
+                  fontSize: '12px',
+                  flexShrink: 0,
+                  marginTop: '1px'
+                }}>4</span>
+                <span style={{ fontWeight: 600 }}>Return here and import the JSON file.</span>
               </li>
             </ol>
 
             {/* Ready-to-copy prompt badge */}
             <div style={{ marginBottom: '12px' }}>
-              <span style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '6px',
-                padding: '4px 10px',
-                borderRadius: 'var(--radius-pill)',
-                backgroundColor: 'rgba(34, 197, 94, 0.18)',
-                color: '#4ADE80',
+              <span className="status-chip status-completed" style={{
                 fontSize: '12px',
-                fontWeight: 700
+                fontWeight: 700,
+                padding: '3px 10px'
               }}>
-                Ready-to-copy prompt
+                <Sparkles size={13} /> Ready-to-copy prompt
               </span>
             </div>
 
             {/* ChatGPT Generation Prompt Box */}
             <div style={{
-              backgroundColor: '#020617',
-              border: '1px solid rgba(255, 255, 255, 0.12)',
+              backgroundColor: 'var(--color-white)',
+              border: '1px solid var(--color-line)',
               borderRadius: 'var(--radius-sm)',
-              padding: '16px 18px'
+              padding: '16px 18px',
+              width: '100%',
+              boxSizing: 'border-box'
             }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px', flexWrap: 'wrap', gap: '8px' }}>
-                <h4 style={{ fontSize: '15px', fontWeight: 800, color: '#FFFFFF', margin: 0 }}>
+                <h4 style={{ fontSize: '15px', fontWeight: 800, color: 'var(--color-ink-900)', margin: 0 }}>
                   ChatGPT generation prompt
                 </h4>
-                <span style={{ fontSize: '12px', color: '#94A3B8' }}>
+                <span style={{ fontSize: '12px', color: 'var(--color-muted)', fontWeight: 600 }}>
                   Copy and paste
                 </span>
               </div>
 
-              <p style={{ fontSize: '13px', color: '#94A3B8', margin: '0 0 16px 0', lineHeight: 1.4 }}>
+              <p style={{ fontSize: '13px', color: 'var(--color-ink-700)', margin: '0 0 16px 0', lineHeight: 1.4 }}>
                 The prompt uses your current conversation's studied portion as its source.
               </p>
 
               <button
                 type="button"
                 onClick={handleCopyPrompt}
+                className="btn btn-primary"
                 style={{
                   width: '100%',
                   display: 'flex',
@@ -461,14 +548,16 @@ export default function UploadTestPage() {
                   justifyContent: 'center',
                   gap: '8px',
                   padding: '12px 18px',
-                  backgroundColor: copiedPrompt ? '#10B981' : '#F8FAFC',
-                  color: copiedPrompt ? '#FFFFFF' : '#0F172A',
+                  backgroundColor: copiedPrompt ? 'var(--color-success)' : 'var(--color-teal-700)',
+                  color: 'var(--color-white)',
                   borderRadius: 'var(--radius-pill)',
                   fontSize: '14px',
                   fontWeight: 700,
                   border: 'none',
                   cursor: 'pointer',
-                  transition: 'all 0.15s ease'
+                  transition: 'all 0.15s ease',
+                  boxShadow: '0 2px 8px rgba(23, 107, 103, 0.25)',
+                  minHeight: '46px'
                 }}
               >
                 {copiedPrompt ? (
@@ -911,6 +1000,24 @@ export default function UploadTestPage() {
           </div>
         </div>
       )}
+
+      <style>{`
+        @media (max-width: 640px) {
+          .upload-stepper-bar {
+            justify-content: flex-start !important;
+            padding: 10px 12px !important;
+            gap: 16px !important;
+            -webkit-overflow-scrolling: touch !important;
+            scrollbar-width: none !important;
+          }
+          .upload-stepper-bar::-webkit-scrollbar {
+            display: none !important;
+          }
+          .upload-how-it-works {
+            padding: 16px 14px !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }

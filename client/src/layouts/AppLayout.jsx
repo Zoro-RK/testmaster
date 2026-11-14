@@ -506,10 +506,21 @@ export default function AppLayout({ children }) {
           .mobile-bottom-nav {
             display: flex !important;
           }
+          .app-shell {
+            width: 100vw !important;
+            max-width: 100vw !important;
+            overflow-x: hidden !important;
+            box-sizing: border-box !important;
+          }
           .main-content {
             margin-left: 0 !important;
             padding-top: calc(var(--header-height) + var(--safe-area-top));
             padding-bottom: calc(var(--mobile-nav-height) + var(--safe-area-bottom));
+            width: 100% !important;
+            max-width: 100vw !important;
+            min-width: 0 !important;
+            box-sizing: border-box !important;
+            overflow-x: hidden !important;
           }
         }
       `}</style>
