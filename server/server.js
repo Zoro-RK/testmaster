@@ -4,7 +4,6 @@ require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
 const express = require('express');
 const cors = require('cors');
 const { connectDB } = require('./config/db');
-const seed = require('./seed/seed');
 
 const authRoutes = require('./routes/authRoutes');
 const groupRoutes = require('./routes/groupRoutes');
@@ -72,7 +71,6 @@ app.use((err, req, res, next) => {
 
 async function startServer() {
   await connectDB();
-  await seed();
 
   app.listen(PORT, () => {
     console.log(`[Server] TNPSC Study Circle server running on port ${PORT}`);
