@@ -161,9 +161,9 @@ export default function TestDetailPage() {
         <ArrowLeft size={16} /> Back to Test Library
       </Link>
 
-      <div className="card" style={{ padding: '36px' }}>
+      <div className="card test-detail-card" style={{ padding: '32px' }}>
         {/* Header */}
-        <div style={{ display: 'flex', gap: '8px', alignItems: 'center', marginBottom: '8px' }}>
+        <div style={{ display: 'flex', gap: '8px', alignItems: 'center', marginBottom: '8px', flexWrap: 'wrap' }}>
           <span className="status-chip status-notStarted">
             {testData.partName || 'TNPSC Practice Test'}
           </span>
@@ -172,48 +172,48 @@ export default function TestDetailPage() {
           </span>
         </div>
 
-        <h1 style={{ fontSize: '26px', fontWeight: 800, color: 'var(--color-ink-900)', lineHeight: 1.25 }}>
+        <h1 style={{ fontSize: '24px', fontWeight: 800, color: 'var(--color-ink-900)', lineHeight: 1.3 }}>
           {testData.title}
         </h1>
 
         {testData.description && (
-          <p style={{ fontSize: '15px', color: 'var(--color-ink-700)', marginTop: '8px', lineHeight: 1.6 }}>
+          <p style={{ fontSize: '14px', color: 'var(--color-ink-700)', marginTop: '8px', lineHeight: 1.6 }}>
             {testData.description}
           </p>
         )}
 
         {/* Test Spec Grid */}
-        <div style={{
+        <div className="test-spec-grid" style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-          gap: '16px',
-          margin: '24px 0',
-          padding: '20px',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
+          gap: '12px',
+          margin: '20px 0',
+          padding: '16px',
           backgroundColor: 'var(--color-paper-50)',
           borderRadius: 'var(--radius-sm)',
           border: '1px solid var(--color-line)'
         }}>
           <div>
-            <div style={{ fontSize: '12px', color: 'var(--color-muted)', fontWeight: 600 }}>Questions</div>
-            <div style={{ fontSize: '18px', fontWeight: 800, color: 'var(--color-ink-900)', marginTop: '2px' }}>
+            <div style={{ fontSize: '11px', color: 'var(--color-muted)', fontWeight: 600 }}>Questions</div>
+            <div style={{ fontSize: '17px', fontWeight: 800, color: 'var(--color-ink-900)', marginTop: '2px' }}>
               {testData.questionCount} MCQs
             </div>
           </div>
           <div>
-            <div style={{ fontSize: '12px', color: 'var(--color-muted)', fontWeight: 600 }}>Time Allowed</div>
-            <div style={{ fontSize: '18px', fontWeight: 800, color: 'var(--color-ink-900)', marginTop: '2px' }}>
+            <div style={{ fontSize: '11px', color: 'var(--color-muted)', fontWeight: 600 }}>Time Allowed</div>
+            <div style={{ fontSize: '17px', fontWeight: 800, color: 'var(--color-ink-900)', marginTop: '2px' }}>
               {testData.durationMinutes} Minutes
             </div>
           </div>
           <div>
-            <div style={{ fontSize: '12px', color: 'var(--color-muted)', fontWeight: 600 }}>Medium / Language</div>
-            <div style={{ fontSize: '18px', fontWeight: 800, color: 'var(--color-ink-900)', marginTop: '2px' }}>
+            <div style={{ fontSize: '11px', color: 'var(--color-muted)', fontWeight: 600 }}>Language</div>
+            <div style={{ fontSize: '17px', fontWeight: 800, color: 'var(--color-ink-900)', marginTop: '2px' }}>
               {testData.language}
             </div>
           </div>
           <div>
-            <div style={{ fontSize: '12px', color: 'var(--color-muted)', fontWeight: 600 }}>Evaluation</div>
-            <div style={{ fontSize: '18px', fontWeight: 800, color: 'var(--color-success)', marginTop: '2px' }}>
+            <div style={{ fontSize: '11px', color: 'var(--color-muted)', fontWeight: 600 }}>Evaluation</div>
+            <div style={{ fontSize: '17px', fontWeight: 800, color: 'var(--color-success)', marginTop: '2px' }}>
               Server Evaluated
             </div>
           </div>
@@ -222,19 +222,19 @@ export default function TestDetailPage() {
         {/* ============================================================== */}
         {/* NEW FEATURE: STUDY PORTION PDF BEFORE ATTENDING THE MCQ        */}
         {/* ============================================================== */}
-        <div style={{
+        <div className="portion-study-box" style={{
           backgroundColor: 'var(--color-paper-100)',
           border: '1.5px solid var(--color-teal-700)',
           borderRadius: 'var(--radius-md)',
-          padding: '24px',
-          marginBottom: '28px',
+          padding: '20px',
+          marginBottom: '24px',
           boxShadow: '0 4px 14px rgba(23, 107, 103, 0.08)'
         }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '14px', marginBottom: '16px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '14px', marginBottom: '14px' }}>
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
               <div style={{
-                width: '42px',
-                height: '42px',
+                width: '40px',
+                height: '40px',
                 borderRadius: '8px',
                 backgroundColor: 'var(--color-teal-700)',
                 color: 'var(--color-white)',
@@ -243,7 +243,7 @@ export default function TestDetailPage() {
                 justifyContent: 'center',
                 flexShrink: 0
               }}>
-                <BookOpen size={22} />
+                <BookOpen size={20} />
               </div>
               <div>
                 <div style={{
@@ -263,7 +263,7 @@ export default function TestDetailPage() {
                   <Sparkles size={12} />
                   Recommended Preparation
                 </div>
-                <h3 style={{ fontSize: '18px', fontWeight: 800, color: 'var(--color-ink-900)' }}>
+                <h3 style={{ fontSize: '17px', fontWeight: 800, color: 'var(--color-ink-900)' }}>
                   Study Portion Covered in this Test
                 </h3>
                 <p style={{ fontSize: '13px', color: 'var(--color-ink-700)', marginTop: '2px' }}>
@@ -273,29 +273,31 @@ export default function TestDetailPage() {
             </div>
 
             {/* Main Action Buttons */}
-            <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+            <div className="portion-actions-row" style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', width: '100%', marginTop: '6px' }}>
               <button
                 type="button"
                 onClick={() => setIsPdfModalOpen(true)}
                 className="btn btn-primary"
                 style={{
-                  padding: '9px 16px',
+                  flex: 1,
+                  minWidth: '140px',
+                  padding: '9px 14px',
                   fontSize: '13px',
                   backgroundColor: 'var(--color-teal-700)',
                   boxShadow: '0 2px 8px rgba(23, 107, 103, 0.25)'
                 }}
               >
-                <BookOpen size={16} /> View & Study PDF
+                <BookOpen size={15} /> View & Study PDF
               </button>
 
               <a
                 href={pdfUrl}
                 download={pdfName}
                 className="btn btn-secondary"
-                style={{ padding: '9px 14px', fontSize: '13px' }}
+                style={{ flex: 1, minWidth: '130px', padding: '9px 12px', fontSize: '13px' }}
                 title="Download Portion PDF"
               >
-                <Download size={15} /> Download PDF
+                <Download size={14} /> Download PDF
               </a>
 
               <button
@@ -304,7 +306,7 @@ export default function TestDetailPage() {
                 className="btn btn-ghost"
                 style={{ padding: '9px 12px', fontSize: '13px', backgroundColor: 'var(--color-white)', border: '1px solid var(--color-line)' }}
               >
-                <Eye size={15} /> {showInlinePdf ? 'Hide Inline' : 'Preview Inline'}
+                <Eye size={14} /> {showInlinePdf ? 'Hide' : 'Preview Inline'}
               </button>
             </div>
           </div>
@@ -539,11 +541,11 @@ export default function TestDetailPage() {
         )}
 
         {/* Action Button */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '14px' }}>
+        <div className="test-detail-footer-actions" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '14px', marginTop: '24px' }}>
           <button
             type="button"
             onClick={() => setIsPdfModalOpen(true)}
-            className="btn btn-secondary"
+            className="btn btn-secondary mobile-full-width"
             style={{ padding: '12px 20px', fontSize: '14px' }}
           >
             <BookOpen size={16} /> Open Portion PDF
@@ -551,7 +553,7 @@ export default function TestDetailPage() {
 
           <button
             onClick={handleStartExam}
-            className="btn btn-primary"
+            className="btn btn-primary mobile-full-width"
             disabled={starting}
             style={{ padding: '14px 32px', fontSize: '15px' }}
           >
@@ -562,6 +564,23 @@ export default function TestDetailPage() {
           </button>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 640px) {
+          .test-detail-card {
+            padding: 16px 14px !important;
+          }
+          .portion-study-box {
+            padding: 14px 12px !important;
+          }
+          .test-spec-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+          .test-detail-footer-actions {
+            flex-direction: column-reverse !important;
+          }
+        }
+      `}</style>
 
       {/* Interactive Fullscreen/Modal PDF Study Reader */}
       <PortionPdfModal

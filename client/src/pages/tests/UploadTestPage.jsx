@@ -200,16 +200,17 @@ export default function UploadTestPage() {
       </div>
 
       {/* 4-Step Stepper Bar */}
-      <div style={{
+      <div className="upload-stepper-bar" style={{
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
         backgroundColor: 'var(--color-white)',
         border: '1px solid var(--color-line)',
         borderRadius: 'var(--radius-md)',
-        padding: '16px 24px',
-        marginBottom: '28px',
-        overflowX: 'auto'
+        padding: '14px 18px',
+        marginBottom: '24px',
+        overflowX: 'auto',
+        gap: '12px'
       }}>
         {[
           { num: 1, label: '1. Select JSON' },
@@ -220,7 +221,7 @@ export default function UploadTestPage() {
           const isDone = step > s.num;
           const isCurrent = step === s.num;
           return (
-            <div key={s.num} style={{ display: 'flex', alignItems: 'center', gap: '8px', color: isCurrent ? 'var(--color-teal-700)' : isDone ? 'var(--color-success)' : 'var(--color-muted)', fontWeight: isCurrent ? 800 : 600, fontSize: '13px' }}>
+            <div key={s.num} style={{ display: 'flex', alignItems: 'center', gap: '8px', color: isCurrent ? 'var(--color-teal-700)' : isDone ? 'var(--color-success)' : 'var(--color-muted)', fontWeight: isCurrent ? 800 : 600, fontSize: '13px', whiteSpace: 'nowrap' }}>
               <span style={{
                 width: '24px',
                 height: '24px',
@@ -231,7 +232,8 @@ export default function UploadTestPage() {
                 backgroundColor: isCurrent ? 'var(--color-teal-700)' : isDone ? 'var(--color-success)' : 'var(--color-paper-200)',
                 color: 'var(--color-white)',
                 fontSize: '11px',
-                fontWeight: 800
+                fontWeight: 800,
+                flexShrink: 0
               }}>
                 {isDone ? <Check size={14} /> : s.num}
               </span>

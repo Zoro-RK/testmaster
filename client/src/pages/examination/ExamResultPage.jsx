@@ -84,13 +84,13 @@ export default function ExamResultPage() {
       </Link>
 
       {/* Main Score & Summary Card */}
-      <div className="card" style={{ padding: '36px', marginBottom: '28px', backgroundColor: 'var(--color-white)' }}>
+      <div className="card result-score-card" style={{ padding: '28px', marginBottom: '24px', backgroundColor: 'var(--color-white)' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '16px' }}>
           <div>
             <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--color-teal-700)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
               Examination Result
             </div>
-            <h1 style={{ fontSize: '26px', fontWeight: 800, color: 'var(--color-ink-900)', marginTop: '4px' }}>
+            <h1 style={{ fontSize: '24px', fontWeight: 800, color: 'var(--color-ink-900)', marginTop: '4px' }}>
               {result.testTitle}
             </h1>
             <div style={{ fontSize: '13px', color: 'var(--color-muted)', marginTop: '4px' }}>
@@ -103,14 +103,14 @@ export default function ExamResultPage() {
             display: 'flex',
             alignItems: 'baseline',
             gap: '8px',
-            padding: '12px 24px',
+            padding: '10px 20px',
             backgroundColor: 'var(--color-teal-100)',
             borderRadius: 'var(--radius-md)',
             color: 'var(--color-teal-700)'
           }}>
-            <span style={{ fontSize: '36px', fontWeight: 900 }}>{score}</span>
-            <span style={{ fontSize: '16px', fontWeight: 700, color: 'var(--color-ink-700)' }}>/ {totalQuestions}</span>
-            <span style={{ fontSize: '14px', fontWeight: 800, marginLeft: '8px', padding: '2px 8px', borderRadius: 'var(--radius-pill)', backgroundColor: 'var(--color-white)' }}>
+            <span style={{ fontSize: '32px', fontWeight: 900 }}>{score}</span>
+            <span style={{ fontSize: '15px', fontWeight: 700, color: 'var(--color-ink-700)' }}>/ {totalQuestions}</span>
+            <span style={{ fontSize: '13px', fontWeight: 800, marginLeft: '6px', padding: '2px 8px', borderRadius: 'var(--radius-pill)', backgroundColor: 'var(--color-white)' }}>
               {percentage}%
             </span>
           </div>
@@ -120,21 +120,21 @@ export default function ExamResultPage() {
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: '14px',
-          margin: '28px 0 20px',
+          gap: '10px',
+          margin: '24px 0 16px',
           textAlign: 'center'
         }}>
-          <div style={{ padding: '16px', backgroundColor: 'var(--color-success-light)', borderRadius: 'var(--radius-sm)', border: '1px solid #cce8d9' }}>
-            <div style={{ fontSize: '24px', fontWeight: 800, color: 'var(--color-success)' }}>{correctCount}</div>
-            <div style={{ fontSize: '12px', color: 'var(--color-success)', fontWeight: 700, marginTop: '2px' }}>Correct Answers</div>
+          <div style={{ padding: '12px 8px', backgroundColor: 'var(--color-success-light)', borderRadius: 'var(--radius-sm)', border: '1px solid #cce8d9' }}>
+            <div style={{ fontSize: '22px', fontWeight: 800, color: 'var(--color-success)' }}>{correctCount}</div>
+            <div style={{ fontSize: '11px', color: 'var(--color-success)', fontWeight: 700, marginTop: '2px' }}>Correct</div>
           </div>
-          <div style={{ padding: '16px', backgroundColor: 'var(--color-danger-light)', borderRadius: 'var(--radius-sm)', border: '1px solid #f7cfcf' }}>
-            <div style={{ fontSize: '24px', fontWeight: 800, color: 'var(--color-danger)' }}>{incorrectCount}</div>
-            <div style={{ fontSize: '12px', color: 'var(--color-danger)', fontWeight: 700, marginTop: '2px' }}>Incorrect Answers</div>
+          <div style={{ padding: '12px 8px', backgroundColor: 'var(--color-danger-light)', borderRadius: 'var(--radius-sm)', border: '1px solid #f7cfcf' }}>
+            <div style={{ fontSize: '22px', fontWeight: 800, color: 'var(--color-danger)' }}>{incorrectCount}</div>
+            <div style={{ fontSize: '11px', color: 'var(--color-danger)', fontWeight: 700, marginTop: '2px' }}>Incorrect</div>
           </div>
-          <div style={{ padding: '16px', backgroundColor: 'var(--color-paper-100)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--color-line)' }}>
-            <div style={{ fontSize: '24px', fontWeight: 800, color: 'var(--color-muted)' }}>{unansweredCount}</div>
-            <div style={{ fontSize: '12px', color: 'var(--color-muted)', fontWeight: 700, marginTop: '2px' }}>Unanswered</div>
+          <div style={{ padding: '12px 8px', backgroundColor: 'var(--color-paper-100)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--color-line)' }}>
+            <div style={{ fontSize: '22px', fontWeight: 800, color: 'var(--color-muted)' }}>{unansweredCount}</div>
+            <div style={{ fontSize: '11px', color: 'var(--color-muted)', fontWeight: 700, marginTop: '2px' }}>Unanswered</div>
           </div>
         </div>
 

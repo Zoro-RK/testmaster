@@ -143,12 +143,12 @@ export default function SyllabusPage() {
       ) : (
         /* Part Tabs Navigation */
         <div>
-          <div style={{
+          <div className="tabs-scroll-container" style={{
             display: 'flex',
             gap: '8px',
             overflowX: 'auto',
             borderBottom: '1px solid var(--color-line)',
-            marginBottom: '24px',
+            marginBottom: '20px',
             paddingBottom: '2px'
           }}>
             {parts.map(part => {

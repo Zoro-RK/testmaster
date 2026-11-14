@@ -39,7 +39,7 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="card" style={{ padding: '36px 32px' }}>
+    <div className="card auth-card" style={{ padding: '36px 32px' }}>
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
         <Logo variant="stacked" size={38} />
       </div>

@@ -35,7 +35,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="card" style={{ padding: '36px 32px' }}>
+    <div className="card auth-card" style={{ padding: '36px 32px' }}>
       {/* Mobile-only logo */}
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '24px' }}>
         <Logo variant="stacked" size={40} />

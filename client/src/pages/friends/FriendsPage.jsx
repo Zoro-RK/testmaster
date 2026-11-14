@@ -97,14 +97,14 @@ export default function FriendsPage() {
           <Users size={40} color="var(--color-muted)" style={{ margin: '0 auto 12px' }} />
           <h3 style={{ fontSize: '18px', fontWeight: 700 }}>No members found</h3>
           <p style={{ fontSize: '14px', color: 'var(--color-muted)', marginTop: '4px' }}>
-            {search ? 'Try adjusting your search query.' : 'Share the invitation code with friends to invite them to this study circle.'}
+            {search ? 'Try adjusting your search query.' : 'Registered candidates automatically connect as friends in this circle.'}
           </p>
         </div>
       ) : (
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
-          gap: '20px'
+          gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+          gap: '16px'
         }}>
           {members.map(member => (
             <FriendCard key={member.id} member={member} />

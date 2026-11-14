@@ -207,25 +207,25 @@ export default function ExamPage() {
   const unansweredCount = totalQuestions - answeredCount;
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--color-paper-50)' }}>
+    <div className="exam-viewport" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--color-paper-50)' }}>
       {/* Fixed Examination Header */}
-      <header style={{
+      <header className="exam-header" style={{
         position: 'sticky',
         top: 0,
         backgroundColor: 'var(--color-white)',
         borderBottom: '1px solid var(--color-line)',
-        padding: '12px 24px',
+        padding: '10px 16px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
         zIndex: 50,
         boxShadow: 'var(--shadow-sm)'
       }}>
-        <div>
-          <div style={{ fontSize: '11px', color: 'var(--color-muted)', fontWeight: 700, textTransform: 'uppercase' }}>
-            TNPSC Group IV Examination
+        <div style={{ minWidth: 0, flex: 1, paddingRight: '8px' }}>
+          <div style={{ fontSize: '11px', color: 'var(--color-muted)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+            TNPSC Group IV
           </div>
-          <h2 style={{ fontSize: '16px', fontWeight: 800, color: 'var(--color-ink-900)' }}>
+          <h2 style={{ fontSize: '15px', fontWeight: 800, color: 'var(--color-ink-900)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
             {attempt?.testTitle}
           </h2>
         </div>
@@ -234,33 +234,35 @@ export default function ExamPage() {
         <div style={{
           display: 'flex',
           alignItems: 'center',
-          gap: '8px',
-          padding: '6px 16px',
+          gap: '6px',
+          padding: '6px 12px',
           borderRadius: 'var(--radius-pill)',
           backgroundColor: isTimeCritical ? 'var(--color-danger-light)' : 'var(--color-teal-100)',
           color: isTimeCritical ? 'var(--color-danger)' : 'var(--color-teal-700)',
           fontWeight: 800,
-          fontSize: '15px'
+          fontSize: '14px',
+          flexShrink: 0
         }}>
-          <Clock size={18} />
+          <Clock size={16} />
           <span>{timeFormatted}</span>
         </div>
 
         {/* Right: Palette trigger & Submit button */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0, marginLeft: '8px' }}>
           <button
             onClick={() => setPaletteOpen(!paletteOpen)}
-            className="btn btn-secondary"
-            style={{ padding: '8px 12px', fontSize: '13px' }}
+            className="btn btn-secondary exam-palette-btn"
+            style={{ padding: '6px 10px', fontSize: '12px' }}
+            title="Question Palette"
           >
-            <Menu size={16} /> Question Palette
+            <Menu size={16} /> <span className="btn-label-desktop">Palette</span>
           </button>
           <button
             onClick={() => setShowSubmitModal(true)}
             className="btn btn-primary"
-            style={{ backgroundColor: 'var(--color-success)', padding: '8px 18px', fontSize: '13px' }}
+            style={{ backgroundColor: 'var(--color-success)', padding: '6px 12px', fontSize: '12px' }}
           >
-            <Send size={15} /> Submit Test
+            <Send size={14} /> Submit
           </button>
         </div>
       </header>
@@ -268,15 +270,15 @@ export default function ExamPage() {
       {/* Main Exam Body */}
       <div style={{ flex: 1, display: 'flex', maxWidth: '1440px', margin: '0 auto', width: '100%' }}>
         {/* Left: Active Question Area */}
-        <div style={{ flex: 1, padding: '28px 32px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+        <div className="exam-question-area" style={{ flex: 1, padding: '24px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
           <div>
             {/* Question Header */}
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '18px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <span style={{ fontSize: '18px', fontWeight: 800, color: 'var(--color-teal-700)' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <span style={{ fontSize: '16px', fontWeight: 800, color: 'var(--color-teal-700)' }}>
                   Question {currentIndex + 1} of {totalQuestions}
                 </span>
-                <span className="status-chip status-notStarted" style={{ fontSize: '11px' }}>
+                <span className="status-chip status-notStarted" style={{ fontSize: '11px', padding: '2px 6px' }}>
                   ID: {currentQ?.id}
                 </span>
               </div>
@@ -284,19 +286,19 @@ export default function ExamPage() {
               {/* Autosave status indicator */}
               <div style={{ fontSize: '12px', color: saving ? 'var(--color-warning)' : 'var(--color-success)', display: 'flex', alignItems: 'center', gap: '4px' }}>
                 <CheckCircle2 size={14} />
-                <span>{saving ? 'Saving…' : 'Autosaved'}</span>
+                <span>{saving ? 'Saving…' : 'Saved'}</span>
               </div>
             </div>
 
             {/* Question Text */}
-            <div style={{
-              fontSize: '18px',
+            <div className="exam-question-card" style={{
+              fontSize: '17px',
               fontWeight: 700,
               color: 'var(--color-ink-900)',
               lineHeight: 1.5,
-              marginBottom: '28px',
+              marginBottom: '20px',
               backgroundColor: 'var(--color-white)',
-              padding: '24px',
+              padding: '20px',
               borderRadius: 'var(--radius-md)',
               border: '1px solid var(--color-line)'
             }}>
@@ -304,7 +306,7 @@ export default function ExamPage() {
             </div>
 
             {/* Answer Options (A, B, C, D) */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {currentQ?.options?.map((opt) => {
                 const isSelected = currentAnswer.selectedOption === opt.key;
                 return (
@@ -315,14 +317,15 @@ export default function ExamPage() {
                     style={{
                       display: 'flex',
                       alignItems: 'center',
-                      gap: '16px',
-                      padding: '16px 20px',
+                      gap: '14px',
+                      padding: '14px 16px',
                       borderRadius: 'var(--radius-sm)',
                       border: '2px solid',
                       borderColor: isSelected ? 'var(--color-teal-700)' : 'var(--color-line)',
                       backgroundColor: isSelected ? 'var(--color-teal-50)' : 'var(--color-white)',
                       textAlign: 'left',
-                      transition: 'all 0.15s ease'
+                      transition: 'all 0.15s ease',
+                      minHeight: '52px'
                     }}
                   >
                     <div style={{
@@ -340,7 +343,7 @@ export default function ExamPage() {
                     }}>
                       {opt.key}
                     </div>
-                    <span style={{ fontSize: '16px', fontWeight: isSelected ? 700 : 500, color: 'var(--color-ink-900)' }}>
+                    <span style={{ fontSize: '15px', fontWeight: isSelected ? 700 : 500, color: 'var(--color-ink-900)', lineHeight: 1.4 }}>
                       {opt.text}
                     </span>
                   </button>
@@ -350,17 +353,17 @@ export default function ExamPage() {
           </div>
 
           {/* Bottom Action Bar */}
-          <div style={{
+          <div className="exam-bottom-actions" style={{
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
-            marginTop: '36px',
-            paddingTop: '20px',
+            marginTop: '28px',
+            paddingTop: '16px',
             borderTop: '1px solid var(--color-line)',
             flexWrap: 'wrap',
             gap: '12px'
           }}>
-            <div style={{ display: 'flex', gap: '10px' }}>
+            <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
               <button
                 type="button"
                 onClick={handleToggleReview}
@@ -368,11 +371,13 @@ export default function ExamPage() {
                 style={{
                   backgroundColor: currentAnswer.markedForReview ? 'var(--color-saffron-100)' : 'var(--color-white)',
                   color: currentAnswer.markedForReview ? 'var(--color-warning)' : 'var(--color-ink-700)',
-                  borderColor: currentAnswer.markedForReview ? 'var(--color-saffron-500)' : 'var(--color-line)'
+                  borderColor: currentAnswer.markedForReview ? 'var(--color-saffron-500)' : 'var(--color-line)',
+                  fontSize: '13px',
+                  padding: '8px 12px'
                 }}
               >
-                <Bookmark size={16} />
-                {currentAnswer.markedForReview ? 'Marked for Review' : 'Mark for Review'}
+                <Bookmark size={15} />
+                {currentAnswer.markedForReview ? 'Marked' : 'Mark for Review'}
               </button>
 
               {currentAnswer.selectedOption && (
@@ -380,21 +385,22 @@ export default function ExamPage() {
                   type="button"
                   onClick={handleClearSelection}
                   className="btn btn-ghost"
-                  style={{ fontSize: '13px' }}
+                  style={{ fontSize: '12px', padding: '8px 10px' }}
                 >
-                  <RotateCcw size={14} /> Clear Selection
+                  <RotateCcw size={13} /> Clear
                 </button>
               )}
             </div>
 
-            <div style={{ display: 'flex', gap: '10px' }}>
+            <div style={{ display: 'flex', gap: '8px' }}>
               <button
                 type="button"
                 onClick={() => setCurrentIndex(prev => Math.max(0, prev - 1))}
                 disabled={currentIndex === 0}
                 className="btn btn-secondary"
+                style={{ minWidth: '90px', fontSize: '13px' }}
               >
-                <ChevronLeft size={16} /> Previous
+                <ChevronLeft size={16} /> Prev
               </button>
 
               <button
@@ -402,6 +408,7 @@ export default function ExamPage() {
                 onClick={() => setCurrentIndex(prev => Math.min(totalQuestions - 1, prev + 1))}
                 disabled={currentIndex === totalQuestions - 1}
                 className="btn btn-primary"
+                style={{ minWidth: '90px', fontSize: '13px' }}
               >
                 Next <ChevronRight size={16} />
               </button>
@@ -409,108 +416,178 @@ export default function ExamPage() {
           </div>
         </div>
 
-        {/* Right Sidebar: Question Palette (Collapsible / Drawer) */}
-        <aside style={{
-          width: '320px',
-          backgroundColor: 'var(--color-white)',
-          borderLeft: '1px solid var(--color-line)',
-          padding: '24px 20px',
-          display: paletteOpen ? 'block' : 'none',
-          position: 'sticky',
-          top: '64px',
-          height: 'calc(100vh - 64px)',
-          overflowY: 'auto'
-        }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
-            <h3 style={{ fontSize: '16px', fontWeight: 800 }}>Question Palette</h3>
-            <button onClick={() => setPaletteOpen(false)} style={{ color: 'var(--color-muted)' }}>
-              <X size={18} />
-            </button>
-          </div>
-
-          {/* Accessible Legend */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            gap: '8px',
-            fontSize: '11px',
-            fontWeight: 600,
-            marginBottom: '20px',
-            padding: '12px',
-            backgroundColor: 'var(--color-paper-50)',
-            borderRadius: 'var(--radius-sm)'
-          }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <span style={{ width: '12px', height: '12px', borderRadius: '3px', backgroundColor: 'var(--color-teal-700)' }}></span>
-              <span>Answered</span>
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <span style={{ width: '12px', height: '12px', borderRadius: '3px', backgroundColor: 'var(--color-paper-100)', border: '1px solid var(--color-line)' }}></span>
-              <span>Not Answered</span>
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <span style={{ width: '12px', height: '12px', borderRadius: '3px', backgroundColor: 'var(--color-saffron-500)' }}></span>
-              <span>Review</span>
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <span style={{ width: '12px', height: '12px', borderRadius: '3px', backgroundColor: 'var(--color-coral-500)' }}></span>
-              <span>Answered + Rev</span>
-            </div>
-          </div>
-
-          {/* Grid of Numbered Tiles */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '8px' }}>
-            {questions.map((q, idx) => {
-              const ans = answers[q.id];
-              const isCurrent = currentIndex === idx;
-              const hasAnswer = Boolean(ans?.selectedOption);
-              const isMarked = Boolean(ans?.markedForReview);
-
-              let bgColor = 'var(--color-paper-100)';
-              let textColor = 'var(--color-ink-900)';
-              let borderColor = 'var(--color-line)';
-
-              if (hasAnswer && isMarked) {
-                bgColor = 'var(--color-coral-500)';
-                textColor = 'var(--color-white)';
-              } else if (isMarked) {
-                bgColor = 'var(--color-saffron-500)';
-                textColor = 'var(--color-white)';
-              } else if (hasAnswer) {
-                bgColor = 'var(--color-teal-700)';
-                textColor = 'var(--color-white)';
-              }
-
-              if (isCurrent) {
-                borderColor = 'var(--color-ink-900)';
-              }
-
-              return (
-                <button
-                  key={q.id}
-                  onClick={() => setCurrentIndex(idx)}
-                  style={{
-                    height: '38px',
-                    borderRadius: 'var(--radius-sm)',
-                    border: isCurrent ? '2px solid var(--color-ink-900)' : `1px solid ${borderColor}`,
-                    backgroundColor: bgColor,
-                    color: textColor,
-                    fontWeight: 800,
-                    fontSize: '13px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    boxShadow: isCurrent ? '0 0 0 2px var(--color-teal-100)' : 'none'
+        {/* Right Sidebar / Mobile Sheet: Question Palette */}
+        {paletteOpen && (
+          <div className="exam-palette-backdrop" onClick={() => setPaletteOpen(false)}>
+            <aside 
+              className="exam-palette-panel"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' }}>
+                <h3 style={{ fontSize: '16px', fontWeight: 800 }}>Question Palette</h3>
+                <button 
+                  onClick={() => setPaletteOpen(false)} 
+                  style={{ 
+                    width: '32px', 
+                    height: '32px', 
+                    borderRadius: '50%', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center', 
+                    backgroundColor: 'var(--color-paper-100)',
+                    color: 'var(--color-ink-900)'
                   }}
-                  title={`Question ${idx + 1}`}
                 >
-                  {idx + 1}
+                  <X size={18} />
                 </button>
-              );
-            })}
+              </div>
+
+              {/* Accessible Legend */}
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(2, 1fr)',
+                gap: '8px',
+                fontSize: '11px',
+                fontWeight: 600,
+                marginBottom: '16px',
+                padding: '10px',
+                backgroundColor: 'var(--color-paper-50)',
+                borderRadius: 'var(--radius-sm)'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span style={{ width: '12px', height: '12px', borderRadius: '3px', backgroundColor: 'var(--color-teal-700)' }}></span>
+                  <span>Answered</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span style={{ width: '12px', height: '12px', borderRadius: '3px', backgroundColor: 'var(--color-paper-100)', border: '1px solid var(--color-line)' }}></span>
+                  <span>Not Answered</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span style={{ width: '12px', height: '12px', borderRadius: '3px', backgroundColor: 'var(--color-saffron-500)' }}></span>
+                  <span>Review</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span style={{ width: '12px', height: '12px', borderRadius: '3px', backgroundColor: 'var(--color-coral-500)' }}></span>
+                  <span>Answered + Rev</span>
+                </div>
+              </div>
+
+              {/* Grid of Numbered Tiles */}
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '8px' }}>
+                {questions.map((q, idx) => {
+                  const ans = answers[q.id];
+                  const isCurrent = currentIndex === idx;
+                  const hasAnswer = Boolean(ans?.selectedOption);
+                  const isMarked = Boolean(ans?.markedForReview);
+
+                  let bgColor = 'var(--color-paper-100)';
+                  let textColor = 'var(--color-ink-900)';
+                  let borderColor = 'var(--color-line)';
+
+                  if (hasAnswer && isMarked) {
+                    bgColor = 'var(--color-coral-500)';
+                    textColor = 'var(--color-white)';
+                  } else if (isMarked) {
+                    bgColor = 'var(--color-saffron-500)';
+                    textColor = 'var(--color-white)';
+                  } else if (hasAnswer) {
+                    bgColor = 'var(--color-teal-700)';
+                    textColor = 'var(--color-white)';
+                  }
+
+                  if (isCurrent) {
+                    borderColor = 'var(--color-ink-900)';
+                  }
+
+                  return (
+                    <button
+                      key={q.id}
+                      onClick={() => {
+                        setCurrentIndex(idx);
+                        if (window.innerWidth <= 768) {
+                          setPaletteOpen(false);
+                        }
+                      }}
+                      style={{
+                        height: '40px',
+                        borderRadius: 'var(--radius-sm)',
+                        border: isCurrent ? '2px solid var(--color-ink-900)' : `1px solid ${borderColor}`,
+                        backgroundColor: bgColor,
+                        color: textColor,
+                        fontWeight: 800,
+                        fontSize: '13px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        boxShadow: isCurrent ? '0 0 0 2px var(--color-teal-100)' : 'none'
+                      }}
+                      title={`Question ${idx + 1}`}
+                    >
+                      {idx + 1}
+                    </button>
+                  );
+                })}
+              </div>
+            </aside>
           </div>
-        </aside>
+        )}
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .exam-question-area {
+            padding: 14px 12px !important;
+          }
+          .exam-question-card {
+            padding: 16px 14px !important;
+            font-size: 15px !important;
+          }
+          .exam-palette-backdrop {
+            position: fixed !important;
+            inset: 0 !important;
+            background-color: rgba(23, 38, 51, 0.5) !important;
+            backdrop-filter: blur(4px) !important;
+            z-index: 100 !important;
+            display: flex !important;
+            align-items: flex-end !important;
+          }
+          .exam-palette-panel {
+            width: 100% !important;
+            max-height: 80vh !important;
+            border-radius: var(--radius-lg) var(--radius-lg) 0 0 !important;
+            padding: 20px 16px !important;
+            background-color: var(--color-white) !important;
+            overflow-y: auto !important;
+            animation: slideUp 0.2s ease-out !important;
+          }
+          .exam-bottom-actions {
+            position: sticky !important;
+            bottom: 0 !important;
+            background-color: var(--color-paper-50) !important;
+            padding-bottom: calc(12px + var(--safe-area-bottom, 0px)) !important;
+            margin-top: 16px !important;
+          }
+          @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+          }
+        }
+        @media (min-width: 769px) {
+          .exam-palette-backdrop {
+            display: block;
+          }
+          .exam-palette-panel {
+            width: 320px;
+            background-color: var(--color-white);
+            border-left: 1px solid var(--color-line);
+            padding: 24px 20px;
+            position: sticky;
+            top: 56px;
+            height: calc(100vh - 56px);
+            overflow-y: auto;
+          }
+        }
+      `}</style>
 
       {/* Submit Confirmation Modal */}
       {showSubmitModal && (

@@ -58,7 +58,7 @@ export default function PortionPath({
   };
 
   return (
-    <div style={{
+    <div className="portion-unit-card" style={{
       backgroundColor: 'var(--color-white)',
       border: '1px solid var(--color-line)',
       borderRadius: 'var(--radius-md)',
@@ -344,6 +344,17 @@ export default function PortionPath({
           })}
         </div>
       )}
+
+      <style>{`
+        @media (max-width: 640px) {
+          .portion-unit-card {
+            padding: 14px 12px !important;
+          }
+          .portion-path-flow {
+            padding-left: 24px !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }

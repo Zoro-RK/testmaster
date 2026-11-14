@@ -12,7 +12,7 @@ export default function PortionPdfModal({ isOpen, onClose, pdfUrl, pdfName, titl
     : pdfUrl;
 
   return (
-    <div style={{
+    <div className="portion-modal-overlay" style={{
       position: 'fixed',
       inset: 0,
       backgroundColor: 'rgba(23, 38, 51, 0.75)',
@@ -21,9 +21,10 @@ export default function PortionPdfModal({ isOpen, onClose, pdfUrl, pdfName, titl
       alignItems: 'center',
       justifyContent: 'center',
       padding: isFullscreen ? 0 : '16px',
-      backdropFilter: 'blur(2px)'
+      backdropFilter: 'blur(4px)',
+      WebkitBackdropFilter: 'blur(4px)'
     }}>
-      <div style={{
+      <div className="portion-modal-dialog" style={{
         backgroundColor: 'var(--color-white)',
         borderRadius: isFullscreen ? 0 : 'var(--radius-md)',
         width: isFullscreen ? '100vw' : '92vw',
@@ -36,16 +37,16 @@ export default function PortionPdfModal({ isOpen, onClose, pdfUrl, pdfName, titl
       }}>
         {/* Header Bar */}
         <div style={{
-          padding: '14px 20px',
+          padding: '12px 16px',
           backgroundColor: 'var(--color-ink-900)',
           color: 'var(--color-white)',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
           flexWrap: 'wrap',
-          gap: '10px'
+          gap: '8px'
         }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', minWidth: 0, flex: 1 }}>
             <div style={{
               width: '32px',
               height: '32px',
@@ -54,28 +55,29 @@ export default function PortionPdfModal({ isOpen, onClose, pdfUrl, pdfName, titl
               color: 'var(--color-white)',
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center'
+              justifyContent: 'center',
+              flexShrink: 0
             }}>
               <BookOpen size={18} />
             </div>
-            <div>
+            <div style={{ minWidth: 0 }}>
               <div style={{ fontSize: '11px', color: 'var(--color-saffron-500)', fontWeight: 700, textTransform: 'uppercase' }}>
-                Portion Study Guide (Pre-Exam Reading)
+                Portion Study Guide
               </div>
-              <h3 style={{ fontSize: '16px', fontWeight: 800, color: 'var(--color-white)', lineHeight: 1.2 }}>
+              <h3 style={{ fontSize: '15px', fontWeight: 800, color: 'var(--color-white)', lineHeight: 1.2, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                 {title}
               </h3>
             </div>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
             {/* Download Link */}
             <a
               href={resolvedPdfUrl}
               download={pdfName}
               className="btn btn-secondary"
               style={{
-                padding: '6px 12px',
+                padding: '6px 10px',
                 fontSize: '12px',
                 backgroundColor: 'rgba(255, 255, 255, 0.12)',
                 color: 'var(--color-white)',
@@ -83,7 +85,7 @@ export default function PortionPdfModal({ isOpen, onClose, pdfUrl, pdfName, titl
               }}
               title="Download PDF"
             >
-              <Download size={14} /> Download PDF
+              <Download size={14} /> <span className="btn-label-desktop">PDF</span>
             </a>
 
             {/* Open in New Window */}
@@ -93,7 +95,7 @@ export default function PortionPdfModal({ isOpen, onClose, pdfUrl, pdfName, titl
               rel="noreferrer"
               className="btn btn-secondary"
               style={{
-                padding: '6px 12px',
+                padding: '6px 10px',
                 fontSize: '12px',
                 backgroundColor: 'rgba(255, 255, 255, 0.12)',
                 color: 'var(--color-white)',
@@ -101,7 +103,7 @@ export default function PortionPdfModal({ isOpen, onClose, pdfUrl, pdfName, titl
               }}
               title="Open full screen in browser tab"
             >
-              <ExternalLink size={14} /> Open Tab
+              <ExternalLink size={14} /> Open
             </a>
 
             {/* Toggle Fullscreen Modal */}
@@ -142,26 +144,26 @@ export default function PortionPdfModal({ isOpen, onClose, pdfUrl, pdfName, titl
 
         {/* Bottom Action Footer */}
         <div style={{
-          padding: '12px 20px',
+          padding: '12px 16px',
           backgroundColor: 'var(--color-white)',
           borderTop: '1px solid var(--color-line)',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
           flexWrap: 'wrap',
-          gap: '12px'
+          gap: '10px'
         }}>
-          <div style={{ fontSize: '13px', color: 'var(--color-ink-700)' }}>
-            Finished reading the portion? You can now close this guide and start your MCQ exam attempt.
+          <div style={{ fontSize: '12px', color: 'var(--color-ink-700)' }}>
+            Finished reading? Start your timed MCQ test.
           </div>
 
-          <div style={{ display: 'flex', gap: '10px' }}>
+          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', width: '100%' }}>
             <button
               onClick={onClose}
               className="btn btn-secondary"
-              style={{ fontSize: '13px', padding: '8px 16px' }}
+              style={{ flex: 1, fontSize: '13px', padding: '8px 12px' }}
             >
-              Close & Return to Test
+              Close
             </button>
 
             {onStartExam && (
@@ -171,14 +173,28 @@ export default function PortionPdfModal({ isOpen, onClose, pdfUrl, pdfName, titl
                   onStartExam();
                 }}
                 className="btn btn-primary"
-                style={{ fontSize: '13px', padding: '8px 18px', backgroundColor: 'var(--color-teal-700)' }}
+                style={{ flex: 1, fontSize: '13px', padding: '8px 16px', backgroundColor: 'var(--color-teal-700)' }}
               >
-                <CheckCircle size={15} /> Ready: Start Examination
+                <CheckCircle size={15} /> Start Examination
               </button>
             )}
           </div>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 640px) {
+          .portion-modal-overlay {
+            padding: 0 !important;
+          }
+          .portion-modal-dialog {
+            width: 100vw !important;
+            height: 100vh !important;
+            border-radius: 0 !important;
+            max-width: 100vw !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }

@@ -79,8 +79,8 @@ export default function MyTestsPage() {
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
           {tests.map(t => (
-            <div key={t._id || t.id} className="card" style={{ padding: '20px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
-              <div style={{ flex: 1, minWidth: '280px' }}>
+            <div key={t._id || t.id} className="card" style={{ padding: '16px 18px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '14px' }}>
+              <div style={{ flex: 1, minWidth: '220px' }}>
                 <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginBottom: '6px' }}>
                   <span className={`status-chip status-${t.status === 'published' ? 'completed' : t.status === 'draft' ? 'inProgress' : 'notStarted'}`} style={{ fontSize: '11px' }}>
                     {t.status.toUpperCase()}

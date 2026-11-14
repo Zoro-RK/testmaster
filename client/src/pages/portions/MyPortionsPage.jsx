@@ -90,7 +90,7 @@ export default function MyPortionsPage() {
       </div>
 
       {/* Part Selection Tabs */}
-      <div style={{
+      <div className="tabs-scroll-container" style={{
         display: 'flex',
         gap: '8px',
         overflowX: 'auto',

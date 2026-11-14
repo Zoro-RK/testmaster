@@ -200,23 +200,61 @@ export default function AppLayout({ children }) {
         top: 0,
         left: 0,
         right: 0,
-        height: 'var(--header-height)',
+        height: 'calc(var(--header-height) + var(--safe-area-top))',
+        paddingTop: 'var(--safe-area-top)',
         backgroundColor: 'var(--color-white)',
         borderBottom: '1px solid var(--color-line)',
         display: 'none',
         alignItems: 'center',
         justifyContent: 'space-between',
-        padding: '0 16px',
-        zIndex: 90
+        paddingLeft: '16px',
+        paddingRight: '12px',
+        zIndex: 90,
+        boxShadow: 'var(--shadow-sm)'
       }}>
-        <Logo variant="horizontal" size={28} />
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle Navigation Menu"
-          style={{ padding: '8px', color: 'var(--color-ink-900)' }}
-        >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <Logo variant="horizontal" size={26} />
+        </div>
+
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          {/* User profile avatar thumbnail */}
+          <button
+            onClick={() => navigate('/settings')}
+            aria-label="User Settings"
+            style={{
+              width: '32px',
+              height: '32px',
+              borderRadius: '50%',
+              backgroundColor: 'var(--color-teal-700)',
+              color: 'var(--color-white)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontWeight: 800,
+              fontSize: '13px'
+            }}
+          >
+            {user?.displayName ? user.displayName.charAt(0).toUpperCase() : 'U'}
+          </button>
+
+          {/* Drawer menu button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle Navigation Menu"
+            style={{
+              width: '40px',
+              height: '40px',
+              borderRadius: 'var(--radius-sm)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: 'var(--color-ink-900)',
+              backgroundColor: mobileMenuOpen ? 'var(--color-paper-100)' : 'transparent'
+            }}
+          >
+            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </header>
 
       {/* Mobile Drawer Menu */}
@@ -224,23 +262,88 @@ export default function AppLayout({ children }) {
         <div style={{
           position: 'fixed',
           inset: 0,
-          backgroundColor: 'rgba(23, 38, 51, 0.4)',
-          zIndex: 95,
+          backgroundColor: 'rgba(23, 38, 51, 0.5)',
+          backdropFilter: 'blur(6px)',
+          WebkitBackdropFilter: 'blur(6px)',
+          zIndex: 99,
           display: 'flex'
         }} onClick={() => setMobileMenuOpen(false)}>
           <div style={{
-            width: '80%',
-            maxWidth: '300px',
+            width: '82%',
+            maxWidth: '320px',
             backgroundColor: 'var(--color-white)',
             height: '100%',
-            padding: '24px 16px',
+            paddingTop: 'calc(var(--safe-area-top) + 16px)',
+            paddingBottom: 'calc(var(--safe-area-bottom) + 16px)',
+            paddingLeft: '16px',
+            paddingRight: '16px',
             display: 'flex',
-            flexDirection: 'column'
+            flexDirection: 'column',
+            boxShadow: 'var(--shadow-modal)',
+            animation: 'slideInLeft 0.22s cubic-bezier(0.16, 1, 0.3, 1)'
           }} onClick={(e) => e.stopPropagation()}>
-            <div style={{ marginBottom: '20px' }}>
-              <Logo variant="horizontal" size={32} />
+            {/* Drawer Header with Close & Logo */}
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '18px', paddingBottom: '12px', borderBottom: '1px solid var(--color-line)' }}>
+              <Logo variant="horizontal" size={28} />
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                aria-label="Close menu"
+                style={{
+                  width: '36px',
+                  height: '36px',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  backgroundColor: 'var(--color-paper-100)',
+                  color: 'var(--color-ink-700)'
+                }}
+              >
+                <X size={18} />
+              </button>
             </div>
-            <nav style={{ flex: 1, overflowY: 'auto' }}>
+
+            {/* User Profile Card */}
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '12px',
+              padding: '12px',
+              backgroundColor: 'var(--color-paper-50)',
+              borderRadius: 'var(--radius-sm)',
+              border: '1px solid var(--color-line)',
+              marginBottom: '16px'
+            }}>
+              <div style={{
+                width: '38px',
+                height: '38px',
+                borderRadius: '50%',
+                backgroundColor: 'var(--color-teal-700)',
+                color: 'var(--color-white)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontWeight: 800,
+                fontSize: '15px',
+                flexShrink: 0
+              }}>
+                {user?.displayName ? user.displayName.charAt(0).toUpperCase() : 'U'}
+              </div>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ fontSize: '14px', fontWeight: 700, color: 'var(--color-ink-900)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                  {user?.displayName}
+                </div>
+                <div style={{ fontSize: '11px', color: 'var(--color-muted)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                  {user?.email}
+                </div>
+              </div>
+            </div>
+
+            {/* Navigation Links */}
+            <nav style={{ flex: 1, overflowY: 'auto', paddingRight: '4px' }}>
+              <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--color-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', padding: '0 8px 8px 8px' }}>
+                Preparation Sections
+              </div>
               {navItems.map((item) => {
                 const Icon = item.icon;
                 const isActive = activeNavItem ? activeNavItem.path === item.path : location.pathname === item.path;
@@ -255,35 +358,65 @@ export default function AppLayout({ children }) {
                       gap: '12px',
                       padding: '12px 14px',
                       borderRadius: 'var(--radius-sm)',
-                      fontSize: '15px',
+                      fontSize: '14px',
                       fontWeight: isActive ? 700 : 500,
                       color: isActive ? 'var(--color-teal-700)' : 'var(--color-ink-700)',
                       backgroundColor: isActive ? 'var(--color-teal-100)' : 'transparent',
-                      marginBottom: '6px'
+                      marginBottom: '4px',
+                      minHeight: '44px'
                     }}
                   >
-                    <Icon size={18} />
+                    <Icon size={18} strokeWidth={isActive ? 2.4 : 1.8} />
                     <span>{item.name}</span>
                   </NavLink>
                 );
               })}
             </nav>
-            <div style={{ borderTop: '1px solid var(--color-line)', paddingTop: '16px' }}>
+
+            {/* Bottom Actions: Settings & Sign Out */}
+            <div style={{ borderTop: '1px solid var(--color-line)', paddingTop: '14px', display: 'flex', gap: '8px' }}>
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  navigate('/settings');
+                }}
+                style={{
+                  flex: 1,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '8px',
+                  padding: '10px 14px',
+                  borderRadius: 'var(--radius-sm)',
+                  backgroundColor: 'var(--color-paper-100)',
+                  border: '1px solid var(--color-line)',
+                  fontSize: '13px',
+                  fontWeight: 600,
+                  color: 'var(--color-ink-700)',
+                  minHeight: '44px'
+                }}
+              >
+                <Settings size={16} />
+                Settings
+              </button>
               <button
                 onClick={handleLogout}
                 style={{
-                  width: '100%',
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '10px',
+                  justifyContent: 'center',
+                  gap: '6px',
                   padding: '10px 14px',
                   borderRadius: 'var(--radius-sm)',
+                  backgroundColor: 'var(--color-white)',
+                  border: '1px solid #f5c2c2',
                   color: 'var(--color-danger)',
                   fontWeight: 600,
-                  fontSize: '14px'
+                  fontSize: '13px',
+                  minHeight: '44px'
                 }}
               >
-                <LogOut size={18} />
+                <LogOut size={16} />
                 Sign Out
               </button>
             </div>
@@ -310,24 +443,27 @@ export default function AppLayout({ children }) {
         bottom: 0,
         left: 0,
         right: 0,
-        height: 'var(--mobile-nav-height)',
+        height: 'calc(var(--mobile-nav-height) + var(--safe-area-bottom))',
+        paddingBottom: 'var(--safe-area-bottom)',
         backgroundColor: 'var(--color-white)',
         borderTop: '1px solid var(--color-line)',
         display: 'none',
         justifyContent: 'space-around',
         alignItems: 'center',
         zIndex: 90,
-        padding: '0 8px'
+        paddingLeft: '4px',
+        paddingRight: '4px',
+        boxShadow: '0 -2px 10px rgba(23, 38, 51, 0.05)'
       }}>
         {[
-          { name: 'Dashboard', path: '/dashboard', icon: LayoutDashboard },
+          { name: 'Home', path: '/dashboard', icon: LayoutDashboard },
           { name: 'Syllabus', path: '/syllabus', icon: Compass },
           { name: 'Portions', path: '/portions', icon: CheckSquare },
           { name: 'Tests', path: '/tests', icon: FileText },
-          { name: 'Progress', path: '/progress', icon: TrendingUp }
+          { name: 'Friends', path: '/friends', icon: Users }
         ].map((item) => {
           const Icon = item.icon;
-          const isActive = location.pathname === item.path;
+          const isActive = activeNavItem ? activeNavItem.path === item.path : location.pathname === item.path;
           return (
             <NavLink
               key={item.path}
@@ -336,13 +472,19 @@ export default function AppLayout({ children }) {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                gap: '4px',
+                justifyContent: 'center',
+                gap: '3px',
+                padding: '6px 10px',
+                borderRadius: 'var(--radius-sm)',
+                backgroundColor: isActive ? 'var(--color-teal-100)' : 'transparent',
                 color: isActive ? 'var(--color-teal-700)' : 'var(--color-muted)',
                 fontSize: '11px',
-                fontWeight: isActive ? 700 : 500
+                fontWeight: isActive ? 800 : 500,
+                minWidth: '56px',
+                transition: 'all 0.15s ease'
               }}
             >
-              <Icon size={20} strokeWidth={isActive ? 2.4 : 1.8} />
+              <Icon size={19} strokeWidth={isActive ? 2.5 : 1.8} />
               <span>{item.name}</span>
             </NavLink>
           );
@@ -350,6 +492,10 @@ export default function AppLayout({ children }) {
       </nav>
 
       <style>{`
+        @keyframes slideInLeft {
+          from { transform: translateX(-100%); }
+          to { transform: translateX(0); }
+        }
         @media (max-width: 900px) {
           .desktop-sidebar {
             display: none !important;
@@ -362,8 +508,8 @@ export default function AppLayout({ children }) {
           }
           .main-content {
             margin-left: 0 !important;
-            padding-top: var(--header-height);
-            padding-bottom: var(--mobile-nav-height);
+            padding-top: calc(var(--header-height) + var(--safe-area-top));
+            padding-bottom: calc(var(--mobile-nav-height) + var(--safe-area-bottom));
           }
         }
       `}</style>

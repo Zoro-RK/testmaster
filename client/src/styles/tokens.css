@@ -50,7 +50,10 @@
 
   --content-max-width: 1440px;
   --sidebar-width: 270px;
-  --header-height: 64px;
-  --mobile-nav-height: 64px;
+  --header-height: 56px;
+  --mobile-nav-height: 60px;
+  --safe-area-top: env(safe-area-inset-top, 0px);
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+  --touch-target-min: 44px;
 }
 

@@ -113,7 +113,7 @@ export default function AuthLayout({ children }) {
       </div>
 
       {/* Right Panel: Form Card Container */}
-      <div style={{
+      <div className="auth-form-container" style={{
         flex: '1',
         display: 'flex',
         flexDirection: 'column',
@@ -131,6 +131,12 @@ export default function AuthLayout({ children }) {
         @media (max-width: 900px) {
           .auth-brand-panel {
             display: none !important;
+          }
+          .auth-form-container {
+            padding: 24px 16px !important;
+          }
+          .auth-card {
+            padding: 24px 18px !important;
           }
         }
       `}</style>

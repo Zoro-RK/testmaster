@@ -62,12 +62,12 @@ export default function DashboardPage() {
   return (
     <div className="page-container">
       {/* Top Welcome Banner */}
-      <div style={{
+      <div className="dashboard-banner" style={{
         backgroundColor: 'var(--color-ink-900)',
         color: 'var(--color-white)',
         borderRadius: 'var(--radius-lg)',
-        padding: '32px 36px',
-        marginBottom: '28px',
+        padding: '30px 32px',
+        marginBottom: '24px',
         position: 'relative',
         overflow: 'hidden',
         boxShadow: 'var(--shadow-card)'
@@ -94,20 +94,20 @@ export default function DashboardPage() {
             fontSize: '12px',
             fontWeight: 700,
             letterSpacing: '0.04em',
-            marginBottom: '14px'
+            marginBottom: '12px'
           }}>
             <Sparkles size={14} />
             <span>{group?.name || 'TNPSC Study Circle'}</span>
           </div>
 
-          <h1 style={{ fontSize: '28px', fontWeight: 800, color: 'var(--color-white)', letterSpacing: '-0.02em', lineHeight: 1.2 }}>
+          <h1 className="dashboard-banner-title" style={{ fontSize: '26px', fontWeight: 800, color: 'var(--color-white)', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
             Vanakkam, {user?.displayName}!
           </h1>
-          <p style={{ fontSize: '15px', color: '#B5C4D0', marginTop: '8px', lineHeight: 1.5 }}>
+          <p style={{ fontSize: '14px', color: '#B5C4D0', marginTop: '8px', lineHeight: 1.5 }}>
             You have covered <strong>{completedCount}</strong> of <strong>{totalTopics}</strong> Group IV topics. Continue your preparation or practice with tests published by friends.
           </p>
 
-          <div style={{ display: 'flex', gap: '12px', marginTop: '22px', flexWrap: 'wrap' }}>
+          <div className="dashboard-banner-actions" style={{ display: 'flex', gap: '10px', marginTop: '18px', flexWrap: 'wrap' }}>
             <Link to="/portions" className="btn btn-primary" style={{ backgroundColor: 'var(--color-teal-700)' }}>
               <Compass size={16} />
               Update My Portions
@@ -206,7 +206,7 @@ export default function DashboardPage() {
       </div>
 
       {/* Main Grid: Recently Published Tests & Circle Activity */}
-      <div style={{
+      <div className="dashboard-main-grid" style={{
         display: 'grid',
         gridTemplateColumns: '2fr 1fr',
         gap: '24px'
@@ -232,8 +232,8 @@ export default function DashboardPage() {
           ) : (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
               {recentTests.map((t) => (
-                <div key={t.id} className="card" style={{ padding: '18px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '14px' }}>
-                  <div style={{ flex: 1, minWidth: '240px' }}>
+                <div key={t.id} className="card recent-test-card" style={{ padding: '18px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '14px' }}>
+                  <div style={{ flex: 1, minWidth: '220px' }}>
                     <div style={{ display: 'flex', gap: '8px', alignItems: 'center', marginBottom: '6px' }}>
                       <span className="status-chip status-notStarted" style={{ fontSize: '11px', padding: '2px 8px' }}>
                         {t.partName || t.partCode || 'Part A'}
@@ -245,7 +245,7 @@ export default function DashboardPage() {
                     <h4 style={{ fontSize: '16px', fontWeight: 700, color: 'var(--color-ink-900)' }}>
                       {t.title}
                     </h4>
-                    <div style={{ display: 'flex', gap: '14px', fontSize: '12px', color: 'var(--color-ink-700)', marginTop: '6px' }}>
+                    <div style={{ display: 'flex', gap: '12px', fontSize: '12px', color: 'var(--color-ink-700)', marginTop: '6px', flexWrap: 'wrap' }}>
                       <span>{t.questionCount} Questions</span>
                       <span>•</span>
                       <span>{t.durationMinutes} Minutes</span>
@@ -254,8 +254,8 @@ export default function DashboardPage() {
                     </div>
                   </div>
 
-                  <div>
-                    <Link to={`/tests/${t.id}`} className="btn btn-secondary" style={{ padding: '8px 14px', fontSize: '13px' }}>
+                  <div className="recent-test-action">
+                    <Link to={`/tests/${t.id}`} className="btn btn-secondary recent-test-btn" style={{ padding: '8px 14px', fontSize: '13px' }}>
                       View & Start <ArrowRight size={14} />
                     </Link>
                   </div>
@@ -349,8 +349,28 @@ export default function DashboardPage() {
 
       <style>{`
         @media (max-width: 900px) {
-          div[style*="grid-template-columns: 2fr 1fr"] {
+          .dashboard-main-grid {
             grid-template-columns: 1fr !important;
+          }
+        }
+        @media (max-width: 640px) {
+          .dashboard-banner {
+            padding: 20px 16px !important;
+          }
+          .dashboard-banner-title {
+            font-size: 20px !important;
+          }
+          .dashboard-banner-actions .btn {
+            width: 100% !important;
+          }
+          .recent-test-card {
+            padding: 14px 12px !important;
+          }
+          .recent-test-action {
+            width: 100% !important;
+          }
+          .recent-test-btn {
+            width: 100% !important;
           }
         }
       `}</style>

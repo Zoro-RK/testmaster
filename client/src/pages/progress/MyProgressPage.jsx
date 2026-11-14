@@ -61,7 +61,7 @@ export default function MyProgressPage() {
       </div>
 
       {/* Tabs */}
-      <div style={{ display: 'flex', gap: '8px', borderBottom: '1px solid var(--color-line)', marginBottom: '24px', overflowX: 'auto' }}>
+      <div className="tabs-scroll-container" style={{ display: 'flex', gap: '8px', borderBottom: '1px solid var(--color-line)', marginBottom: '24px', overflowX: 'auto' }}>
         {[
           { key: 'overview', label: 'Unit Coverage' },
           { key: 'revision', label: `Revision Queue (${revisionQuestions.length})` },
