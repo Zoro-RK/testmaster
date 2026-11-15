@@ -3,7 +3,7 @@ require('dotenv').config({ path: path.join(__dirname, '.env') });
 require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
 const express = require('express');
 const cors = require('cors');
-const { connectDB } = require('./config/db');
+const { connectDB, isConnectedToMongo } = require('./config/db');
 
 const authRoutes = require('./routes/authRoutes');
 const groupRoutes = require('./routes/groupRoutes');
@@ -41,15 +41,23 @@ app.use('/api/progress', progressRoutes);
 app.use('/api/materials', materialRoutes);
 app.use('/api/activity', activityRoutes);
 
-app.get('/api/health', (req, res) => {
-  res.json({
+// Health check and keep-alive endpoints for UptimeRobot / uptime monitors
+const handleHealthCheck = (req, res) => {
+  res.status(200).json({
     status: 'healthy',
+    message: 'TNPSC Study Circle API is online and healthy',
+    database: isConnectedToMongo() ? 'connected' : 'local-json',
+    uptimeSeconds: Math.floor(process.uptime()),
     timestamp: new Date().toISOString(),
     service: 'TNPSC Study Circle API'
   });
-});
+};
 
-// Serve frontend in production or if built
+// Explicitly support GET & HEAD for UptimeRobot and ping monitors
+app.get(['/api/health', '/health', '/ping', '/api'], handleHealthCheck);
+app.head(['/api/health', '/health', '/ping', '/api'], (req, res) => res.status(200).end());
+
+// Serve frontend in production or if built; otherwise respond 200 OK for root ping
 const clientDist = path.join(__dirname, '..', 'client', 'dist');
 if (require('fs').existsSync(clientDist)) {
   app.use(express.static(clientDist));
@@ -59,6 +67,10 @@ if (require('fs').existsSync(clientDist)) {
     }
     res.sendFile(path.join(clientDist, 'index.html'));
   });
+} else {
+  // When running as standalone API on Render, respond 200 to root / for UptimeRobot
+  app.get('/', handleHealthCheck);
+  app.head('/', (req, res) => res.status(200).end());
 }
 
 // Error handling middleware
