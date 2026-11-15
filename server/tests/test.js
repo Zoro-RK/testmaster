@@ -3,14 +3,16 @@ require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
 require('dotenv').config({ path: path.join(__dirname, '..', '..', '.env') });
 const assert = require('assert');
 const request = require('supertest');
+const mongoose = require('mongoose');
 const app = require('../server');
 const { connectDB } = require('../config/db');
-const seed = require('../seed/seed');
 
 async function runTests() {
   console.log('--- Starting TNPSC Study Circle Verification Test Suite (In-Process) ---');
   await connectDB();
-  await seed();
+
+  const createdUserIds = [];
+  let publishedTestId = null;
 
   try {
     // 1. Health check
@@ -34,6 +36,9 @@ async function runTests() {
     assert.strictEqual(registerRes.body.user.displayName, testUsername);
     assert.strictEqual(registerRes.body.group.role, 'member', 'New registrant must have standard member role');
     const token = registerRes.body.token;
+    if (registerRes.body.user && (registerRes.body.user.id || registerRes.body.user._id)) {
+      createdUserIds.push(registerRes.body.user.id || registerRes.body.user._id);
+    }
     console.log('✔ Register with only name + password succeeded');
 
     // 2b. Login using the registered name and password
@@ -96,6 +101,9 @@ async function runTests() {
         password: 'FriendPassword#2025'
       });
     const friendToken = friendRegister.body.token;
+    if (friendRegister.body.user && (friendRegister.body.user.id || friendRegister.body.user._id)) {
+      createdUserIds.push(friendRegister.body.user.id || friendRegister.body.user._id);
+    }
 
     const friendViewRes = await request(app)
       .get(`/api/portions/member/${meRes.body.user.id}`)
@@ -199,7 +207,7 @@ async function runTests() {
         status: 'published'
       });
     assert.strictEqual(createTestRes.status, 201);
-    const publishedTestId = createTestRes.body.test._id;
+    publishedTestId = createTestRes.body.test._id;
     console.log(`✔ Test published with ID: ${publishedTestId}`);
 
     // 9. Examination Lifecycle & Security
@@ -325,6 +333,31 @@ async function runTests() {
   } catch (err) {
     console.error('❌ Test failed:', err);
     throw err;
+  } finally {
+    // Clean up all test artifacts and temporary test users so the live DB remains pristine
+    try {
+      if (mongoose.connection && mongoose.connection.db) {
+        const db = mongoose.connection.db;
+        if (createdUserIds.length > 0) {
+          const stringIds = createdUserIds.map(id => String(id));
+          const allIds = [...createdUserIds, ...stringIds];
+          await db.collection('users').deleteMany({ _id: { $in: allIds } });
+          await db.collection('groupmembers').deleteMany({ userId: { $in: allIds } });
+          await db.collection('portionprogresses').deleteMany({ userId: { $in: allIds } });
+          await db.collection('bookmarks').deleteMany({ userId: { $in: allIds } });
+          await db.collection('activityevents').deleteMany({ userId: { $in: allIds } });
+          await db.collection('testattempts').deleteMany({ userId: { $in: allIds } });
+          await db.collection('materials').deleteMany({ uploadedBy: { $in: allIds } });
+        }
+        if (publishedTestId) {
+          await db.collection('tests').deleteOne({ _id: publishedTestId });
+          await db.collection('testversions').deleteMany({ testId: publishedTestId });
+          await db.collection('testattempts').deleteMany({ testId: publishedTestId });
+        }
+      }
+    } catch (cleanErr) {
+      console.warn('Test cleanup warning:', cleanErr.message);
+    }
   }
 }
 
